@@ -1,0 +1,10 @@
+D:\Programowanie\Dungeons\Dungeons\bin\Debug\Dungeons.exe.config
+D:\Programowanie\Dungeons\Dungeons\bin\Debug\Dungeons.exe
+D:\Programowanie\Dungeons\Dungeons\bin\Debug\Dungeons.pdb
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.csprojAssemblyReference.cache
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.Dungeons.resources
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.Properties.Resources.resources
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResource.cache
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.exe
+D:\Programowanie\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
