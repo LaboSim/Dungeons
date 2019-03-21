@@ -229,6 +229,7 @@
             this.moveLeft.TabIndex = 0;
             this.moveLeft.Text = "←";
             this.moveLeft.UseVisualStyleBackColor = true;
+            this.moveLeft.Click += new System.EventHandler(this.moveLeft_Click);
             // 
             // moveRight
             // 
@@ -238,6 +239,7 @@
             this.moveRight.TabIndex = 1;
             this.moveRight.Text = "→";
             this.moveRight.UseVisualStyleBackColor = true;
+            this.moveRight.Click += new System.EventHandler(this.moveRight_Click);
             // 
             // moveUp
             // 
@@ -248,6 +250,7 @@
             this.moveUp.TabIndex = 2;
             this.moveUp.Text = "↑";
             this.moveUp.UseVisualStyleBackColor = true;
+            this.moveUp.Click += new System.EventHandler(this.moveUp_Click);
             // 
             // moveDown
             // 
@@ -258,6 +261,7 @@
             this.moveDown.TabIndex = 3;
             this.moveDown.Text = "↓";
             this.moveDown.UseVisualStyleBackColor = true;
+            this.moveDown.Click += new System.EventHandler(this.moveDown_Click);
             // 
             // attackLeft
             // 
@@ -311,6 +315,7 @@
             this.MinimizeBox = false;
             this.Name = "Dungeons";
             this.Text = "Dungeons";
+            this.Load += new System.EventHandler(this.Dungeons_Load);
             ((System.ComponentModel.ISupportInitialize)(this.player30)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
