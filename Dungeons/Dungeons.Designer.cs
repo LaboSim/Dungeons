@@ -41,20 +41,22 @@
             this.ghoulHitPoints = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.moveLeft = new System.Windows.Forms.Button();
-            this.moveRight = new System.Windows.Forms.Button();
-            this.moveUp = new System.Windows.Forms.Button();
             this.moveDown = new System.Windows.Forms.Button();
-            this.attackLeft = new System.Windows.Forms.Button();
-            this.attackRight = new System.Windows.Forms.Button();
-            this.attackUp = new System.Windows.Forms.Button();
+            this.moveUp = new System.Windows.Forms.Button();
+            this.moveRight = new System.Windows.Forms.Button();
+            this.moveLeft = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.attackDown = new System.Windows.Forms.Button();
+            this.attackUp = new System.Windows.Forms.Button();
+            this.attackRight = new System.Windows.Forms.Button();
+            this.attackLeft = new System.Windows.Forms.Button();
+            this.bat30 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bat30)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -207,6 +209,48 @@
             this.tabPage1.Text = "Move";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // moveDown
+            // 
+            this.moveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveDown.Location = new System.Drawing.Point(85, 6);
+            this.moveDown.Name = "moveDown";
+            this.moveDown.Size = new System.Drawing.Size(20, 26);
+            this.moveDown.TabIndex = 3;
+            this.moveDown.Text = "↓";
+            this.moveDown.UseVisualStyleBackColor = true;
+            this.moveDown.Click += new System.EventHandler(this.moveDown_Click);
+            // 
+            // moveUp
+            // 
+            this.moveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveUp.Location = new System.Drawing.Point(59, 6);
+            this.moveUp.Name = "moveUp";
+            this.moveUp.Size = new System.Drawing.Size(20, 26);
+            this.moveUp.TabIndex = 2;
+            this.moveUp.Text = "↑";
+            this.moveUp.UseVisualStyleBackColor = true;
+            this.moveUp.Click += new System.EventHandler(this.moveUp_Click);
+            // 
+            // moveRight
+            // 
+            this.moveRight.Location = new System.Drawing.Point(33, 6);
+            this.moveRight.Name = "moveRight";
+            this.moveRight.Size = new System.Drawing.Size(20, 26);
+            this.moveRight.TabIndex = 1;
+            this.moveRight.Text = "→";
+            this.moveRight.UseVisualStyleBackColor = true;
+            this.moveRight.Click += new System.EventHandler(this.moveRight_Click);
+            // 
+            // moveLeft
+            // 
+            this.moveLeft.Location = new System.Drawing.Point(6, 6);
+            this.moveLeft.Name = "moveLeft";
+            this.moveLeft.Size = new System.Drawing.Size(20, 26);
+            this.moveLeft.TabIndex = 0;
+            this.moveLeft.Text = "←";
+            this.moveLeft.UseVisualStyleBackColor = true;
+            this.moveLeft.Click += new System.EventHandler(this.moveLeft_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.attackDown);
@@ -221,65 +265,15 @@
             this.tabPage2.Text = "Attack";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // moveLeft
+            // attackDown
             // 
-            this.moveLeft.Location = new System.Drawing.Point(6, 6);
-            this.moveLeft.Name = "moveLeft";
-            this.moveLeft.Size = new System.Drawing.Size(20, 26);
-            this.moveLeft.TabIndex = 0;
-            this.moveLeft.Text = "←";
-            this.moveLeft.UseVisualStyleBackColor = true;
-            this.moveLeft.Click += new System.EventHandler(this.moveLeft_Click);
-            // 
-            // moveRight
-            // 
-            this.moveRight.Location = new System.Drawing.Point(33, 6);
-            this.moveRight.Name = "moveRight";
-            this.moveRight.Size = new System.Drawing.Size(20, 26);
-            this.moveRight.TabIndex = 1;
-            this.moveRight.Text = "→";
-            this.moveRight.UseVisualStyleBackColor = true;
-            this.moveRight.Click += new System.EventHandler(this.moveRight_Click);
-            // 
-            // moveUp
-            // 
-            this.moveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moveUp.Location = new System.Drawing.Point(59, 6);
-            this.moveUp.Name = "moveUp";
-            this.moveUp.Size = new System.Drawing.Size(20, 26);
-            this.moveUp.TabIndex = 2;
-            this.moveUp.Text = "↑";
-            this.moveUp.UseVisualStyleBackColor = true;
-            this.moveUp.Click += new System.EventHandler(this.moveUp_Click);
-            // 
-            // moveDown
-            // 
-            this.moveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moveDown.Location = new System.Drawing.Point(85, 6);
-            this.moveDown.Name = "moveDown";
-            this.moveDown.Size = new System.Drawing.Size(20, 26);
-            this.moveDown.TabIndex = 3;
-            this.moveDown.Text = "↓";
-            this.moveDown.UseVisualStyleBackColor = true;
-            this.moveDown.Click += new System.EventHandler(this.moveDown_Click);
-            // 
-            // attackLeft
-            // 
-            this.attackLeft.Location = new System.Drawing.Point(6, 6);
-            this.attackLeft.Name = "attackLeft";
-            this.attackLeft.Size = new System.Drawing.Size(20, 26);
-            this.attackLeft.TabIndex = 0;
-            this.attackLeft.Text = "←";
-            this.attackLeft.UseVisualStyleBackColor = true;
-            // 
-            // attackRight
-            // 
-            this.attackRight.Location = new System.Drawing.Point(33, 6);
-            this.attackRight.Name = "attackRight";
-            this.attackRight.Size = new System.Drawing.Size(20, 26);
-            this.attackRight.TabIndex = 1;
-            this.attackRight.Text = "→";
-            this.attackRight.UseVisualStyleBackColor = true;
+            this.attackDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackDown.Location = new System.Drawing.Point(85, 6);
+            this.attackDown.Name = "attackDown";
+            this.attackDown.Size = new System.Drawing.Size(20, 26);
+            this.attackDown.TabIndex = 3;
+            this.attackDown.Text = "↓";
+            this.attackDown.UseVisualStyleBackColor = true;
             // 
             // attackUp
             // 
@@ -291,15 +285,35 @@
             this.attackUp.Text = "↑";
             this.attackUp.UseVisualStyleBackColor = true;
             // 
-            // attackDown
+            // attackRight
             // 
-            this.attackDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.attackDown.Location = new System.Drawing.Point(85, 6);
-            this.attackDown.Name = "attackDown";
-            this.attackDown.Size = new System.Drawing.Size(20, 26);
-            this.attackDown.TabIndex = 3;
-            this.attackDown.Text = "↓";
-            this.attackDown.UseVisualStyleBackColor = true;
+            this.attackRight.Location = new System.Drawing.Point(33, 6);
+            this.attackRight.Name = "attackRight";
+            this.attackRight.Size = new System.Drawing.Size(20, 26);
+            this.attackRight.TabIndex = 1;
+            this.attackRight.Text = "→";
+            this.attackRight.UseVisualStyleBackColor = true;
+            // 
+            // attackLeft
+            // 
+            this.attackLeft.Location = new System.Drawing.Point(6, 6);
+            this.attackLeft.Name = "attackLeft";
+            this.attackLeft.Size = new System.Drawing.Size(20, 26);
+            this.attackLeft.TabIndex = 0;
+            this.attackLeft.Text = "←";
+            this.attackLeft.UseVisualStyleBackColor = true;
+            // 
+            // bat30
+            // 
+            this.bat30.BackColor = System.Drawing.Color.Transparent;
+            this.bat30.Image = ((System.Drawing.Image)(resources.GetObject("bat30.Image")));
+            this.bat30.Location = new System.Drawing.Point(48, 12);
+            this.bat30.Name = "bat30";
+            this.bat30.Size = new System.Drawing.Size(30, 30);
+            this.bat30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bat30.TabIndex = 3;
+            this.bat30.TabStop = false;
+            this.bat30.Visible = false;
             // 
             // Dungeons
             // 
@@ -308,9 +322,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.player30);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.player30);
+            this.Controls.Add(this.bat30);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dungeons";
@@ -321,6 +336,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bat30)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -348,6 +364,7 @@
         private System.Windows.Forms.Button attackRight;
         private System.Windows.Forms.Button attackDown;
         private System.Windows.Forms.Button attackUp;
+        private System.Windows.Forms.PictureBox bat30;
     }
 }
 

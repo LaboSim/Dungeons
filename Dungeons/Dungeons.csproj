@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bat.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Dungeons.cs">
       <SubType>Form</SubType>
@@ -53,6 +54,7 @@
     <Compile Include="Dungeons.Designer.cs">
       <DependentUpon>Dungeons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enemy.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Mover.cs" />
     <Compile Include="Player.cs" />

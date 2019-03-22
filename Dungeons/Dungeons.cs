@@ -25,7 +25,8 @@ namespace Dungeons
         {
             //70(left), 50(up), 420(right), 139(bottom)
             //78, 57, 420, 155
-            game = new Game(new Rectangle(70, 50, 420, 139));
+            game = new Game(new Rectangle(70, 50, 420, 145));
+            game.NewLevel(random);
             UpdateCharacters();
         }
 
@@ -33,6 +34,31 @@ namespace Dungeons
         {
             player30.Location = game.PlayerLocation;
             playerHitPoints.Text = game.PlayerHitPoints.ToString();
+
+            bool showBat = false;
+            int enemiesShown = 0;
+
+            foreach(Enemy enemy in game.Enemies)
+            {
+                if(enemy is Bat)
+                {
+                    bat30.Location = enemy.Location;
+                    batHitPoints.Text = enemy.HitPoints.ToString();
+                    if(enemy.HitPoints >= 1)
+                    {
+                        showBat = true;
+                        enemiesShown++;
+                    }
+                }
+            }
+            if (showBat)
+                bat30.Visible = true;
+            else
+            {
+                bat30.Visible = false;
+                batHitPoints.Text = "";
+            }
+                
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
