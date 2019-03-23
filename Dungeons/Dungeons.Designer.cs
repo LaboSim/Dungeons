@@ -51,12 +51,16 @@
             this.attackRight = new System.Windows.Forms.Button();
             this.attackLeft = new System.Windows.Forms.Button();
             this.bat30 = new System.Windows.Forms.PictureBox();
+            this.sword30 = new System.Windows.Forms.PictureBox();
+            this.equipSword = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bat30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sword30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipSword)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -315,6 +319,29 @@
             this.bat30.TabStop = false;
             this.bat30.Visible = false;
             // 
+            // sword30
+            // 
+            this.sword30.BackColor = System.Drawing.Color.Transparent;
+            this.sword30.Image = ((System.Drawing.Image)(resources.GetObject("sword30.Image")));
+            this.sword30.Location = new System.Drawing.Point(84, 12);
+            this.sword30.Name = "sword30";
+            this.sword30.Size = new System.Drawing.Size(30, 30);
+            this.sword30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sword30.TabIndex = 4;
+            this.sword30.TabStop = false;
+            // 
+            // equipSword
+            // 
+            this.equipSword.BackColor = System.Drawing.Color.Transparent;
+            this.equipSword.Image = ((System.Drawing.Image)(resources.GetObject("equipSword.Image")));
+            this.equipSword.Location = new System.Drawing.Point(71, 278);
+            this.equipSword.Name = "equipSword";
+            this.equipSword.Size = new System.Drawing.Size(30, 30);
+            this.equipSword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipSword.TabIndex = 5;
+            this.equipSword.TabStop = false;
+            this.equipSword.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,10 +349,12 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipSword);
             this.Controls.Add(this.player30);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bat30);
+            this.Controls.Add(this.sword30);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dungeons";
@@ -337,6 +366,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bat30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sword30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipSword)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -365,6 +396,8 @@
         private System.Windows.Forms.Button attackDown;
         private System.Windows.Forms.Button attackUp;
         private System.Windows.Forms.PictureBox bat30;
+        private System.Windows.Forms.PictureBox sword30;
+        private System.Windows.Forms.PictureBox equipSword;
     }
 }
 

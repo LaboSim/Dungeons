@@ -10,11 +10,17 @@ namespace Dungeons
     class Game
     {
         private Player player;
+
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
+        public List<string> PlayerWeapons {  get { return player.Weapons; } }
+
         private int level = 0;
         public int Level { get { return level; } }
+
+
         public List<Enemy> Enemies;
+        public Weapon WeaponInRoom;
 
         private Rectangle boundaries;
         public Rectangle Boundaries { get { return boundaries; } }
@@ -46,8 +52,19 @@ namespace Dungeons
             player.Hit(maxDamage, random);
         }
 
+        public void Equip(string weaponName)
+        {
+            player.Equip(weaponName);
+        }
+
+        public bool CheckPlayerInventory(string weaponName)
+        {
+            return player.Weapons.Contains(weaponName);
+        }
+
         public void Attack(Direction direction, Random random)
         {
+            //
             foreach(Enemy enemy in Enemies)
             {
                 enemy.Move(random);
@@ -63,6 +80,7 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
             }

@@ -59,6 +59,32 @@ namespace Dungeons
                 batHitPoints.Text = "";
             }
 
+            //
+
+            sword30.Visible = false;
+
+            Control weaponControl = null;
+
+            switch (game.WeaponInRoom.Name)
+            {
+                case "Sword":
+                    {
+                        weaponControl = sword30;
+                        break;
+                    }
+            }
+
+            weaponControl.Visible = true;
+
+            if (game.CheckPlayerInventory("Sword"))
+                equipSword.Visible = true;
+
+            weaponControl.Location = game.WeaponInRoom.Location;
+            if (game.WeaponInRoom.PickedUp)
+                weaponControl.Visible = false;
+            else
+                weaponControl.Visible = true;
+
             if(game.PlayerHitPoints <= 0)
             {
                 MessageBox.Show("You have been killed");
