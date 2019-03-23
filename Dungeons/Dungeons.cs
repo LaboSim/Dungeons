@@ -58,7 +58,17 @@ namespace Dungeons
                 bat30.Visible = false;
                 batHitPoints.Text = "";
             }
-                
+
+            if(game.PlayerHitPoints <= 0)
+            {
+                MessageBox.Show("You have been killed");
+                Application.Exit();
+            }
+
+            if(enemiesShown < 1)
+            {
+                MessageBox.Show("You defeated all of enemies at this level");
+            }    
         }
 
         private void moveLeft_Click(object sender, EventArgs e)

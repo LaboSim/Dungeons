@@ -20,5 +20,10 @@ namespace Dungeons
         {
             base.location = Move(direction, game.Boundaries);
         }
+
+        public void Hit(int maxDamage, Random random)
+        {
+            HitPoints -= random.Next(1, maxDamage);
+        }
     }
 }

@@ -41,6 +41,19 @@ namespace Dungeons
                 boundaries.Top + random.Next(boundaries.Bottom / 10 - boundaries.Top / 10) * 10);
         }
 
+        public void HitPlayer(int maxDamage, Random random)
+        {
+            player.Hit(maxDamage, random);
+        }
+
+        public void Attack(Direction direction, Random random)
+        {
+            foreach(Enemy enemy in Enemies)
+            {
+                enemy.Move(random);
+            }
+        }
+
         public void NewLevel(Random random)
         {
             level++;

@@ -9,6 +9,7 @@ namespace Dungeons
 {
     abstract class Enemy : Mover
     {
+        private const int NearPlayerDistance = 25;
         public int HitPoints { get; private set; }
 
         public Enemy(Game game, Point location, int hitPoints) : base(game, location)
@@ -17,6 +18,11 @@ namespace Dungeons
         }
 
         public abstract void Move(Random random);
+
+        protected bool NearPlayer()
+        {
+            return (Nearby(game.PlayerLocation, NearPlayerDistance));
+        }
 
         protected Direction FindPlayerDirection(Point playerLocation)
         {

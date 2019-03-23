@@ -18,7 +18,7 @@ namespace Dungeons
         {
             if(HitPoints >= 1)
             {
-                if(random.Next(1,3) == 1)
+                if(random.Next(1,3 ) == 1)
                 {
                     location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
                 }
@@ -26,6 +26,11 @@ namespace Dungeons
                 {
                     location = Move((Direction)random.Next(4), game.Boundaries);
                 }
+            }
+
+            if (NearPlayer())
+            {
+                game.HitPlayer(2, random);
             }
         }
     }
