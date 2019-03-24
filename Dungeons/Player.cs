@@ -58,6 +58,14 @@ namespace Dungeons
             HitPoints -= random.Next(1, maxDamage);
         }
 
+        public string choosenWeapon()
+        {
+            if (equippedWeapon != null)
+                return equippedWeapon.Name;
+            else
+                return "";
+        }
+
         public void Equip(string weaponName)
         {
             foreach(Weapon weapon in inventory)

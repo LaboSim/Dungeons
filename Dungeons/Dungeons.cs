@@ -76,8 +76,12 @@ namespace Dungeons
 
             weaponControl.Visible = true;
 
-            if (game.CheckPlayerInventory("Sword"))
-                equipSword.Visible = true;
+
+            //here function to check what i hava in inventory
+            //if (game.CheckPlayerInventory("Sword"))
+            //    equipSword.Visible = true;
+            checkInventory();
+            choosenWeapon();
 
             weaponControl.Location = game.WeaponInRoom.Location;
             if (game.WeaponInRoom.PickedUp)
@@ -93,8 +97,23 @@ namespace Dungeons
 
             if(enemiesShown < 1)
             {
-                MessageBox.Show("You defeated all of enemies at this level");
+                MessageBox.Show("You defeated all of enemies at this level", "Great Job");
             }    
+        }
+
+        private void choosenWeapon()
+        {
+            if(game.choosenWeaponByPlayer() == "Sword")
+            {
+                equipSword.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponSword.Visible = true;
+            }
+        }
+
+        private void checkInventory()
+        {
+            if (game.CheckPlayerInventory("Sword"))
+                equipSword.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
@@ -141,8 +160,13 @@ namespace Dungeons
 
         private void attackDown_Click(object sender, EventArgs e)
         {
-            game.Attack(Direction.Up, random);
+            game.Attack(Direction.Down, random);
             UpdateCharacters();
+        }
+
+        private void equipSword_Click(object sender, EventArgs e)
+        {
+            game.Equip("Sword");
         }
     }
 }

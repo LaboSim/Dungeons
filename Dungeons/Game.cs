@@ -57,6 +57,11 @@ namespace Dungeons
             player.Equip(weaponName);
         }
 
+        public string choosenWeaponByPlayer()
+        {
+            return player.choosenWeapon();
+        }
+
         public bool CheckPlayerInventory(string weaponName)
         {
             return player.Weapons.Contains(weaponName);
