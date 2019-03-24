@@ -29,9 +29,52 @@ namespace Dungeons
                 return false;
         }
 
+        public bool Nearby(Point enemyLocation, Point targetLocation, int distance)
+        {
+            if (Math.Abs(enemyLocation.X - targetLocation.X) < distance &&
+                (Math.Abs(enemyLocation.Y - targetLocation.Y) < distance))
+                return true;
+            else
+                return false;
+        }
+
         public Point Move(Direction direction, Rectangle boundaries)
         {
             Point newlocation = location;
+
+            switch (direction)
+            {
+                case Direction.Up:
+                    {
+                        if (newlocation.Y - MoveInterval >= boundaries.Top)
+                            newlocation.Y -= MoveInterval;
+                        break;
+                    }
+                case Direction.Down:
+                    {
+                        if (newlocation.Y + MoveInterval <= boundaries.Bottom)
+                            newlocation.Y += MoveInterval;
+                        break;
+                    }
+                case Direction.Left:
+                    {
+                        if (newlocation.X - MoveInterval >= boundaries.Left)
+                            newlocation.X -= MoveInterval;
+                        break;
+                    }
+                case Direction.Right:
+                    {
+                        if (newlocation.X + MoveInterval <= boundaries.Right)
+                            newlocation.X += MoveInterval;
+                        break;
+                    }
+            }
+            return newlocation;
+        }
+
+        public Point Move(Direction direction, Point playerLocation, Rectangle boundaries)
+        {
+            Point newlocation = playerLocation;
 
             switch (direction)
             {

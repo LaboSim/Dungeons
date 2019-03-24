@@ -64,7 +64,7 @@ namespace Dungeons
 
         public void Attack(Direction direction, Random random)
         {
-            //
+            player.Attack(direction, random);
             foreach(Enemy enemy in Enemies)
             {
                 enemy.Move(random);

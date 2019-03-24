@@ -120,5 +120,29 @@ namespace Dungeons
             game.Move(Direction.Down, random);
             UpdateCharacters();
         }
+
+        private void attackLeft_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Left, random);
+            UpdateCharacters();
+        }
+
+        private void attackRight_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Right, random);
+            UpdateCharacters();
+        }
+
+        private void attackUp_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Up, random);
+            UpdateCharacters();
+        }
+
+        private void attackDown_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Up, random);
+            UpdateCharacters();
+        }
     }
 }

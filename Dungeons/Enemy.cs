@@ -19,6 +19,11 @@ namespace Dungeons
 
         public abstract void Move(Random random);
 
+        public void Hit(int maxDamage, Random random)
+        {
+            HitPoints -= random.Next(1, maxDamage);
+        }
+
         protected bool NearPlayer()
         {
             return (Nearby(game.PlayerLocation, NearPlayerDistance));

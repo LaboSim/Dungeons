@@ -47,6 +47,12 @@ namespace Dungeons
             }
         }
 
+        public void Attack(Direction direction, Random random)
+        {
+            if (equippedWeapon != null)
+                equippedWeapon.Attack(direction, random);
+        }
+
         public void Hit(int maxDamage, Random random)
         {
             HitPoints -= random.Next(1, maxDamage);

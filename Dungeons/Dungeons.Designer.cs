@@ -278,6 +278,7 @@
             this.attackDown.TabIndex = 3;
             this.attackDown.Text = "↓";
             this.attackDown.UseVisualStyleBackColor = true;
+            this.attackDown.Click += new System.EventHandler(this.attackDown_Click);
             // 
             // attackUp
             // 
@@ -288,6 +289,7 @@
             this.attackUp.TabIndex = 2;
             this.attackUp.Text = "↑";
             this.attackUp.UseVisualStyleBackColor = true;
+            this.attackUp.Click += new System.EventHandler(this.attackUp_Click);
             // 
             // attackRight
             // 
@@ -297,6 +299,7 @@
             this.attackRight.TabIndex = 1;
             this.attackRight.Text = "→";
             this.attackRight.UseVisualStyleBackColor = true;
+            this.attackRight.Click += new System.EventHandler(this.attackRight_Click);
             // 
             // attackLeft
             // 
@@ -306,6 +309,7 @@
             this.attackLeft.TabIndex = 0;
             this.attackLeft.Text = "←";
             this.attackLeft.UseVisualStyleBackColor = true;
+            this.attackLeft.Click += new System.EventHandler(this.attackLeft_Click);
             // 
             // bat30
             // 
