@@ -57,6 +57,7 @@
             this.equipBow = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.equipWeaponSword = new System.Windows.Forms.PictureBox();
+            this.equipWeaponBow = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -68,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bow30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponSword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBow)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -378,6 +380,7 @@
             this.equipBow.TabIndex = 7;
             this.equipBow.TabStop = false;
             this.equipBow.Visible = false;
+            this.equipBow.Click += new System.EventHandler(this.equipBow_Click);
             // 
             // label5
             // 
@@ -402,6 +405,18 @@
             this.equipWeaponSword.TabStop = false;
             this.equipWeaponSword.Visible = false;
             // 
+            // equipWeaponBow
+            // 
+            this.equipWeaponBow.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponBow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.equipWeaponBow.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBow.Image")));
+            this.equipWeaponBow.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponBow.Name = "equipWeaponBow";
+            this.equipWeaponBow.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponBow.TabIndex = 10;
+            this.equipWeaponBow.TabStop = false;
+            this.equipWeaponBow.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,6 +424,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipWeaponBow);
             this.Controls.Add(this.equipWeaponSword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.equipBow);
@@ -435,6 +451,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bow30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponSword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBow)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,6 +487,7 @@
         private System.Windows.Forms.PictureBox equipBow;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox equipWeaponSword;
+        private System.Windows.Forms.PictureBox equipWeaponBow;
     }
 }
 

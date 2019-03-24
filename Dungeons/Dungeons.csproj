@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bat.cs" />
+    <Compile Include="Bow.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Dungeons.cs">
       <SubType>Form</SubType>

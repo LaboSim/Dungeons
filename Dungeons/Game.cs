@@ -88,6 +88,13 @@ namespace Dungeons
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
+                case 2:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        break;
+                    }
             }
         }
     }

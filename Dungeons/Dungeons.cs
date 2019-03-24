@@ -62,6 +62,7 @@ namespace Dungeons
             //
 
             sword30.Visible = false;
+            bow30.Visible = false;
 
             Control weaponControl = null;
 
@@ -72,14 +73,17 @@ namespace Dungeons
                         weaponControl = sword30;
                         break;
                     }
+                case "Bow":
+                    {
+                        weaponControl = bow30;
+                        break;
+                    }
             }
 
             weaponControl.Visible = true;
 
-
-            //here function to check what i hava in inventory
-            //if (game.CheckPlayerInventory("Sword"))
-            //    equipSword.Visible = true;
+            setClearEquipWeapon();
+            setNoneWeaponInInventory();
             checkInventory();
             choosenWeapon();
 
@@ -98,7 +102,21 @@ namespace Dungeons
             if(enemiesShown < 1)
             {
                 MessageBox.Show("You defeated all of enemies at this level", "Great Job");
+                game.NewLevel(random);
+                UpdateCharacters();
             }    
+        }
+
+        private void setNoneWeaponInInventory()
+        {
+            equipSword.BorderStyle = BorderStyle.None;
+            equipBow.BorderStyle = BorderStyle.None;
+        }
+
+        private void setClearEquipWeapon()
+        {
+            equipWeaponSword.Visible = false;
+            equipWeaponBow.Visible = false;
         }
 
         private void choosenWeapon()
@@ -108,12 +126,19 @@ namespace Dungeons
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
             }
+            else if(game.choosenWeaponByPlayer() == "Bow")
+            {
+                equipBow.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponBow.Visible = true;
+            }
         }
 
         private void checkInventory()
         {
             if (game.CheckPlayerInventory("Sword"))
                 equipSword.Visible = true;
+            if (game.CheckPlayerInventory("Bow"))
+                equipBow.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
@@ -167,6 +192,11 @@ namespace Dungeons
         private void equipSword_Click(object sender, EventArgs e)
         {
             game.Equip("Sword");
+        }
+
+        private void equipBow_Click(object sender, EventArgs e)
+        {
+            game.Equip("Bow");
         }
     }
 }

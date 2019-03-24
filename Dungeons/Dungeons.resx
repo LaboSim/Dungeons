@@ -274,6 +274,27 @@
         llokeMNXJglINMrW+RAZlhEZlo+lyl/LLcOoNlQ7ZAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="equipWeaponBow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAN/SURBVGhD3ZlLa1NBGIYDXoO09QIpamylSqTWVihS
+        ohZFoVIooovqwttClCIIoi4EQTeCIK4ruHMhuHEn0r3+gv4C/Qf+hNFnYMLMOW+SSZqci4uHdt6cy/fO
+        983lnFP582vjv0CKZUSKRWPz5yejdB8p5sWP7+vmxZPbZuXKWTNRHzeVSiXF2Oges9icM58/vg7MBRfK
+        A4K/tbpkAxyr7jRzhw6YqzOT5kFz2jxePGXunGkEoF84dtAa9a8TXDRL1t8/M7Mnp8zu7dvMwkTNBnjj
+        9JT9f3LfSND74GeIc8iaf73g4lmAAYKi913PkwWCQ390/7r59uWd+b35tRUoWcMU59Lmd/ebI2gME25O
+        BpwByoSeJ0CCJ1h1XtJEO6Q4SOhZAqXHqW3fAAPb7/kksSZAioOCLFAujdreVgnFGIBeTIAUBwHBkoWl
+        E3U7iN0A7WYAejUBUuwHFi0yQBDMMuMjVVtGZIOg1ABV9GMCpNgr9DI3r9dG7fRI8JhgYMdmAfo1AVLs
+        BTcbNWcOmw/Pl8295VlbRvD21Vp0QFsxAVKMhZtWd+0wq5emrQkHbcpLnaPYqgmQYgyMCcro5d3zgYk3
+        Dy/a7CRX3nYMwgRIsRvcnHK6PH80MPH05oINChMxO9ZBmQApdoJdJ5lYOXc8MAGNI/vtGqHOSzJIEyDF
+        TlD7a9fmAwOUEybI0rDWiW5IsRNsud0M5WDAo+dlAqTYCQKmtNxMxV8yoY5NMiwTIMV2sC6wyLHtwAwQ
+        GAGq432GaQKkqCAQAmfFZvsRO6hh2CZAigrKh204T3BZL3YxSDEJve82gQQVs0ZAViZAij5uBXebwNj9
+        U5YmQIo+lBHlRFnFllTWJkCKDna27GJ5uiMrWW87ekGKDjJAJnhE5blbHeOTlwmQIvjZILhuq3aeJkCK
+        4Gej25qRtwmQImMhdmwUwQRIkfFAJsgIeyt1DBTFBEiRd1Fu3Wj39qNIJiAl2AD/GaCsMJT8vXVMgUxA
+        SmBgU1YsgmrKLaIJSAnMVrwZZG+V/JhSVBOQEgiUDyzMVr5eZBMQNNy0y0D3n/qKbgKCBjMUr/z5fuHe
+        S5XBBAQNZ4T1g0FfFhMQNHjWcAshGSmLCQgavhEGe1lMQNBwpQUx2/YiETQwwvrhD/ayEDTcBxvMdNos
+        FpGUwFrC2Ij9ylQUpFhGpFhGpFg+Nip/AfeEvfqlYZh2AAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlgAAAGQCAMAAABF6+6qAAAABGdBTUEAANbY1E9YMgAAAd1QTFRFmZmZ
