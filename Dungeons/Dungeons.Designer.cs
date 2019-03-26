@@ -61,6 +61,7 @@
             this.mace30 = new System.Windows.Forms.PictureBox();
             this.equipMace = new System.Windows.Forms.PictureBox();
             this.equipWeaponMace = new System.Windows.Forms.PictureBox();
+            this.ghost30 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mace30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipMace)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponMace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost30)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -460,6 +462,18 @@
             this.equipWeaponMace.TabStop = false;
             this.equipWeaponMace.Visible = false;
             // 
+            // ghost30
+            // 
+            this.ghost30.BackColor = System.Drawing.Color.Transparent;
+            this.ghost30.Image = ((System.Drawing.Image)(resources.GetObject("ghost30.Image")));
+            this.ghost30.Location = new System.Drawing.Point(192, 12);
+            this.ghost30.Name = "ghost30";
+            this.ghost30.Size = new System.Drawing.Size(30, 30);
+            this.ghost30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ghost30.TabIndex = 14;
+            this.ghost30.TabStop = false;
+            this.ghost30.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -467,20 +481,21 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.player30);
             this.Controls.Add(this.equipWeaponMace);
             this.Controls.Add(this.equipMace);
-            this.Controls.Add(this.mace30);
             this.Controls.Add(this.equipWeaponBow);
             this.Controls.Add(this.equipWeaponSword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.equipBow);
             this.Controls.Add(this.equipSword);
-            this.Controls.Add(this.player30);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bat30);
             this.Controls.Add(this.sword30);
             this.Controls.Add(this.bow30);
+            this.Controls.Add(this.mace30);
+            this.Controls.Add(this.ghost30);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dungeons";
@@ -501,6 +516,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.mace30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipMace)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponMace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghost30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,6 +556,7 @@
         private System.Windows.Forms.PictureBox mace30;
         private System.Windows.Forms.PictureBox equipMace;
         private System.Windows.Forms.PictureBox equipWeaponMace;
+        private System.Windows.Forms.PictureBox ghost30;
     }
 }
 

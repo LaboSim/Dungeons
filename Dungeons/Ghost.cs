@@ -7,9 +7,9 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class Bat : Enemy
+    class Ghost : Enemy
     {
-        public Bat(Game game, Point location) : base(game, location, 6)
+        public Ghost(Game game, Point location) : base(game, location, 8)
         {
 
         }
@@ -18,17 +18,13 @@ namespace Dungeons
         {
             if(HitPoints >= 1)
             {
-                if(random.Next(1,3) == 1)
+                if(random.Next(1,4) == 1)
                 {
                     location = Move(FindPlayerDirection(game.PlayerLocation), game.Boundaries);
                 }
-                else
-                {
-                    location = Move((Direction)random.Next(4), game.Boundaries);
-                }
                 if (NearPlayer())
                 {
-                    game.HitPlayer(2, random);
+                    game.HitPlayer(3, random);
                 }
             }
         }

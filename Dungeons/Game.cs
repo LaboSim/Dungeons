@@ -84,6 +84,7 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
