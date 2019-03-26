@@ -19,6 +19,7 @@ namespace Dungeons
         {
             InitializeComponent();
             player30.Visible = true;
+            CenterToScreen();
         }
 
         private void Dungeons_Load(object sender, EventArgs e)
@@ -32,41 +33,89 @@ namespace Dungeons
 
         private void UpdateCharacters()
         {
-            player30.Location = game.PlayerLocation;
-            playerHitPoints.Text = game.PlayerHitPoints.ToString();
+            int enemiesShown;
+            UpdatePlayer();
+            enemiesShown = UpdateEnemies();
+           
+            setTheVisibilityOfTheWeaponOnTheBoard();
 
+            Control weaponControl = null;
+            chooseWeaponToDisplay(weaponControl);
+
+            setClearEquipWeapon();
+            setNoneWeaponInInventory();
+            checkInventory();
+            choosenWeapon();
+
+            checkTheStatusOfWeaponOnTheBoard(chooseWeaponToDisplay(weaponControl));
+
+            checkHitPoints(game.PlayerHitPoints);
+            countEnemies(enemiesShown);               
+        }
+
+        private int UpdateEnemies()
+        {
             bool showBat = false;
             int enemiesShown = 0;
 
-            foreach(Enemy enemy in game.Enemies)
+            foreach (Enemy enemy in game.Enemies)
             {
-                if(enemy is Bat)
+                if (enemy is Bat)
                 {
                     bat30.Location = enemy.Location;
                     batHitPoints.Text = enemy.HitPoints.ToString();
-                    if(enemy.HitPoints >= 1)
+                    if (enemy.HitPoints >= 1)
                     {
                         showBat = true;
+                        showEnemies(showBat);
                         enemiesShown++;
                     }
                 }
             }
-            if (showBat)
-                bat30.Visible = true;
-            else
+            //if (showBat)
+            //    bat30.Visible = true;
+            //else
+            //{
+            //    bat30.Visible = false;
+            //    batHitPoints.Text = "";
+            //}
+            return enemiesShown;
+        }
+
+        private void showEnemies(bool showEnemy)
+        {
+            foreach(Enemy enemy in game.Enemies)
             {
-                bat30.Visible = false;
-                batHitPoints.Text = "";
+                if(enemy is Bat)
+                {
+                    if (showEnemy)
+                        bat30.Visible = true;
+                    else
+                    {
+                        bat30.Visible = false;
+                        batHitPoints.Text = "";
+                    }
+                }
             }
+        }
 
-            //
+        private void UpdatePlayer()
+        {
+            player30.Location = game.PlayerLocation;
+            playerHitPoints.Text = game.PlayerHitPoints.ToString();
+        }
 
-            sword30.Visible = false;
-            bow30.Visible = false;
-            mace30.Visible = false;
+        private void checkTheStatusOfWeaponOnTheBoard(Control weaponControl)
+        {
+            weaponControl.Location = game.WeaponInRoom.Location;
+            if (game.WeaponInRoom.PickedUp)
+                weaponControl.Visible = false;
+            else
+                weaponControl.Visible = true;
+        }
 
-            Control weaponControl = null;
-
+        private Control chooseWeaponToDisplay(Control weaponControl)
+        {
             switch (game.WeaponInRoom.Name)
             {
                 case "Sword":
@@ -85,32 +134,34 @@ namespace Dungeons
                         break;
                     }
             }
-
             weaponControl.Visible = true;
+            return weaponControl;
+        }
 
-            setClearEquipWeapon();
-            setNoneWeaponInInventory();
-            checkInventory();
-            choosenWeapon();
-
-            weaponControl.Location = game.WeaponInRoom.Location;
-            if (game.WeaponInRoom.PickedUp)
-                weaponControl.Visible = false;
-            else
-                weaponControl.Visible = true;
-
-            if(game.PlayerHitPoints <= 0)
-            {
-                MessageBox.Show("You have been killed");
-                Application.Exit();
-            }
-
-            if(enemiesShown < 1)
+        private void countEnemies(int enemiesShown)
+        {
+            if (enemiesShown < 1)
             {
                 MessageBox.Show("You defeated all of enemies at this level", "Great Job");
                 game.NewLevel(random);
                 UpdateCharacters();
-            }    
+            }
+        }
+
+        private void checkHitPoints(int playerHitPoints)
+        {
+            if (game.PlayerHitPoints <= 0)
+            {
+                MessageBox.Show("You have been killed");
+                Application.Exit();
+            }
+        }
+
+        private void setTheVisibilityOfTheWeaponOnTheBoard()
+        {
+            sword30.Visible = false;
+            bow30.Visible = false;
+            mace30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -207,16 +258,19 @@ namespace Dungeons
         private void equipSword_Click(object sender, EventArgs e)
         {
             game.Equip("Sword");
+            UpdateCharacters();
         }
 
         private void equipBow_Click(object sender, EventArgs e)
         {
             game.Equip("Bow");
+            UpdateCharacters();
         }
 
         private void equipMace_Click(object sender, EventArgs e)
         {
             game.Equip("Mace");
+            UpdateCharacters();
         }
     }
 }

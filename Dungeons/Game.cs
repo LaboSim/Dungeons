@@ -34,7 +34,6 @@ namespace Dungeons
         public void Move(Direction direction, Random random)
         {
             player.Move(direction);
-
             foreach(Enemy enemy in Enemies)
             {
                 enemy.Move(random);
@@ -93,6 +92,13 @@ namespace Dungeons
                         Enemies.Clear();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
                         WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        break;
+                    }
+                case 3:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
                         break;
                     }
             }
