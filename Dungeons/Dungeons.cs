@@ -63,6 +63,7 @@ namespace Dungeons
 
             sword30.Visible = false;
             bow30.Visible = false;
+            mace30.Visible = false;
 
             Control weaponControl = null;
 
@@ -76,6 +77,11 @@ namespace Dungeons
                 case "Bow":
                     {
                         weaponControl = bow30;
+                        break;
+                    }
+                case "Mace":
+                    {
+                        weaponControl = mace30;
                         break;
                     }
             }
@@ -111,12 +117,14 @@ namespace Dungeons
         {
             equipSword.BorderStyle = BorderStyle.None;
             equipBow.BorderStyle = BorderStyle.None;
+            equipMace.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
         {
             equipWeaponSword.Visible = false;
             equipWeaponBow.Visible = false;
+            equipWeaponMace.Visible = false;
         }
 
         private void choosenWeapon()
@@ -131,6 +139,11 @@ namespace Dungeons
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
             }
+            else if(game.choosenWeaponByPlayer() == "Mace")
+            {
+                equipMace.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponMace.Visible = true;
+            }
         }
 
         private void checkInventory()
@@ -139,6 +152,8 @@ namespace Dungeons
                 equipSword.Visible = true;
             if (game.CheckPlayerInventory("Bow"))
                 equipBow.Visible = true;
+            if (game.CheckPlayerInventory("Mace"))
+                equipMace.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
@@ -197,6 +212,11 @@ namespace Dungeons
         private void equipBow_Click(object sender, EventArgs e)
         {
             game.Equip("Bow");
+        }
+
+        private void equipMace_Click(object sender, EventArgs e)
+        {
+            game.Equip("Mace");
         }
     }
 }

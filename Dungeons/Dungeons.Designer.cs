@@ -58,6 +58,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.equipWeaponSword = new System.Windows.Forms.PictureBox();
             this.equipWeaponBow = new System.Windows.Forms.PictureBox();
+            this.mace30 = new System.Windows.Forms.PictureBox();
+            this.equipMace = new System.Windows.Forms.PictureBox();
+            this.equipWeaponMace = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -70,6 +73,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponSword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mace30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipMace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponMace)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -417,6 +423,43 @@
             this.equipWeaponBow.TabStop = false;
             this.equipWeaponBow.Visible = false;
             // 
+            // mace30
+            // 
+            this.mace30.BackColor = System.Drawing.Color.Transparent;
+            this.mace30.Image = ((System.Drawing.Image)(resources.GetObject("mace30.Image")));
+            this.mace30.Location = new System.Drawing.Point(156, 12);
+            this.mace30.Name = "mace30";
+            this.mace30.Size = new System.Drawing.Size(30, 30);
+            this.mace30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mace30.TabIndex = 11;
+            this.mace30.TabStop = false;
+            this.mace30.Visible = false;
+            // 
+            // equipMace
+            // 
+            this.equipMace.BackColor = System.Drawing.Color.Transparent;
+            this.equipMace.Image = ((System.Drawing.Image)(resources.GetObject("equipMace.Image")));
+            this.equipMace.Location = new System.Drawing.Point(143, 278);
+            this.equipMace.Name = "equipMace";
+            this.equipMace.Size = new System.Drawing.Size(30, 30);
+            this.equipMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipMace.TabIndex = 12;
+            this.equipMace.TabStop = false;
+            this.equipMace.Visible = false;
+            this.equipMace.Click += new System.EventHandler(this.equipMace_Click);
+            // 
+            // equipWeaponMace
+            // 
+            this.equipWeaponMace.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponMace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.equipWeaponMace.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponMace.Image")));
+            this.equipWeaponMace.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponMace.Name = "equipWeaponMace";
+            this.equipWeaponMace.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponMace.TabIndex = 13;
+            this.equipWeaponMace.TabStop = false;
+            this.equipWeaponMace.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,6 +467,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipWeaponMace);
+            this.Controls.Add(this.equipMace);
+            this.Controls.Add(this.mace30);
             this.Controls.Add(this.equipWeaponBow);
             this.Controls.Add(this.equipWeaponSword);
             this.Controls.Add(this.label5);
@@ -452,6 +498,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponSword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mace30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipMace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponMace)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,6 +537,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox equipWeaponSword;
         private System.Windows.Forms.PictureBox equipWeaponBow;
+        private System.Windows.Forms.PictureBox mace30;
+        private System.Windows.Forms.PictureBox equipMace;
+        private System.Windows.Forms.PictureBox equipWeaponMace;
     }
 }
 
