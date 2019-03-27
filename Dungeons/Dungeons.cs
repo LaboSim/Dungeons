@@ -18,6 +18,8 @@ namespace Dungeons
         public Dungeons()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint |
+                ControlStyles.OptimizedDoubleBuffer, true);
             player30.Visible = true;
             CenterToScreen();
         }
@@ -167,7 +169,7 @@ namespace Dungeons
         {
             if (game.PlayerHitPoints <= 0)
             {
-                MessageBox.Show("You have been killed");
+                MessageBox.Show("You have been killed", "Opsss");
                 Application.Exit();
             }
         }

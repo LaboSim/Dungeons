@@ -496,6 +496,7 @@
             this.Controls.Add(this.bow30);
             this.Controls.Add(this.mace30);
             this.Controls.Add(this.ghost30);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dungeons";
