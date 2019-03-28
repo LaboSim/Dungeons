@@ -69,10 +69,10 @@ namespace Dungeons
                     batHitPoints.Text = enemy.HitPoints.ToString();
                     if (enemy.HitPoints >= 1)
                     {
-                        showBat = true;
-                        showEnemies(showBat);
+                        showBat = true;                        
                         enemiesShown++;
                     }
+                    showEnemies(showBat);
                 }
                 if(enemy is Ghost)
                 {
@@ -80,10 +80,10 @@ namespace Dungeons
                     ghostHitPoints.Text = enemy.HitPoints.ToString();
                     if(enemy.HitPoints >= 1)
                     {
-                        showGhost = true;
-                        showEnemies(showGhost);
+                        showGhost = true;                        
                         enemiesShown++;
                     }
+                    showEnemies(showGhost);
                 }
             }
             return enemiesShown;
@@ -165,6 +165,7 @@ namespace Dungeons
             if (enemiesShown < 1)
             {
                 MessageBox.Show("You defeated all of enemies at this level", "Great Job");
+                //UpdateCharacters();
                 game.NewLevel(random);
                 UpdateCharacters();
             }
