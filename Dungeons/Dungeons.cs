@@ -210,16 +210,19 @@ namespace Dungeons
             {
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
+                drinkButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
+                drinkButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
+                drinkButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Blue potion")
             {
