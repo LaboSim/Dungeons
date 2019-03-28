@@ -150,6 +150,11 @@ namespace Dungeons
                         weaponControl = mace30;
                         break;
                     }
+                case "Blue potion":
+                    {
+                        weaponControl = bluePotion30;
+                        break;
+                    }
             }
             weaponControl.Visible = true;
             return weaponControl;
@@ -179,6 +184,7 @@ namespace Dungeons
             sword30.Visible = false;
             bow30.Visible = false;
             mace30.Visible = false;
+            bluePotion30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -186,6 +192,7 @@ namespace Dungeons
             equipSword.BorderStyle = BorderStyle.None;
             equipBow.BorderStyle = BorderStyle.None;
             equipMace.BorderStyle = BorderStyle.None;
+            equipBluePotion.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
@@ -193,6 +200,7 @@ namespace Dungeons
             equipWeaponSword.Visible = false;
             equipWeaponBow.Visible = false;
             equipWeaponMace.Visible = false;
+            equipWeaponBluePotion.Visible = false;
         }
 
         private void choosenWeapon()
@@ -212,6 +220,12 @@ namespace Dungeons
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
             }
+            else if(game.choosenWeaponByPlayer() == "Blue potion")
+            {
+                equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponBluePotion.Visible = true;
+                drinkButton.Visible = true;
+            }
         }
 
         private void checkInventory()
@@ -222,6 +236,8 @@ namespace Dungeons
                 equipBow.Visible = true;
             if (game.CheckPlayerInventory("Mace"))
                 equipMace.Visible = true;
+            if (game.CheckPlayerInventory("Blue potion"))
+                equipBluePotion.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
@@ -289,5 +305,23 @@ namespace Dungeons
             game.Equip("Mace");
             UpdateCharacters();
         }
+
+        private void drinkButton_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Up, random);
+            if (game.CheckPotionUsed())
+            {
+                drinkButton.Visible = false;
+                equipBluePotion.Visible = false;
+            }
+            UpdateCharacters();
+        }
+
+        private void equipBluePotion_Click(object sender, EventArgs e)
+        {
+            game.Equip("Blue potion");
+            UpdateCharacters();
+        }
+
     }
 }

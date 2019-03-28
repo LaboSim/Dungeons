@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bat.cs" />
+    <Compile Include="BluePotion.cs" />
     <Compile Include="Bow.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Dungeons.cs">
@@ -62,6 +63,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Ghost.cs" />
+    <Compile Include="IPotion.cs" />
     <Compile Include="Mace.cs" />
     <Compile Include="Mover.cs" />
     <Compile Include="Player.cs" />
@@ -93,9 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

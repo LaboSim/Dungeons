@@ -56,6 +56,11 @@ namespace Dungeons
             player.Equip(weaponName);
         }
 
+        public bool CheckPotionUsed()
+        {
+            return player.CheckPotionUsed();
+        }
+
         public string choosenWeaponByPlayer()
         {
             return player.choosenWeapon();
@@ -64,6 +69,11 @@ namespace Dungeons
         public bool CheckPlayerInventory(string weaponName)
         {
             return player.Weapons.Contains(weaponName);
+        }
+
+        public void IncreasePlayerHealth(int health, Random random)
+        {
+            player.IncreaseHealth(health, random);
         }
 
         public void Attack(Direction direction, Random random)
@@ -84,15 +94,17 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Sword(this, GetRandomLocation(random));
+                        //Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                        //WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 2:
                     {
                         Enemies.Clear();
-                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        // Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:
