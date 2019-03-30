@@ -82,23 +82,22 @@ namespace Dungeons
 
             foreach(Weapon weapon in inventory)
             {
-                if(weapon.Name == equippedWeapon.Name && weapon is IPotion)
+                if (equippedWeapon.Name == weapon.Name && weapon is IPotion)
                 {
                     potion = weapon as IPotion;
                     potionUsed = potion.Used;
                     DeletePotion(weapon);
-                    equippedWeapon = null;
                     break;
                 }
-                break;
             }
             return potionUsed;
         }
 
         private void DeletePotion(Weapon weapon)
         {
+            equippedWeapon = null;
             inventory.Remove(weapon);
-            Weapons.Remove(weapon.Name);
+            Weapons.Remove(weapon.Name);           
         }
 
         public void IncreaseHealth(int health, Random random)

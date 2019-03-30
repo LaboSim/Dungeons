@@ -28,3 +28,13 @@ D:\Nowy folder\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResource.cach
 D:\Nowy folder\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
 D:\Nowy folder\Dungeons\Dungeons\obj\Debug\Dungeons.exe
 D:\Nowy folder\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\bin\Debug\Dungeons.exe.config
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\bin\Debug\Dungeons.exe
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\bin\Debug\Dungeons.pdb
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.csprojAssemblyReference.cache
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.Dungeons.resources
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.Properties.Resources.resources
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResource.cache
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.exe
+D:\Szymon\Programowanie\C#\Dungeons\Dungeons\obj\Debug\Dungeons.pdb

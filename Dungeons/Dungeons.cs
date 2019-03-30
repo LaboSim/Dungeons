@@ -45,8 +45,9 @@ namespace Dungeons
             chooseWeaponToDisplay(weaponControl);
 
             setClearEquipWeapon();
-            setNoneWeaponInInventory();
             checkInventory();
+            setNoneWeaponInInventory();
+            
             choosenWeapon();
 
             checkTheStatusOfWeaponOnTheBoard(chooseWeaponToDisplay(weaponControl));
@@ -236,12 +237,15 @@ namespace Dungeons
         {
             if (game.CheckPlayerInventory("Sword"))
                 equipSword.Visible = true;
+
             if (game.CheckPlayerInventory("Bow"))
                 equipBow.Visible = true;
+
             if (game.CheckPlayerInventory("Mace"))
                 equipMace.Visible = true;
+
             if (game.CheckPlayerInventory("Blue potion"))
-                equipBluePotion.Visible = true;
+                    equipBluePotion.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)
@@ -313,12 +317,10 @@ namespace Dungeons
         private void drinkButton_Click(object sender, EventArgs e)
         {
             game.Attack(Direction.Up, random);
-            if (game.CheckPotionUsed())
-            {
-                drinkButton.Visible = false;
-                equipBluePotion.Visible = false;
-            }
+            game.CheckPotionUsed();
             UpdateCharacters();
+            drinkButton.Visible = false;
+            equipBluePotion.Visible = false;
         }
 
         private void equipBluePotion_Click(object sender, EventArgs e)
