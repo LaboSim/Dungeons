@@ -74,6 +74,7 @@
             this.overallNumberOfMoves = new System.Windows.Forms.Label();
             this.overallNumberOfAttacksSuccessful = new System.Windows.Forms.Label();
             this.overallNumberOfAttacks = new System.Windows.Forms.Label();
+            this.tagLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -635,6 +636,17 @@
             this.overallNumberOfAttacks.TabIndex = 26;
             this.overallNumberOfAttacks.Text = "Overall number of attacks: 0";
             // 
+            // tagLabel
+            // 
+            this.tagLabel.AutoSize = true;
+            this.tagLabel.BackColor = System.Drawing.Color.Transparent;
+            this.tagLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tagLabel.Location = new System.Drawing.Point(535, 257);
+            this.tagLabel.Name = "tagLabel";
+            this.tagLabel.Size = new System.Drawing.Size(25, 9);
+            this.tagLabel.TabIndex = 27;
+            this.tagLabel.Text = "v1.2.9";
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -642,6 +654,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.tagLabel);
             this.Controls.Add(this.overallNumberOfAttacks);
             this.Controls.Add(this.overallNumberOfAttacksSuccessful);
             this.Controls.Add(this.overallNumberOfMoves);
@@ -750,6 +763,7 @@
         private System.Windows.Forms.Label overallNumberOfMoves;
         private System.Windows.Forms.Label overallNumberOfAttacksSuccessful;
         private System.Windows.Forms.Label overallNumberOfAttacks;
+        private System.Windows.Forms.Label tagLabel;
     }
 }
 
