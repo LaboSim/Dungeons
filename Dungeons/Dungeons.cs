@@ -60,6 +60,7 @@ namespace Dungeons
         {
             bool showBat = false;
             bool showGhost = false;
+            bool showGhoul = false;
             int enemiesShown = 0;
 
             foreach (Enemy enemy in game.Enemies)
@@ -85,6 +86,17 @@ namespace Dungeons
                         enemiesShown++;
                     }
                     showEnemies(showGhost);
+                }
+                if(enemy is Ghoul)
+                {
+                    ghoul30.Location = enemy.Location;
+                    ghoulHitPoints.Text = enemy.HitPoints.ToString();
+                    if(enemy.HitPoints >= 1)
+                    {
+                        showGhoul = true;
+                        enemiesShown++;
+                    }
+                    showEnemies(showGhoul);
                 }
             }
             return enemiesShown;
@@ -112,6 +124,16 @@ namespace Dungeons
                     {
                         ghost30.Visible = false;
                         ghostHitPoints.Text = "";
+                    }
+                }
+                if(enemy is Ghoul)
+                {
+                    if (showEnemy)
+                        ghoul30.Visible = true;
+                    else
+                    {
+                        ghoul30.Visible = false;
+                        ghoulHitPoints.Text = "";
                     }
                 }
             }

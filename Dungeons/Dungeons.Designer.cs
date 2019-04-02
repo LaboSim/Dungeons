@@ -66,6 +66,7 @@
             this.equipBluePotion = new System.Windows.Forms.PictureBox();
             this.equipWeaponBluePotion = new System.Windows.Forms.PictureBox();
             this.drinkButton = new System.Windows.Forms.Button();
+            this.ghoul30 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -85,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluePotion30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBluePotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBluePotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghoul30)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -177,7 +179,6 @@
             this.playerHitPoints.Name = "playerHitPoints";
             this.playerHitPoints.Size = new System.Drawing.Size(77, 13);
             this.playerHitPoints.TabIndex = 4;
-            this.playerHitPoints.Text = "playerHitPoints";
             this.playerHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // batHitPoints
@@ -188,7 +189,6 @@
             this.batHitPoints.Name = "batHitPoints";
             this.batHitPoints.Size = new System.Drawing.Size(77, 13);
             this.batHitPoints.TabIndex = 5;
-            this.batHitPoints.Text = "batHitPoints";
             this.batHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ghostHitPoints
@@ -199,7 +199,6 @@
             this.ghostHitPoints.Name = "ghostHitPoints";
             this.ghostHitPoints.Size = new System.Drawing.Size(77, 13);
             this.ghostHitPoints.TabIndex = 6;
-            this.ghostHitPoints.Text = "ghostHitPoints";
             this.ghostHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ghoulHitPoints
@@ -210,7 +209,6 @@
             this.ghoulHitPoints.Name = "ghoulHitPoints";
             this.ghoulHitPoints.Size = new System.Drawing.Size(77, 13);
             this.ghoulHitPoints.TabIndex = 7;
-            this.ghoulHitPoints.Text = "ghoulHitPoints";
             this.ghoulHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl1
@@ -530,6 +528,18 @@
             this.drinkButton.Visible = false;
             this.drinkButton.Click += new System.EventHandler(this.drinkButton_Click);
             // 
+            // ghoul30
+            // 
+            this.ghoul30.BackColor = System.Drawing.Color.Transparent;
+            this.ghoul30.Image = ((System.Drawing.Image)(resources.GetObject("ghoul30.Image")));
+            this.ghoul30.Location = new System.Drawing.Point(264, 12);
+            this.ghoul30.Name = "ghoul30";
+            this.ghoul30.Size = new System.Drawing.Size(30, 30);
+            this.ghoul30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ghoul30.TabIndex = 19;
+            this.ghoul30.TabStop = false;
+            this.ghoul30.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +547,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.ghoul30);
             this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.equipWeaponBluePotion);
             this.Controls.Add(this.equipBluePotion);
@@ -581,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bluePotion30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBluePotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBluePotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ghoul30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,6 +637,7 @@
         private System.Windows.Forms.PictureBox equipBluePotion;
         private System.Windows.Forms.PictureBox equipWeaponBluePotion;
         private System.Windows.Forms.Button drinkButton;
+        private System.Windows.Forms.PictureBox ghoul30;
     }
 }
 

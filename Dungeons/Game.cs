@@ -13,7 +13,6 @@ namespace Dungeons
 
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
-       // public List<string> PlayerWeapons {  get { return player.Weapons; } }
 
         private int level = 0;
         public int Level { get { return level; } }
@@ -56,8 +55,6 @@ namespace Dungeons
             player.Equip(weaponName);
         }
 
-
-        //
         public bool CheckPotionUsed()
         {
             return player.CheckPotionUsed();
@@ -109,7 +106,7 @@ namespace Dungeons
                 case 3:
                     {
                         Enemies.Clear();
-                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
                         WeaponInRoom = new Mace(this, GetRandomLocation(random));
                         break;
                     }
