@@ -67,6 +67,9 @@
             this.equipWeaponBluePotion = new System.Windows.Forms.PictureBox();
             this.drinkButton = new System.Windows.Forms.Button();
             this.ghoul30 = new System.Windows.Forms.PictureBox();
+            this.redPotion30 = new System.Windows.Forms.PictureBox();
+            this.equipRedPotion = new System.Windows.Forms.PictureBox();
+            this.equipWeaponRedPotion = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -87,6 +90,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBluePotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBluePotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghoul30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redPotion30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -399,11 +405,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(173, 278);
+            this.label5.Location = new System.Drawing.Point(218, 278);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Equipped weapon";
+            this.label5.Text = "Weapon";
             // 
             // equipWeaponSword
             // 
@@ -519,9 +525,9 @@
             // 
             // drinkButton
             // 
-            this.drinkButton.Location = new System.Drawing.Point(276, 236);
+            this.drinkButton.Location = new System.Drawing.Point(309, 233);
             this.drinkButton.Name = "drinkButton";
-            this.drinkButton.Size = new System.Drawing.Size(75, 23);
+            this.drinkButton.Size = new System.Drawing.Size(72, 23);
             this.drinkButton.TabIndex = 18;
             this.drinkButton.Text = "Drink";
             this.drinkButton.UseVisualStyleBackColor = true;
@@ -540,6 +546,44 @@
             this.ghoul30.TabStop = false;
             this.ghoul30.Visible = false;
             // 
+            // redPotion30
+            // 
+            this.redPotion30.BackColor = System.Drawing.Color.Transparent;
+            this.redPotion30.Image = ((System.Drawing.Image)(resources.GetObject("redPotion30.Image")));
+            this.redPotion30.Location = new System.Drawing.Point(300, 12);
+            this.redPotion30.Name = "redPotion30";
+            this.redPotion30.Size = new System.Drawing.Size(30, 30);
+            this.redPotion30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.redPotion30.TabIndex = 20;
+            this.redPotion30.TabStop = false;
+            this.redPotion30.Visible = false;
+            // 
+            // equipRedPotion
+            // 
+            this.equipRedPotion.BackColor = System.Drawing.Color.Transparent;
+            this.equipRedPotion.Image = ((System.Drawing.Image)(resources.GetObject("equipRedPotion.Image")));
+            this.equipRedPotion.Location = new System.Drawing.Point(107, 314);
+            this.equipRedPotion.Name = "equipRedPotion";
+            this.equipRedPotion.Size = new System.Drawing.Size(30, 30);
+            this.equipRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipRedPotion.TabIndex = 21;
+            this.equipRedPotion.TabStop = false;
+            this.equipRedPotion.Visible = false;
+            this.equipRedPotion.Click += new System.EventHandler(this.equipRedPotion_Click);
+            // 
+            // equipWeaponRedPotion
+            // 
+            this.equipWeaponRedPotion.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponRedPotion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.equipWeaponRedPotion.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponRedPotion.Image")));
+            this.equipWeaponRedPotion.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponRedPotion.Name = "equipWeaponRedPotion";
+            this.equipWeaponRedPotion.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipWeaponRedPotion.TabIndex = 22;
+            this.equipWeaponRedPotion.TabStop = false;
+            this.equipWeaponRedPotion.Visible = false;
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +591,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipWeaponRedPotion);
+            this.Controls.Add(this.equipRedPotion);
             this.Controls.Add(this.ghoul30);
             this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.equipWeaponBluePotion);
@@ -567,6 +613,7 @@
             this.Controls.Add(this.mace30);
             this.Controls.Add(this.ghost30);
             this.Controls.Add(this.bluePotion30);
+            this.Controls.Add(this.redPotion30);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -593,6 +640,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBluePotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBluePotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ghoul30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redPotion30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -638,6 +688,9 @@
         private System.Windows.Forms.PictureBox equipWeaponBluePotion;
         private System.Windows.Forms.Button drinkButton;
         private System.Windows.Forms.PictureBox ghoul30;
+        private System.Windows.Forms.PictureBox redPotion30;
+        private System.Windows.Forms.PictureBox equipRedPotion;
+        private System.Windows.Forms.PictureBox equipWeaponRedPotion;
     }
 }
 

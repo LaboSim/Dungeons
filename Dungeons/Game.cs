@@ -93,6 +93,8 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        //WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
@@ -100,14 +102,16 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        //WeaponInRoom = new Mace(this, GetRandomLocation(random));
                         break;
                     }
             }
