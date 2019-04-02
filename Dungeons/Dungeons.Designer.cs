@@ -367,6 +367,7 @@
             // equipSword
             // 
             this.equipSword.BackColor = System.Drawing.Color.Transparent;
+            this.equipSword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipSword.Image = ((System.Drawing.Image)(resources.GetObject("equipSword.Image")));
             this.equipSword.Location = new System.Drawing.Point(71, 278);
             this.equipSword.Name = "equipSword";
@@ -392,6 +393,7 @@
             // equipBow
             // 
             this.equipBow.BackColor = System.Drawing.Color.Transparent;
+            this.equipBow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipBow.Image = ((System.Drawing.Image)(resources.GetObject("equipBow.Image")));
             this.equipBow.Location = new System.Drawing.Point(107, 278);
             this.equipBow.Name = "equipBow";
@@ -452,6 +454,7 @@
             // equipMace
             // 
             this.equipMace.BackColor = System.Drawing.Color.Transparent;
+            this.equipMace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipMace.Image = ((System.Drawing.Image)(resources.GetObject("equipMace.Image")));
             this.equipMace.Location = new System.Drawing.Point(143, 278);
             this.equipMace.Name = "equipMace";
@@ -501,6 +504,7 @@
             // equipBluePotion
             // 
             this.equipBluePotion.BackColor = System.Drawing.Color.Transparent;
+            this.equipBluePotion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipBluePotion.Image = ((System.Drawing.Image)(resources.GetObject("equipBluePotion.Image")));
             this.equipBluePotion.Location = new System.Drawing.Point(71, 314);
             this.equipBluePotion.Name = "equipBluePotion";
@@ -526,9 +530,10 @@
             // 
             // drinkButton
             // 
-            this.drinkButton.Location = new System.Drawing.Point(309, 233);
+            this.drinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.drinkButton.Location = new System.Drawing.Point(272, 277);
             this.drinkButton.Name = "drinkButton";
-            this.drinkButton.Size = new System.Drawing.Size(72, 23);
+            this.drinkButton.Size = new System.Drawing.Size(123, 63);
             this.drinkButton.TabIndex = 18;
             this.drinkButton.Text = "Drink";
             this.drinkButton.UseVisualStyleBackColor = true;
@@ -562,6 +567,7 @@
             // equipRedPotion
             // 
             this.equipRedPotion.BackColor = System.Drawing.Color.Transparent;
+            this.equipRedPotion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipRedPotion.Image = ((System.Drawing.Image)(resources.GetObject("equipRedPotion.Image")));
             this.equipRedPotion.Location = new System.Drawing.Point(107, 314);
             this.equipRedPotion.Name = "equipRedPotion";
@@ -603,11 +609,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.actualLevel);
             this.Controls.Add(this.equipWeaponRedPotion);
             this.Controls.Add(this.equipRedPotion);
             this.Controls.Add(this.ghoul30);
-            this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.equipWeaponBluePotion);
             this.Controls.Add(this.equipBluePotion);
             this.Controls.Add(this.player30);
@@ -618,7 +624,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.equipBow);
             this.Controls.Add(this.equipSword);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.bat30);
             this.Controls.Add(this.sword30);
@@ -627,6 +632,7 @@
             this.Controls.Add(this.ghost30);
             this.Controls.Add(this.bluePotion30);
             this.Controls.Add(this.redPotion30);
+            this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
