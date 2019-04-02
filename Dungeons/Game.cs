@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Dungeons
 {
@@ -93,8 +94,6 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
-                        //WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
@@ -102,16 +101,68 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
-                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
-                        //WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        break;
+                    }
+                case 4:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                        if (CheckPlayerInventory("Bow"))
+                        {
+                            if (CheckPlayerInventory("Blue potion"))
+                                ;
+                            else
+                                WeaponInRoom = new BluePotion(this, GetRandomLocation(random));                         
+                        }
+                        else
+                            WeaponInRoom = new Bow(this, GetRandomLocation(random));                            
+                        break;
+                    }
+                case 5:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                        break;
+                    }
+                case 6:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                        break;
+                    }
+                case 7:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                        Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                        if (CheckPlayerInventory("Mace"))
+                        {
+                            if (CheckPlayerInventory("Red potion"))
+                                ;
+                            else
+                                WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
+                        }
+                        else
+                            WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                        break;
+                    }
+                case 8:
+                    {
+                        Application.Exit();
                         break;
                     }
             }

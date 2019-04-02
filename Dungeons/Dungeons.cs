@@ -195,6 +195,7 @@ namespace Dungeons
                 MessageBox.Show("You defeated all of enemies at this level", "Great Job");
                 game.NewLevel(random);
                 UpdateCharacters();
+                actualLevel.Text = "Level " + game.Level.ToString();
             }
         }
 

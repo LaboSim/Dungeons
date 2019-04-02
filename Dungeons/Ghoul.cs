@@ -9,7 +9,7 @@ namespace Dungeons
 {
     class Ghoul : Enemy
     {
-        public Ghoul(Game game, Point location) : base(game, location, 10)
+        public Ghoul(Game game, Point location) : base(game, location, 1)
         {
 
         }

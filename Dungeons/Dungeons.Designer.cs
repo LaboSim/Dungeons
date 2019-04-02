@@ -70,6 +70,7 @@
             this.redPotion30 = new System.Windows.Forms.PictureBox();
             this.equipRedPotion = new System.Windows.Forms.PictureBox();
             this.equipWeaponRedPotion = new System.Windows.Forms.PictureBox();
+            this.actualLevel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -584,6 +585,17 @@
             this.equipWeaponRedPotion.TabStop = false;
             this.equipWeaponRedPotion.Visible = false;
             // 
+            // actualLevel
+            // 
+            this.actualLevel.AutoSize = true;
+            this.actualLevel.BackColor = System.Drawing.Color.Transparent;
+            this.actualLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.actualLevel.Location = new System.Drawing.Point(462, 9);
+            this.actualLevel.Name = "actualLevel";
+            this.actualLevel.Size = new System.Drawing.Size(62, 16);
+            this.actualLevel.TabIndex = 23;
+            this.actualLevel.Text = "Level: 1";
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -591,6 +603,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.actualLevel);
             this.Controls.Add(this.equipWeaponRedPotion);
             this.Controls.Add(this.equipRedPotion);
             this.Controls.Add(this.ghoul30);
@@ -691,6 +704,7 @@
         private System.Windows.Forms.PictureBox redPotion30;
         private System.Windows.Forms.PictureBox equipRedPotion;
         private System.Windows.Forms.PictureBox equipWeaponRedPotion;
+        private System.Windows.Forms.Label actualLevel;
     }
 }
 
