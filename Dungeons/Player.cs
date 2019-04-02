@@ -10,8 +10,10 @@ namespace Dungeons
     class Player : Mover
     {
         private const int distanceOfTheWeaponToThePlayer = 1;
-        private int numberOfMove = 0;
-        public int NumberOfMoves { get { return numberOfMove; } }
+        private int numberOfMoves = 0;
+        public int NumberOfMoves { get { return numberOfMoves; } }
+        private int numberOfAttack = 0;
+        public int NumberOfAttack { get { return numberOfAttack; } }
         private Weapon equippedWeapon;
         private List<Weapon> inventory = new List<Weapon>();
         public List<string> Weapons
@@ -36,6 +38,7 @@ namespace Dungeons
 
         public void Move(Direction direction)
         {
+            numberOfMoves++;
             base.location = Move(direction, game.Boundaries);
             if (!game.WeaponInRoom.PickedUp)
             {
@@ -52,7 +55,10 @@ namespace Dungeons
         public void Attack(Direction direction, Random random)
         {
             if (equippedWeapon != null)
+            {
                 equippedWeapon.Attack(direction, random);
+                numberOfAttack++;
+            }                
         }
 
         public void Hit(int maxDamage, Random random)

@@ -71,6 +71,9 @@
             this.equipRedPotion = new System.Windows.Forms.PictureBox();
             this.equipWeaponRedPotion = new System.Windows.Forms.PictureBox();
             this.actualLevel = new System.Windows.Forms.Label();
+            this.overallNumberOfMoves = new System.Windows.Forms.Label();
+            this.overallNumberOfAttacksSuccessful = new System.Windows.Forms.Label();
+            this.overallNumberOfAttacks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -602,6 +605,36 @@
             this.actualLevel.TabIndex = 23;
             this.actualLevel.Text = "Level: 1";
             // 
+            // overallNumberOfMoves
+            // 
+            this.overallNumberOfMoves.AutoSize = true;
+            this.overallNumberOfMoves.BackColor = System.Drawing.Color.Transparent;
+            this.overallNumberOfMoves.Location = new System.Drawing.Point(189, 227);
+            this.overallNumberOfMoves.Name = "overallNumberOfMoves";
+            this.overallNumberOfMoves.Size = new System.Drawing.Size(136, 13);
+            this.overallNumberOfMoves.TabIndex = 24;
+            this.overallNumberOfMoves.Text = "Overall number of moves: 0";
+            // 
+            // overallNumberOfAttacksSuccessful
+            // 
+            this.overallNumberOfAttacksSuccessful.AutoSize = true;
+            this.overallNumberOfAttacksSuccessful.BackColor = System.Drawing.Color.Transparent;
+            this.overallNumberOfAttacksSuccessful.Location = new System.Drawing.Point(189, 253);
+            this.overallNumberOfAttacksSuccessful.Name = "overallNumberOfAttacksSuccessful";
+            this.overallNumberOfAttacksSuccessful.Size = new System.Drawing.Size(193, 13);
+            this.overallNumberOfAttacksSuccessful.TabIndex = 25;
+            this.overallNumberOfAttacksSuccessful.Text = "Overall number of attacks successful: 0";
+            // 
+            // overallNumberOfAttacks
+            // 
+            this.overallNumberOfAttacks.AutoSize = true;
+            this.overallNumberOfAttacks.BackColor = System.Drawing.Color.Transparent;
+            this.overallNumberOfAttacks.Location = new System.Drawing.Point(189, 240);
+            this.overallNumberOfAttacks.Name = "overallNumberOfAttacks";
+            this.overallNumberOfAttacks.Size = new System.Drawing.Size(140, 13);
+            this.overallNumberOfAttacks.TabIndex = 26;
+            this.overallNumberOfAttacks.Text = "Overall number of attacks: 0";
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,6 +642,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.overallNumberOfAttacks);
+            this.Controls.Add(this.overallNumberOfAttacksSuccessful);
+            this.Controls.Add(this.overallNumberOfMoves);
             this.Controls.Add(this.drinkButton);
             this.Controls.Add(this.actualLevel);
             this.Controls.Add(this.equipWeaponRedPotion);
@@ -711,6 +747,9 @@
         private System.Windows.Forms.PictureBox equipRedPotion;
         private System.Windows.Forms.PictureBox equipWeaponRedPotion;
         private System.Windows.Forms.Label actualLevel;
+        private System.Windows.Forms.Label overallNumberOfMoves;
+        private System.Windows.Forms.Label overallNumberOfAttacksSuccessful;
+        private System.Windows.Forms.Label overallNumberOfAttacks;
     }
 }
 

@@ -22,6 +22,7 @@ namespace Dungeons
         public void Hit(int maxDamage, Random random)
         {
             HitPoints -= random.Next(1, maxDamage);
+            game.NumberOfAttackSuccessful++;
         }
 
         protected bool NearPlayer()

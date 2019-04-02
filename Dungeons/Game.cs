@@ -15,6 +15,10 @@ namespace Dungeons
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
 
+        public int NumberOfPlayerMoves { get { return player.NumberOfMoves; } }
+        public int NumberOfAttackSuccessful { get; set; }
+        public int NumberOfAttack { get { return player.NumberOfAttack; } }
+
         private int level = 0;
         public int Level { get { return level; } }
 
