@@ -33,8 +33,17 @@ namespace Dungeons
         {
             if (e.KeyCode == Keys.Q)
                 Exit();
-            else if (e.KeyCode == Keys.S)
-                this.Close();
+
+            if(startGame.Text == "START GAME (S)")
+            {
+                if (e.KeyCode == Keys.S)
+                    this.Close();
+            }
+            else
+            {
+                if (e.KeyCode == Keys.R)
+                    Application.Restart();
+            }
         }
 
         private void Exit()
@@ -47,14 +56,9 @@ namespace Dungeons
             }
         }
 
-        public void VisibleRestart()
+        public void Restart()
         {
-            restartButton.Visible = true;
-        }
-
-        private void restartButton_Click(object sender, EventArgs e)
-        {
-            Application.Restart();
+            startGame.Text = "RESTART (R)";
         }
     }
 }
