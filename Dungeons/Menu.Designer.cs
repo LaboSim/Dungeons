@@ -30,6 +30,7 @@
         {
             this.quitGame = new System.Windows.Forms.Button();
             this.startGame = new System.Windows.Forms.Button();
+            this.restartButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // quitGame
@@ -53,11 +54,23 @@
             this.startGame.UseVisualStyleBackColor = true;
             this.startGame.Click += new System.EventHandler(this.startGame_Click);
             // 
+            // restartButton
+            // 
+            this.restartButton.Location = new System.Drawing.Point(161, 76);
+            this.restartButton.Name = "restartButton";
+            this.restartButton.Size = new System.Drawing.Size(75, 23);
+            this.restartButton.TabIndex = 2;
+            this.restartButton.Text = "RESTART";
+            this.restartButton.UseVisualStyleBackColor = true;
+            this.restartButton.Visible = false;
+            this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(236, 111);
+            this.Controls.Add(this.restartButton);
             this.Controls.Add(this.startGame);
             this.Controls.Add(this.quitGame);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -77,5 +90,6 @@
 
         private System.Windows.Forms.Button quitGame;
         private System.Windows.Forms.Button startGame;
+        private System.Windows.Forms.Button restartButton;
     }
 }

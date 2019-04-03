@@ -36,7 +36,7 @@ namespace Dungeons
 
         public Player(Game game, Point location) : base(game, location)
         {
-            HitPoints = 10;
+            HitPoints = 1;
         }
 
         public void Move(Direction direction)

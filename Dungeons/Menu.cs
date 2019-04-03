@@ -42,9 +42,19 @@ namespace Dungeons
             if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 == DialogResult.Yes)
             {
-                Thread.Sleep(1500);
+                //Thread.Sleep(1500);
                 Application.Exit();
             }
+        }
+
+        public void VisibleRestart()
+        {
+            restartButton.Visible = true;
+        }
+
+        private void restartButton_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

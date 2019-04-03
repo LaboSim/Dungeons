@@ -695,6 +695,7 @@
             this.Controls.Add(this.bluePotion30);
             this.Controls.Add(this.redPotion30);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;

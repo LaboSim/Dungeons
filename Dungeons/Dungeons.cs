@@ -211,7 +211,8 @@ namespace Dungeons
             if (game.PlayerHitPoints <= 0)
             {
                 MessageBox.Show("You have been killed", "Opsss");
-                Application.Exit();
+                menu.VisibleRestart();
+                menu.ShowDialog();
             }
         }
 
