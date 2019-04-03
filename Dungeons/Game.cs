@@ -22,7 +22,6 @@ namespace Dungeons
         private int level = 0;
         public int Level { get { return level; } }
 
-
         public List<Enemy> Enemies;
         public Weapon WeaponInRoom;
 

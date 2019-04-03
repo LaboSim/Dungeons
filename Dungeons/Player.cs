@@ -10,10 +10,13 @@ namespace Dungeons
     class Player : Mover
     {
         private const int distanceOfTheWeaponToThePlayer = 1;
+
         private int numberOfMoves = 0;
         public int NumberOfMoves { get { return numberOfMoves; } }
+
         private int numberOfAttack = 0;
         public int NumberOfAttack { get { return numberOfAttack; } }
+
         private Weapon equippedWeapon;
         private List<Weapon> inventory = new List<Weapon>();
         public List<string> Weapons

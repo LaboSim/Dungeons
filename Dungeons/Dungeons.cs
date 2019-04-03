@@ -14,6 +14,7 @@ namespace Dungeons
     {
         private Game game;
         private Random random = new Random();
+        Menu menu = new Menu();
 
         public Dungeons()
         {
@@ -22,6 +23,8 @@ namespace Dungeons
                 ControlStyles.OptimizedDoubleBuffer, true);
             player30.Visible = true;
             CenterToScreen();
+            this.Show();
+            menu.ShowDialog();
         }
 
         private void Dungeons_Load(object sender, EventArgs e)

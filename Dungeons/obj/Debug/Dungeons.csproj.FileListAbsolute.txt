@@ -48,3 +48,4 @@ D:\Programowanie\Dungeons\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateRe
 D:\Programowanie\Dungeons\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
 D:\Programowanie\Dungeons\Dungeons\Dungeons\obj\Debug\Dungeons.exe
 D:\Programowanie\Dungeons\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
+D:\Programowanie\Dungeons\Dungeons\Dungeons\obj\Debug\Dungeons.Menu.resources
