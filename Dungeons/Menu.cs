@@ -21,13 +21,29 @@ namespace Dungeons
 
         private void quitGame_Click(object sender, EventArgs e)
         {
-            Thread.Sleep(1500);
-            Application.Exit();
+            Exit();
         }
 
         private void startGame_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Menu_KeyDown(object sender, KeyEventArgs e)
+        {
+            Console.WriteLine(e.KeyCode.ToString());
+            if (e.KeyCode == Keys.Escape)
+                Exit();
+        }
+
+        private void Exit()
+        {
+            if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+                == DialogResult.Yes)
+            {
+                Thread.Sleep(1500);
+                Application.Exit();
+            }
         }
     }
 }
