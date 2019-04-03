@@ -38,7 +38,7 @@
             this.quitGame.Name = "quitGame";
             this.quitGame.Size = new System.Drawing.Size(75, 23);
             this.quitGame.TabIndex = 0;
-            this.quitGame.Text = "QUIT";
+            this.quitGame.Text = "QUIT (Q)";
             this.quitGame.UseVisualStyleBackColor = true;
             this.quitGame.Click += new System.EventHandler(this.quitGame_Click);
             // 
@@ -47,9 +47,9 @@
             this.startGame.AutoSize = true;
             this.startGame.Location = new System.Drawing.Point(68, 32);
             this.startGame.Name = "startGame";
-            this.startGame.Size = new System.Drawing.Size(87, 23);
+            this.startGame.Size = new System.Drawing.Size(103, 23);
             this.startGame.TabIndex = 1;
-            this.startGame.Text = "START GAME";
+            this.startGame.Text = "START GAME (S)";
             this.startGame.UseVisualStyleBackColor = true;
             this.startGame.Click += new System.EventHandler(this.startGame_Click);
             // 

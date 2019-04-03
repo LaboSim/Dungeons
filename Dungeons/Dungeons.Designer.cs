@@ -75,6 +75,7 @@
             this.overallNumberOfAttacksSuccessful = new System.Windows.Forms.Label();
             this.overallNumberOfAttacks = new System.Windows.Forms.Label();
             this.tagLabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -647,6 +648,17 @@
             this.tagLabel.TabIndex = 27;
             this.tagLabel.Text = "v1.2.9";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(463, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 9);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Menu - M";
+            // 
             // Dungeons
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,6 +666,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.tagLabel);
             this.Controls.Add(this.overallNumberOfAttacks);
             this.Controls.Add(this.overallNumberOfAttacksSuccessful);
@@ -683,11 +696,13 @@
             this.Controls.Add(this.redPotion30);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Dungeons";
             this.Text = "Dungeons";
             this.Load += new System.EventHandler(this.Dungeons_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dungeons_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.player30)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -764,6 +779,7 @@
         private System.Windows.Forms.Label overallNumberOfAttacksSuccessful;
         private System.Windows.Forms.Label overallNumberOfAttacks;
         private System.Windows.Forms.Label tagLabel;
+        private System.Windows.Forms.Label label6;
     }
 }
 

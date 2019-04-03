@@ -391,5 +391,13 @@ namespace Dungeons
             game.Equip("Red potion");
             UpdateCharacters();
         }
+
+        private void Dungeons_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.M)
+            {
+                menu.ShowDialog();
+            }
+        }
     }
 }

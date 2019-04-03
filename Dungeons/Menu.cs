@@ -31,9 +31,10 @@ namespace Dungeons
 
         private void Menu_KeyDown(object sender, KeyEventArgs e)
         {
-            Console.WriteLine(e.KeyCode.ToString());
-            if (e.KeyCode == Keys.Escape)
+            if (e.KeyCode == Keys.Q)
                 Exit();
+            else if (e.KeyCode == Keys.S)
+                this.Close();
         }
 
         private void Exit()
