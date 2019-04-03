@@ -17,6 +17,8 @@ namespace Dungeons
         {
             InitializeComponent();
             CenterToScreen();
+            title.BackColor = System.Drawing.Color.Transparent;
+            title.Parent = pictureBox1;
         }
 
         private void quitGame_Click(object sender, EventArgs e)
