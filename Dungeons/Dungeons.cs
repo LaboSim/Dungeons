@@ -16,6 +16,7 @@ namespace Dungeons
         private Random random = new Random();
         Menu menu = new Menu();
         EndOfGameForm endOfGame = new EndOfGameForm();
+        bool checkVisibilityStats = true;
 
         public DungeonsForm()
         {
@@ -404,6 +405,41 @@ namespace Dungeons
             {
                 menu.ShowDialog();
             }
+            else if(e.KeyCode == Keys.V)
+            {
+                VisibilityStatistics();
+            }
+        }
+
+        private void VisibilityStatistics()
+        {
+            if (checkVisibilityStats)
+                offVisibilityStats();
+            else
+                onVisibilityStats();
+        }
+
+        private void onVisibilityStats()
+        {
+            checkVisibilityStats = true;
+            overallNumberOfMoves.Visible = true;
+            overallNumberOfAttacks.Visible = true;
+            overallNumberOfAttacksSuccessful.Visible = true;
+            visibilityStats.Visible = false;
+        }
+
+        private void offVisibilityStats()
+        {
+            checkVisibilityStats = false;
+            overallNumberOfMoves.Visible = false;
+            overallNumberOfAttacks.Visible = false;
+            overallNumberOfAttacksSuccessful.Visible = false;
+            visibilityStats.Visible = true;
+        }
+
+        private void visibilityStats_Click(object sender, EventArgs e)
+        {
+            VisibilityStatistics();
         }
     }
 }

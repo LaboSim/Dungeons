@@ -76,6 +76,7 @@
             this.overallNumberOfAttacks = new System.Windows.Forms.Label();
             this.tagLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.visibilityStats = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -659,6 +660,19 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Menu - M";
             // 
+            // visibilityStats
+            // 
+            this.visibilityStats.AutoSize = true;
+            this.visibilityStats.BackColor = System.Drawing.Color.Transparent;
+            this.visibilityStats.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.visibilityStats.Location = new System.Drawing.Point(189, 227);
+            this.visibilityStats.Name = "visibilityStats";
+            this.visibilityStats.Size = new System.Drawing.Size(103, 13);
+            this.visibilityStats.TabIndex = 29;
+            this.visibilityStats.Text = "V - to show statistics";
+            this.visibilityStats.Visible = false;
+            this.visibilityStats.Click += new System.EventHandler(this.visibilityStats_Click);
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -666,6 +680,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.visibilityStats);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tagLabel);
             this.Controls.Add(this.overallNumberOfAttacks);
@@ -781,6 +796,7 @@
         private System.Windows.Forms.Label overallNumberOfAttacks;
         private System.Windows.Forms.Label tagLabel;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label visibilityStats;
     }
 }
 
