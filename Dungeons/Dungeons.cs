@@ -201,10 +201,8 @@ namespace Dungeons
                 game.NewLevel(random);
                 UpdateCharacters();
                 actualLevel.Text = "Level " + game.Level.ToString();
-                if(game.Level == 2)
-                {
+                if(game.Level == 8)
                     FinishTheGame();
-                }
             }
         }
 
