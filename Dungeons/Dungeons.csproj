@@ -91,6 +91,7 @@
     <Compile Include="RedPotion.cs" />
     <Compile Include="Sword.cs" />
     <Compile Include="Weapon.cs" />
+    <Compile Include="Wizard.cs" />
     <EmbeddedResource Include="Dungeons.resx">
       <DependentUpon>Dungeons.cs</DependentUpon>
     </EmbeddedResource>

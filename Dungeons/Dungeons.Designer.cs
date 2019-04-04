@@ -79,6 +79,7 @@
             this.visibilityStats = new System.Windows.Forms.Label();
             this.moveLabel = new System.Windows.Forms.Label();
             this.attackLabel = new System.Windows.Forms.Label();
+            this.wizard30 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -102,6 +103,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.redPotion30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wizard30)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -708,6 +710,18 @@
             this.attackLabel.Text = "ATTACK";
             this.attackLabel.Visible = false;
             // 
+            // wizard30
+            // 
+            this.wizard30.BackColor = System.Drawing.Color.Transparent;
+            this.wizard30.Image = ((System.Drawing.Image)(resources.GetObject("wizard30.Image")));
+            this.wizard30.Location = new System.Drawing.Point(336, 12);
+            this.wizard30.Name = "wizard30";
+            this.wizard30.Size = new System.Drawing.Size(30, 30);
+            this.wizard30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.wizard30.TabIndex = 32;
+            this.wizard30.TabStop = false;
+            this.wizard30.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -747,7 +761,8 @@
             this.Controls.Add(this.bluePotion30);
             this.Controls.Add(this.redPotion30);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Controls.Add(this.wizard30);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -779,6 +794,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.redPotion30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wizard30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -836,6 +852,7 @@
         private System.Windows.Forms.Label visibilityStats;
         private System.Windows.Forms.Label moveLabel;
         private System.Windows.Forms.Label attackLabel;
+        private System.Windows.Forms.PictureBox wizard30;
     }
 }
 
