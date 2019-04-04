@@ -13,6 +13,9 @@ namespace Dungeons
 {
     public partial class Menu : Form
     {
+        PrepareToPlay prepareToPlay = new PrepareToPlay();
+        int runApp = 0;
+
         public Menu()
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace Dungeons
         private void startGame_Click(object sender, EventArgs e)
         {
             if (startGame.Text == "START GAME (S)")
-                this.Close();
+                PrepareToGame();
             else
                 Application.Restart();
         }
@@ -42,13 +45,25 @@ namespace Dungeons
             if(startGame.Text == "START GAME (S)")
             {
                 if (e.KeyCode == Keys.S)
-                    this.Close();
+                    PrepareToGame();
             }
             else
             {
                 if (e.KeyCode == Keys.R)
                     Application.Restart();
             }
+        }
+
+        private void PrepareToGame()
+        {
+            if (runApp == 0)
+            {
+                prepareToPlay.Show();
+                Thread.Sleep(1000);
+                prepareToPlay.Close();
+            }
+            runApp++;
+            this.Close();
         }
 
         private void Exit()

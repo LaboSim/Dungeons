@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Dungeons
 {
-    public partial class Dungeons : Form
+    public partial class DungeonsForm : Form
     {
         private Game game;
         private Random random = new Random();
         Menu menu = new Menu();
-        EndOfGame endOfGame = new EndOfGame();
+        EndOfGameForm endOfGame = new EndOfGameForm();
 
-        public Dungeons()
+        public DungeonsForm()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint |

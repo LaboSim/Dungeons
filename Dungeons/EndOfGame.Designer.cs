@@ -1,6 +1,6 @@
 ﻿namespace Dungeons
 {
-    partial class EndOfGame
+    partial class EndOfGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // EndOfGame
+            // EndOfGameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -67,7 +67,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "EndOfGame";
+            this.Name = "EndOfGameForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -165,7 +165,7 @@ namespace Dungeons
                     }
                 case 8:
                     {
-                        System.Threading.Thread.Sleep(500);
+                        System.Threading.Thread.Sleep(50);
                         break;
                     }
             }

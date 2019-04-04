@@ -1,6 +1,6 @@
 ﻿namespace Dungeons
 {
-    partial class Dungeons
+    partial class DungeonsForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dungeons));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DungeonsForm));
             this.player30 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -659,7 +659,7 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Menu - M";
             // 
-            // Dungeons
+            // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -700,7 +700,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Dungeons";
+            this.Name = "DungeonsForm";
             this.Text = "Dungeons";
             this.Load += new System.EventHandler(this.Dungeons_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dungeons_KeyDown);

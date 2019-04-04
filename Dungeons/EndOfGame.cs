@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Dungeons
 {
-    public partial class EndOfGame : Form
+    public partial class EndOfGameForm : Form
     {
         Menu menu = new Menu();
 
-        public EndOfGame()
+        public EndOfGameForm()
         {
             InitializeComponent();
             CenterToScreen();
