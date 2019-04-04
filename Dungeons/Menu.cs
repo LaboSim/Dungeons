@@ -60,7 +60,6 @@ namespace Dungeons
         {
             if (runApp == 0)
             {
-                Console.WriteLine("OK");
                 prepareToPlay.Show();
                 Thread.Sleep(1000);
                 prepareToPlay.Close();

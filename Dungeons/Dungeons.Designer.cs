@@ -230,6 +230,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabControl1.Location = new System.Drawing.Point(272, 277);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -253,6 +254,7 @@
             // 
             // moveDown
             // 
+            this.moveDown.Cursor = System.Windows.Forms.Cursors.PanSouth;
             this.moveDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.moveDown.Location = new System.Drawing.Point(85, 6);
             this.moveDown.Name = "moveDown";
@@ -264,6 +266,7 @@
             // 
             // moveUp
             // 
+            this.moveUp.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.moveUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.moveUp.Location = new System.Drawing.Point(59, 6);
             this.moveUp.Name = "moveUp";
@@ -275,6 +278,7 @@
             // 
             // moveRight
             // 
+            this.moveRight.Cursor = System.Windows.Forms.Cursors.PanEast;
             this.moveRight.Location = new System.Drawing.Point(33, 6);
             this.moveRight.Name = "moveRight";
             this.moveRight.Size = new System.Drawing.Size(20, 26);
@@ -285,6 +289,7 @@
             // 
             // moveLeft
             // 
+            this.moveLeft.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.moveLeft.Location = new System.Drawing.Point(6, 6);
             this.moveLeft.Name = "moveLeft";
             this.moveLeft.Size = new System.Drawing.Size(20, 26);
@@ -309,6 +314,7 @@
             // 
             // attackDown
             // 
+            this.attackDown.Cursor = System.Windows.Forms.Cursors.PanSouth;
             this.attackDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.attackDown.Location = new System.Drawing.Point(85, 6);
             this.attackDown.Name = "attackDown";
@@ -320,6 +326,7 @@
             // 
             // attackUp
             // 
+            this.attackUp.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.attackUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.attackUp.Location = new System.Drawing.Point(59, 6);
             this.attackUp.Name = "attackUp";
@@ -331,6 +338,7 @@
             // 
             // attackRight
             // 
+            this.attackRight.Cursor = System.Windows.Forms.Cursors.PanEast;
             this.attackRight.Location = new System.Drawing.Point(33, 6);
             this.attackRight.Name = "attackRight";
             this.attackRight.Size = new System.Drawing.Size(20, 26);
@@ -341,6 +349,7 @@
             // 
             // attackLeft
             // 
+            this.attackLeft.Cursor = System.Windows.Forms.Cursors.PanWest;
             this.attackLeft.Location = new System.Drawing.Point(6, 6);
             this.attackLeft.Name = "attackLeft";
             this.attackLeft.Size = new System.Drawing.Size(20, 26);
@@ -650,7 +659,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.3";
+            this.tagLabel.Text = "v1.3.4";
             // 
             // label6
             // 
