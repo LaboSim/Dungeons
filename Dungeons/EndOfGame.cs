@@ -36,8 +36,6 @@ namespace Dungeons
         {
             if (e.KeyCode == Keys.Space)
                 ShowMainMenu();
-        }
-
-        
+        }       
     }
 }

@@ -39,8 +39,10 @@ namespace Dungeons
 
         private void Menu_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Q)
+            if (e.KeyCode == Keys.E)
                 Exit();
+            else if (e.KeyCode == Keys.I)
+                InstructionApp();
 
             if(startGame.Text == "START GAME (S)")
             {
@@ -80,6 +82,18 @@ namespace Dungeons
         public void Restart()
         {
             startGame.Text = "RESTART (R)";
+        }
+
+        private void instructionButton_Click(object sender, EventArgs e)
+        {
+            InstructionApp();
+        }
+
+        private void InstructionApp()
+        {
+            MessageBox.Show("In game:\n  M - Go to the menu\n  V  - Show/hide statistics\nIn splash screen:\n  S - Start game\n" +
+                "  I - Instruction\n  E - Exit\nIn final screen:\n  SPACE - Skip screen", "Instruction",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Information);        
         }
     }
 }
