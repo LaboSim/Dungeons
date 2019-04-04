@@ -22,9 +22,22 @@ namespace Dungeons
 
         private void newGameButton_Click(object sender, EventArgs e)
         {
+            ShowMainMenu();            
+        }
+
+        private void ShowMainMenu()
+        {
             menu.Restart();
             this.Close();
             menu.ShowDialog();
         }
+
+        private void EndOfGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+                ShowMainMenu();
+        }
+
+        
     }
 }

@@ -9,7 +9,7 @@ namespace Dungeons
 {
     class Ghost : Enemy
     {
-        public Ghost(Game game, Point location) : base(game, location, 1)
+        public Ghost(Game game, Point location) : base(game, location, 8)
         {
 
         }
