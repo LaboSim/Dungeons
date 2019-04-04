@@ -60,6 +60,12 @@
     <Compile Include="Dungeons.Designer.cs">
       <DependentUpon>Dungeons.cs</DependentUpon>
     </Compile>
+    <Compile Include="EndOfGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndOfGame.Designer.cs">
+      <DependentUpon>EndOfGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enemy.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Ghost.cs" />
@@ -81,6 +87,9 @@
     <Compile Include="Weapon.cs" />
     <EmbeddedResource Include="Dungeons.resx">
       <DependentUpon>Dungeons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndOfGame.resx">
+      <DependentUpon>EndOfGame.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

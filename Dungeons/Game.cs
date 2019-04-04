@@ -95,10 +95,9 @@ namespace Dungeons
             {
                 case 1:
                     {
-                        Enemies = new List<Enemy>();
+                        Enemies = new List<Enemy>();                    
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
-                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 2:
@@ -166,7 +165,7 @@ namespace Dungeons
                     }
                 case 8:
                     {
-                        Application.Exit();
+                        System.Threading.Thread.Sleep(500);
                         break;
                     }
             }

@@ -15,6 +15,7 @@ namespace Dungeons
         private Game game;
         private Random random = new Random();
         Menu menu = new Menu();
+        EndOfGame endOfGame = new EndOfGame();
 
         public Dungeons()
         {
@@ -77,9 +78,9 @@ namespace Dungeons
                         showBat = true;                        
                         enemiesShown++;
                     }
-                    showEnemies(showBat);
+                    showEnemies(showBat, enemy);
                 }
-                if(enemy is Ghost)
+                else if(enemy is Ghost)
                 {
                     ghost30.Location = enemy.Location;
                     ghostHitPoints.Text = enemy.HitPoints.ToString();
@@ -88,9 +89,9 @@ namespace Dungeons
                         showGhost = true;                        
                         enemiesShown++;
                     }
-                    showEnemies(showGhost);
+                    showEnemies(showGhost, enemy);
                 }
-                if(enemy is Ghoul)
+                else if(enemy is Ghoul)
                 {
                     ghoul30.Location = enemy.Location;
                     ghoulHitPoints.Text = enemy.HitPoints.ToString();
@@ -99,30 +100,28 @@ namespace Dungeons
                         showGhoul = true;
                         enemiesShown++;
                     }
-                    showEnemies(showGhoul);
+                    showEnemies(showGhoul, enemy);
                 }
             }
             return enemiesShown;
         }
 
-        private void showEnemies(bool showEnemy)
+        private void showEnemies(bool showEnemy, Enemy enemy)
         {
-            foreach(Enemy enemy in game.Enemies)
-            {
                 if(enemy is Bat)
                 {
                     if (showEnemy)
-                        bat30.Visible = true;
+                        bat30.Visible = true;                   
                     else
                     {
                         bat30.Visible = false;
                         batHitPoints.Text = "";
                     }
                 }
-                if(enemy is Ghost)
+                else if(enemy is Ghost)
                 {
                     if (showEnemy)
-                        ghost30.Visible = true;
+                        ghost30.Visible = true;                      
                     else
                     {
                         ghost30.Visible = false;
@@ -132,13 +131,12 @@ namespace Dungeons
                 if(enemy is Ghoul)
                 {
                     if (showEnemy)
-                        ghoul30.Visible = true;
+                        ghoul30.Visible = true;                   
                     else
                     {
                         ghoul30.Visible = false;
                         ghoulHitPoints.Text = "";
                     }
-                }
             }
         }
 
@@ -203,7 +201,16 @@ namespace Dungeons
                 game.NewLevel(random);
                 UpdateCharacters();
                 actualLevel.Text = "Level " + game.Level.ToString();
+                if(game.Level == 2)
+                {
+                    FinishTheGame();
+                }
             }
+        }
+
+        private void FinishTheGame()
+        {
+            endOfGame.ShowDialog();
         }
 
         private void checkHitPoints(int playerHitPoints)

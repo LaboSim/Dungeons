@@ -28,7 +28,10 @@ namespace Dungeons
 
         private void startGame_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (startGame.Text == "START GAME (S)")
+                this.Close();
+            else
+                Application.Restart();
         }
 
         private void Menu_KeyDown(object sender, KeyEventArgs e)
