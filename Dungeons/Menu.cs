@@ -58,12 +58,13 @@ namespace Dungeons
         {
             if (runApp == 0)
             {
+                Console.WriteLine("OK");
                 prepareToPlay.Show();
                 Thread.Sleep(1000);
                 prepareToPlay.Close();
+                runApp++;
             }
-            runApp++;
-            this.Close();
+            this.Close();     
         }
 
         private void Exit()
@@ -71,7 +72,7 @@ namespace Dungeons
             if (MessageBox.Show("Are you sure?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
                 == DialogResult.Yes)
             {
-                //Thread.Sleep(1500);
+                Thread.Sleep(500);
                 Application.Exit();
             }
         }

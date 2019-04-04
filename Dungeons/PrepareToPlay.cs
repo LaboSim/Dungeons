@@ -15,6 +15,7 @@ namespace Dungeons
         public PrepareToPlay()
         {
             InitializeComponent();
+            CenterToScreen();
         }
     }
 }
