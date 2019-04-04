@@ -441,5 +441,19 @@ namespace Dungeons
         {
             VisibilityStatistics();
         }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if(e.TabPage == tabPage1)
+            {
+                moveLabel.Visible = true;
+                attackLabel.Visible = false;
+            }
+            else
+            {
+                moveLabel.Visible = false;
+                attackLabel.Visible = true;
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Dungeons
     public partial class Menu : Form
     {
         PrepareToPlay prepareToPlay = new PrepareToPlay();
-        int runApp = 0;
+        byte runApp = 0;
 
         public Menu()
         {
@@ -92,8 +92,8 @@ namespace Dungeons
         private void InstructionApp()
         {
             MessageBox.Show("In game:\n  M - Go to the menu\n  V  - Show/hide statistics\nIn splash screen:\n  S - Start game\n" +
-                "  I - Instruction\n  E - Exit\nIn final screen:\n  SPACE - Skip screen", "Instruction",
-                MessageBoxButtons.OKCancel, MessageBoxIcon.Information);        
+                "  I - Instruction\n  E - Exit\nIn final screen:\n  SPACE - Skip screen", "Shortcuts",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);        
         }
     }
 }

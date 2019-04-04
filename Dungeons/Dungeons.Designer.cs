@@ -77,6 +77,8 @@
             this.tagLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.visibilityStats = new System.Windows.Forms.Label();
+            this.moveLabel = new System.Windows.Forms.Label();
+            this.attackLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -233,6 +235,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(123, 63);
             this.tabControl1.TabIndex = 2;
+            this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tabPage1
             // 
@@ -673,6 +676,29 @@
             this.visibilityStats.Visible = false;
             this.visibilityStats.Click += new System.EventHandler(this.visibilityStats_Click);
             // 
+            // moveLabel
+            // 
+            this.moveLabel.AutoSize = true;
+            this.moveLabel.BackColor = System.Drawing.Color.Transparent;
+            this.moveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.moveLabel.Location = new System.Drawing.Point(12, 193);
+            this.moveLabel.Name = "moveLabel";
+            this.moveLabel.Size = new System.Drawing.Size(46, 15);
+            this.moveLabel.TabIndex = 30;
+            this.moveLabel.Text = "MOVE";
+            // 
+            // attackLabel
+            // 
+            this.attackLabel.AutoSize = true;
+            this.attackLabel.BackColor = System.Drawing.Color.Transparent;
+            this.attackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.attackLabel.Location = new System.Drawing.Point(9, 193);
+            this.attackLabel.Name = "attackLabel";
+            this.attackLabel.Size = new System.Drawing.Size(57, 15);
+            this.attackLabel.TabIndex = 31;
+            this.attackLabel.Text = "ATTACK";
+            this.attackLabel.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,6 +706,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.attackLabel);
+            this.Controls.Add(this.moveLabel);
             this.Controls.Add(this.visibilityStats);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tagLabel);
@@ -797,6 +825,8 @@
         private System.Windows.Forms.Label tagLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label visibilityStats;
+        private System.Windows.Forms.Label moveLabel;
+        private System.Windows.Forms.Label attackLabel;
     }
 }
 
