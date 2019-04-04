@@ -646,7 +646,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.2";
+            this.tagLabel.Text = "v1.3.3";
             // 
             // label6
             // 
