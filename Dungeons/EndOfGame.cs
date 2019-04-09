@@ -13,6 +13,7 @@ namespace Dungeons
     public partial class EndOfGameForm : Form
     {
         Menu menu = new Menu();
+        int counter = 5;
 
         public EndOfGameForm()
         {
@@ -20,9 +21,16 @@ namespace Dungeons
             CenterToScreen();
         }
 
+        public void StartTimer()
+        {
+            timer1.Enabled = true;
+            timer1.Start();
+        }
+
         private void newGameButton_Click(object sender, EventArgs e)
         {
-            ShowMainMenu();            
+            timer1.Stop();
+            ShowMainMenu();
         }
 
         private void ShowMainMenu()
@@ -34,8 +42,20 @@ namespace Dungeons
 
         private void EndOfGame_KeyDown(object sender, KeyEventArgs e)
         {
+            timer1.Stop();
             if (e.KeyCode == Keys.Space)
                 ShowMainMenu();
-        }       
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            counter--;
+            if(counter == 0)
+            {
+                timer1.Stop();
+                ShowMainMenu();
+            }
+
+        }
     }
 }

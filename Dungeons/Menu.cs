@@ -49,6 +49,13 @@ namespace Dungeons
                 if (e.KeyCode == Keys.S)
                     PrepareToGame();
             }
+            //else if(startGame.Text == "CONTINUE (C)")
+            //{
+            //    if(e.KeyCode == Keys.C)
+            //    {
+            //        ;
+            //    }
+            //}
             else
             {
                 if (e.KeyCode == Keys.R)
@@ -64,8 +71,14 @@ namespace Dungeons
                 Thread.Sleep(1000);
                 prepareToPlay.Close();
                 runApp++;
+                //Continue();
             }
             this.Close();     
+        }
+
+        private void Continue()
+        {
+            startGame.Text = "CONTINUE (C)";
         }
 
         private void Exit()
