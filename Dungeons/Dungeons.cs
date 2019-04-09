@@ -196,19 +196,21 @@ namespace Dungeons
 
         private void countEnemies(int enemiesShown)
         {
+            if (game.Level == 8)
+                FinishTheGame();
+
             if (enemiesShown < 1)
             {
                 MessageBox.Show("You defeated all of enemies at this level", "Great Job");
                 game.NewLevel(random);
                 UpdateCharacters();
                 actualLevel.Text = "Level " + game.Level.ToString();
-                if(game.Level == 8)
-                    FinishTheGame();
             }
         }
 
         private void FinishTheGame()
         {
+            Console.WriteLine("Jestem w funkcji");
             endOfGame.ShowDialog();
         }
 

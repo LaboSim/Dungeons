@@ -163,8 +163,9 @@ namespace Dungeons
                             WeaponInRoom = new Mace(this, GetRandomLocation(random));
                         break;
                     }
-                case 8:
+               case 8:
                     {
+                        Enemies.Clear();
                         System.Threading.Thread.Sleep(50);
                         break;
                     }

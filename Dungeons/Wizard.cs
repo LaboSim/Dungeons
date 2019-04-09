@@ -9,7 +9,7 @@ namespace Dungeons
 {
     class Wizard : Enemy
     {
-        public Wizard(Game game, Point location) : (game, location, 20)
+        public Wizard(Game game, Point location) : base(game, location, 20)
         {
                 
         }
