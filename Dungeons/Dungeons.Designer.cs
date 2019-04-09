@@ -39,6 +39,8 @@
             this.batHitPoints = new System.Windows.Forms.Label();
             this.ghostHitPoints = new System.Windows.Forms.Label();
             this.ghoulHitPoints = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wizardHitPoints = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.moveDown = new System.Windows.Forms.Button();
@@ -80,8 +82,6 @@
             this.moveLabel = new System.Windows.Forms.Label();
             this.attackLabel = new System.Windows.Forms.Label();
             this.wizard30 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.wizardHitPoints = new System.Windows.Forms.Label();
             this.battleAxe30 = new System.Windows.Forms.PictureBox();
             this.equipBattleAxe = new System.Windows.Forms.PictureBox();
             this.equipWeaponBattleAxe = new System.Windows.Forms.PictureBox();
@@ -131,8 +131,8 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.09859F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.90141F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
@@ -143,7 +143,7 @@
             this.tableLayoutPanel1.Controls.Add(this.ghoulHitPoints, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.wizardHitPoints, 1, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(401, 277);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(444, 279);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -151,7 +151,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(123, 63);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(80, 63);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
@@ -205,7 +205,7 @@
             this.playerHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.playerHitPoints.Location = new System.Drawing.Point(43, 1);
             this.playerHitPoints.Name = "playerHitPoints";
-            this.playerHitPoints.Size = new System.Drawing.Size(77, 10);
+            this.playerHitPoints.Size = new System.Drawing.Size(34, 10);
             this.playerHitPoints.TabIndex = 4;
             this.playerHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -215,7 +215,7 @@
             this.batHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.batHitPoints.Location = new System.Drawing.Point(43, 13);
             this.batHitPoints.Name = "batHitPoints";
-            this.batHitPoints.Size = new System.Drawing.Size(77, 10);
+            this.batHitPoints.Size = new System.Drawing.Size(34, 10);
             this.batHitPoints.TabIndex = 5;
             this.batHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -225,7 +225,7 @@
             this.ghostHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ghostHitPoints.Location = new System.Drawing.Point(43, 25);
             this.ghostHitPoints.Name = "ghostHitPoints";
-            this.ghostHitPoints.Size = new System.Drawing.Size(77, 10);
+            this.ghostHitPoints.Size = new System.Drawing.Size(34, 10);
             this.ghostHitPoints.TabIndex = 6;
             this.ghostHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -233,18 +233,39 @@
             // 
             this.ghoulHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ghoulHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ghoulHitPoints.Location = new System.Drawing.Point(59, 37);
+            this.ghoulHitPoints.Location = new System.Drawing.Point(43, 37);
             this.ghoulHitPoints.Name = "ghoulHitPoints";
-            this.ghoulHitPoints.Size = new System.Drawing.Size(44, 10);
+            this.ghoulHitPoints.Size = new System.Drawing.Size(34, 10);
             this.ghoulHitPoints.TabIndex = 7;
             this.ghoulHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(3, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 10);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Wizard";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wizardHitPoints
+            // 
+            this.wizardHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.wizardHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wizardHitPoints.Location = new System.Drawing.Point(43, 50);
+            this.wizardHitPoints.Name = "wizardHitPoints";
+            this.wizardHitPoints.Size = new System.Drawing.Size(34, 10);
+            this.wizardHitPoints.TabIndex = 9;
+            this.wizardHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tabControl1.Location = new System.Drawing.Point(272, 277);
+            this.tabControl1.Location = new System.Drawing.Point(315, 279);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(123, 63);
@@ -439,9 +460,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(218, 278);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(261, 276);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 13);
+            this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "Weapon";
             // 
@@ -450,7 +472,7 @@
             this.equipWeaponSword.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponSword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponSword.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponSword.Image")));
-            this.equipWeaponSword.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponSword.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponSword.Name = "equipWeaponSword";
             this.equipWeaponSword.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponSword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -463,7 +485,7 @@
             this.equipWeaponBow.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponBow.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponBow.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBow.Image")));
-            this.equipWeaponBow.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponBow.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponBow.Name = "equipWeaponBow";
             this.equipWeaponBow.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponBow.TabIndex = 10;
@@ -501,7 +523,7 @@
             this.equipWeaponMace.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponMace.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponMace.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponMace.Image")));
-            this.equipWeaponMace.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponMace.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponMace.Name = "equipWeaponMace";
             this.equipWeaponMace.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponMace.TabIndex = 13;
@@ -551,7 +573,7 @@
             this.equipWeaponBluePotion.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponBluePotion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponBluePotion.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBluePotion.Image")));
-            this.equipWeaponBluePotion.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponBluePotion.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponBluePotion.Name = "equipWeaponBluePotion";
             this.equipWeaponBluePotion.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponBluePotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -562,7 +584,7 @@
             // drinkButton
             // 
             this.drinkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.drinkButton.Location = new System.Drawing.Point(272, 277);
+            this.drinkButton.Location = new System.Drawing.Point(315, 279);
             this.drinkButton.Name = "drinkButton";
             this.drinkButton.Size = new System.Drawing.Size(123, 63);
             this.drinkButton.TabIndex = 18;
@@ -614,7 +636,7 @@
             this.equipWeaponRedPotion.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponRedPotion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponRedPotion.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponRedPotion.Image")));
-            this.equipWeaponRedPotion.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponRedPotion.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponRedPotion.Name = "equipWeaponRedPotion";
             this.equipWeaponRedPotion.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -672,7 +694,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.6";
+            this.tagLabel.Text = "v1.3.7";
             // 
             // label6
             // 
@@ -733,27 +755,6 @@
             this.wizard30.TabStop = false;
             this.wizard30.Visible = false;
             // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label7.Location = new System.Drawing.Point(3, 50);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 10);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Wizard";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // wizardHitPoints
-            // 
-            this.wizardHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.wizardHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wizardHitPoints.Location = new System.Drawing.Point(43, 50);
-            this.wizardHitPoints.Name = "wizardHitPoints";
-            this.wizardHitPoints.Size = new System.Drawing.Size(77, 10);
-            this.wizardHitPoints.TabIndex = 9;
-            this.wizardHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // battleAxe30
             // 
             this.battleAxe30.BackColor = System.Drawing.Color.Transparent;
@@ -769,6 +770,7 @@
             // equipBattleAxe
             // 
             this.equipBattleAxe.BackColor = System.Drawing.Color.Transparent;
+            this.equipBattleAxe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipBattleAxe.Image = ((System.Drawing.Image)(resources.GetObject("equipBattleAxe.Image")));
             this.equipBattleAxe.Location = new System.Drawing.Point(179, 278);
             this.equipBattleAxe.Name = "equipBattleAxe";
@@ -777,13 +779,14 @@
             this.equipBattleAxe.TabIndex = 34;
             this.equipBattleAxe.TabStop = false;
             this.equipBattleAxe.Visible = false;
+            this.equipBattleAxe.Click += new System.EventHandler(this.equipBattleAxe_Click);
             // 
             // equipWeaponBattleAxe
             // 
             this.equipWeaponBattleAxe.BackColor = System.Drawing.Color.Transparent;
             this.equipWeaponBattleAxe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponBattleAxe.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBattleAxe.Image")));
-            this.equipWeaponBattleAxe.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponBattleAxe.Location = new System.Drawing.Point(263, 292);
             this.equipWeaponBattleAxe.Name = "equipWeaponBattleAxe";
             this.equipWeaponBattleAxe.Size = new System.Drawing.Size(50, 50);
             this.equipWeaponBattleAxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

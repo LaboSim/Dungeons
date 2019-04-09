@@ -497,5 +497,11 @@ namespace Dungeons
                 attackLabel.Visible = true;
             }
         }
+
+        private void equipBattleAxe_Click(object sender, EventArgs e)
+        {
+            game.Equip("Battle axe");
+            UpdateCharacters();
+        }
     }
 }
