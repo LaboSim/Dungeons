@@ -166,7 +166,6 @@ namespace Dungeons
                case 8:
                     {
                         Enemies.Clear();
-                        System.Threading.Thread.Sleep(50);
                         break;
                     }
             }

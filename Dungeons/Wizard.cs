@@ -16,7 +16,21 @@ namespace Dungeons
 
         public override void Move(Random random)
         {
-            throw new NotImplementedException();
+            if(HitPoints >= 1)
+            {
+                if(random.Next(1,6) == 1)
+                {
+                    location = Move((Direction)random.Next(4), game.Boundaries);
+                }
+                else
+                {
+                    location = Move(FindPlayerDirection(game.PlayerLocation),game.Boundaries);
+                }
+                if (NearPlayer())
+                {
+                    game.HitPlayer(5, random);
+                }
+            }
         }
     }
 }

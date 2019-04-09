@@ -54,9 +54,7 @@ namespace Dungeons
             else if(startGame.Text == "CONTINUE (C)")
             {
                 if(e.KeyCode == Keys.C)
-                {
                     PrepareToGame();
-                }
             }
             else
             {

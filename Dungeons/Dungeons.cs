@@ -407,13 +407,9 @@ namespace Dungeons
         private void Dungeons_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.M)
-            {
                 menu.ShowDialog();
-            }
             else if(e.KeyCode == Keys.V)
-            {
                 VisibilityStatistics();
-            }
         }
 
         private void VisibilityStatistics()
