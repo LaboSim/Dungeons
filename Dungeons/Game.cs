@@ -96,7 +96,7 @@ namespace Dungeons
                 case 1:
                     {
                         Enemies = new List<Enemy>();                    
-                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));                        
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
@@ -164,6 +164,12 @@ namespace Dungeons
                         break;
                     }
                case 8:
+                    {
+                        Enemies.Clear();
+                        Enemies.Add(new Wizard(this, GetRandomLocation(random)));
+                        break;
+                    }
+                case 9:
                     {
                         Enemies.Clear();
                         break;

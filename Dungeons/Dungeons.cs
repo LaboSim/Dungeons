@@ -66,6 +66,7 @@ namespace Dungeons
             bool showBat = false;
             bool showGhost = false;
             bool showGhoul = false;
+            bool showWizard = false;
             int enemiesShown = 0;
 
             foreach (Enemy enemy in game.Enemies)
@@ -103,6 +104,17 @@ namespace Dungeons
                     }
                     showEnemies(showGhoul, enemy);
                 }
+                else if(enemy is Wizard)
+                {
+                    wizard30.Location = enemy.Location;
+                    wizardHitPoints.Text = enemy.HitPoints.ToString();
+                    if(enemy.HitPoints >= 1)
+                    {
+                        showWizard = true;
+                        enemiesShown++;
+                    }
+                    showEnemies(showWizard, enemy);
+                }
             }
             return enemiesShown;
         }
@@ -119,7 +131,7 @@ namespace Dungeons
                         batHitPoints.Text = "";
                     }
                 }
-                else if(enemy is Ghost)
+                if(enemy is Ghost)
                 {
                     if (showEnemy)
                         ghost30.Visible = true;                      
@@ -138,7 +150,18 @@ namespace Dungeons
                         ghoul30.Visible = false;
                         ghoulHitPoints.Text = "";
                     }
-            }
+                }
+                if(enemy is Wizard)
+                {
+                    if (showEnemy)
+                        wizard30.Visible = true;
+                    else
+                    {
+                        wizard30.Visible = false;
+                        wizardHitPoints.Text = "";
+                    }
+
+                }
         }
 
         private void UpdatePlayer()
@@ -196,7 +219,7 @@ namespace Dungeons
 
         private void countEnemies(int enemiesShown)
         {
-            if (game.Level == 2)
+            if (game.Level == 9)
                 FinishTheGame();
 
             else

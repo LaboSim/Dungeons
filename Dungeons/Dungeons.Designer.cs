@@ -80,6 +80,8 @@
             this.moveLabel = new System.Windows.Forms.Label();
             this.attackLabel = new System.Windows.Forms.Label();
             this.wizard30 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.wizardHitPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -133,13 +135,16 @@
             this.tableLayoutPanel1.Controls.Add(this.batHitPoints, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ghostHitPoints, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.ghoulHitPoints, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.wizardHitPoints, 1, 4);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(401, 277);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(123, 63);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -147,10 +152,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(3, 1);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(34, 10);
             this.label1.TabIndex = 0;
             this.label1.Text = "Player";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,10 +163,10 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(10, 16);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(10, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
+            this.label2.Size = new System.Drawing.Size(19, 10);
             this.label2.TabIndex = 1;
             this.label2.Text = "Bat";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -169,10 +174,10 @@
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(3, 31);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(3, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
+            this.label3.Size = new System.Drawing.Size(34, 10);
             this.label3.TabIndex = 2;
             this.label3.Text = "Ghost";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,10 +185,10 @@
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(3, 47);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(3, 37);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
+            this.label4.Size = new System.Drawing.Size(34, 10);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ghoul";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -194,7 +199,7 @@
             this.playerHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.playerHitPoints.Location = new System.Drawing.Point(43, 1);
             this.playerHitPoints.Name = "playerHitPoints";
-            this.playerHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.playerHitPoints.Size = new System.Drawing.Size(77, 10);
             this.playerHitPoints.TabIndex = 4;
             this.playerHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -202,9 +207,9 @@
             // 
             this.batHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.batHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.batHitPoints.Location = new System.Drawing.Point(43, 16);
+            this.batHitPoints.Location = new System.Drawing.Point(43, 13);
             this.batHitPoints.Name = "batHitPoints";
-            this.batHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.batHitPoints.Size = new System.Drawing.Size(77, 10);
             this.batHitPoints.TabIndex = 5;
             this.batHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -212,9 +217,9 @@
             // 
             this.ghostHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ghostHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ghostHitPoints.Location = new System.Drawing.Point(43, 31);
+            this.ghostHitPoints.Location = new System.Drawing.Point(43, 25);
             this.ghostHitPoints.Name = "ghostHitPoints";
-            this.ghostHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.ghostHitPoints.Size = new System.Drawing.Size(77, 10);
             this.ghostHitPoints.TabIndex = 6;
             this.ghostHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -222,9 +227,9 @@
             // 
             this.ghoulHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ghoulHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ghoulHitPoints.Location = new System.Drawing.Point(43, 47);
+            this.ghoulHitPoints.Location = new System.Drawing.Point(59, 37);
             this.ghoulHitPoints.Name = "ghoulHitPoints";
-            this.ghoulHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.ghoulHitPoints.Size = new System.Drawing.Size(44, 10);
             this.ghoulHitPoints.TabIndex = 7;
             this.ghoulHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -722,6 +727,27 @@
             this.wizard30.TabStop = false;
             this.wizard30.Visible = false;
             // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label7.Location = new System.Drawing.Point(3, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 10);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Wizard";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // wizardHitPoints
+            // 
+            this.wizardHitPoints.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.wizardHitPoints.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wizardHitPoints.Location = new System.Drawing.Point(43, 50);
+            this.wizardHitPoints.Name = "wizardHitPoints";
+            this.wizardHitPoints.Size = new System.Drawing.Size(77, 10);
+            this.wizardHitPoints.TabIndex = 9;
+            this.wizardHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -853,6 +879,8 @@
         private System.Windows.Forms.Label moveLabel;
         private System.Windows.Forms.Label attackLabel;
         private System.Windows.Forms.PictureBox wizard30;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label wizardHitPoints;
     }
 }
 
