@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bat.cs" />
+    <Compile Include="BattleAxe.cs" />
     <Compile Include="BluePotion.cs" />
     <Compile Include="Bow.cs" />
     <Compile Include="Direction.cs" />

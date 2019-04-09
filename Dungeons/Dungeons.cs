@@ -212,6 +212,11 @@ namespace Dungeons
                         weaponControl = redPotion30;
                         break;
                     }
+                case "Battle axe":
+                    {
+                        weaponControl = battleAxe30;
+                        break;
+                    }
             }
             weaponControl.Visible = true;
             return weaponControl;
@@ -257,6 +262,7 @@ namespace Dungeons
             mace30.Visible = false;
             bluePotion30.Visible = false;
             redPotion30.Visible = false;
+            battleAxe30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -266,6 +272,7 @@ namespace Dungeons
             equipMace.BorderStyle = BorderStyle.None;
             equipBluePotion.BorderStyle = BorderStyle.None;
             equipRedPotion.BorderStyle = BorderStyle.None;
+            equipBattleAxe.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
@@ -275,6 +282,7 @@ namespace Dungeons
             equipWeaponMace.Visible = false;
             equipWeaponBluePotion.Visible = false;
             equipWeaponRedPotion.Visible = false;
+            equipWeaponBattleAxe.Visible = false;
         }
 
         private void choosenWeapon()
@@ -309,6 +317,12 @@ namespace Dungeons
                 equipWeaponRedPotion.Visible = true;
                 drinkButton.Visible = true;
             }
+            else if(game.choosenWeaponByPlayer() == "Battle axe")
+            {
+                equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponBattleAxe.Visible = true;
+                drinkButton.Visible = false;
+            }
         }
 
         private void checkInventory()
@@ -324,8 +338,12 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Blue potion"))
                     equipBluePotion.Visible = true;
+
             if (game.CheckPlayerInventory("Red potion"))
                 equipRedPotion.Visible = true;
+
+            if (game.CheckPlayerInventory("Battle axe"))
+                equipBattleAxe.Visible = true;
         }
 
         private void moveLeft_Click(object sender, EventArgs e)

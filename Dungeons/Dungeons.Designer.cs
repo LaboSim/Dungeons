@@ -82,6 +82,9 @@
             this.wizard30 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.wizardHitPoints = new System.Windows.Forms.Label();
+            this.battleAxe30 = new System.Windows.Forms.PictureBox();
+            this.equipBattleAxe = new System.Windows.Forms.PictureBox();
+            this.equipWeaponBattleAxe = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -106,6 +109,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizard30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.battleAxe30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipBattleAxe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBattleAxe)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -666,7 +672,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.5";
+            this.tagLabel.Text = "v1.3.6";
             // 
             // label6
             // 
@@ -748,6 +754,43 @@
             this.wizardHitPoints.TabIndex = 9;
             this.wizardHitPoints.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // battleAxe30
+            // 
+            this.battleAxe30.BackColor = System.Drawing.Color.Transparent;
+            this.battleAxe30.Image = ((System.Drawing.Image)(resources.GetObject("battleAxe30.Image")));
+            this.battleAxe30.Location = new System.Drawing.Point(12, 48);
+            this.battleAxe30.Name = "battleAxe30";
+            this.battleAxe30.Size = new System.Drawing.Size(30, 30);
+            this.battleAxe30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.battleAxe30.TabIndex = 33;
+            this.battleAxe30.TabStop = false;
+            this.battleAxe30.Visible = false;
+            // 
+            // equipBattleAxe
+            // 
+            this.equipBattleAxe.BackColor = System.Drawing.Color.Transparent;
+            this.equipBattleAxe.Image = ((System.Drawing.Image)(resources.GetObject("equipBattleAxe.Image")));
+            this.equipBattleAxe.Location = new System.Drawing.Point(179, 278);
+            this.equipBattleAxe.Name = "equipBattleAxe";
+            this.equipBattleAxe.Size = new System.Drawing.Size(30, 30);
+            this.equipBattleAxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipBattleAxe.TabIndex = 34;
+            this.equipBattleAxe.TabStop = false;
+            this.equipBattleAxe.Visible = false;
+            // 
+            // equipWeaponBattleAxe
+            // 
+            this.equipWeaponBattleAxe.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponBattleAxe.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.equipWeaponBattleAxe.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBattleAxe.Image")));
+            this.equipWeaponBattleAxe.Location = new System.Drawing.Point(216, 293);
+            this.equipWeaponBattleAxe.Name = "equipWeaponBattleAxe";
+            this.equipWeaponBattleAxe.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponBattleAxe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipWeaponBattleAxe.TabIndex = 35;
+            this.equipWeaponBattleAxe.TabStop = false;
+            this.equipWeaponBattleAxe.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,6 +798,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipWeaponBattleAxe);
+            this.Controls.Add(this.equipBattleAxe);
             this.Controls.Add(this.attackLabel);
             this.Controls.Add(this.moveLabel);
             this.Controls.Add(this.visibilityStats);
@@ -788,6 +833,7 @@
             this.Controls.Add(this.redPotion30);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.wizard30);
+            this.Controls.Add(this.battleAxe30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -821,6 +867,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipRedPotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponRedPotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizard30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.battleAxe30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipBattleAxe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBattleAxe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,6 +930,9 @@
         private System.Windows.Forms.PictureBox wizard30;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label wizardHitPoints;
+        private System.Windows.Forms.PictureBox battleAxe30;
+        private System.Windows.Forms.PictureBox equipBattleAxe;
+        private System.Windows.Forms.PictureBox equipWeaponBattleAxe;
     }
 }
 
