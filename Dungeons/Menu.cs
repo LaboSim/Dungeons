@@ -33,6 +33,8 @@ namespace Dungeons
         {
             if (startGame.Text == "START GAME (S)")
                 PrepareToGame();
+            else if (startGame.Text == "CONTINUE (C)")
+                PrepareToGame();
             else
                 Application.Restart();
         }
@@ -49,13 +51,13 @@ namespace Dungeons
                 if (e.KeyCode == Keys.S)
                     PrepareToGame();
             }
-            //else if(startGame.Text == "CONTINUE (C)")
-            //{
-            //    if(e.KeyCode == Keys.C)
-            //    {
-            //        ;
-            //    }
-            //}
+            else if(startGame.Text == "CONTINUE (C)")
+            {
+                if(e.KeyCode == Keys.C)
+                {
+                    PrepareToGame();
+                }
+            }
             else
             {
                 if (e.KeyCode == Keys.R)
@@ -71,7 +73,7 @@ namespace Dungeons
                 Thread.Sleep(1000);
                 prepareToPlay.Close();
                 runApp++;
-                //Continue();
+                Continue();
             }
             this.Close();     
         }
