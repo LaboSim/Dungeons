@@ -86,6 +86,10 @@
             this.equipBattleAxe = new System.Windows.Forms.PictureBox();
             this.equipWeaponBattleAxe = new System.Windows.Forms.PictureBox();
             this.numberOfArrows = new System.Windows.Forms.Label();
+            this.quiver30 = new System.Windows.Forms.PictureBox();
+            this.equipQuiver = new System.Windows.Forms.PictureBox();
+            this.equipWeaponQuiver = new System.Windows.Forms.PictureBox();
+            this.quiverButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -113,6 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.battleAxe30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBattleAxe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBattleAxe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quiver30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipQuiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponQuiver)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -695,7 +702,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.8";
+            this.tagLabel.Text = "v1.3.9";
             // 
             // label6
             // 
@@ -726,7 +733,7 @@
             this.moveLabel.AutoSize = true;
             this.moveLabel.BackColor = System.Drawing.Color.Transparent;
             this.moveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moveLabel.Location = new System.Drawing.Point(12, 193);
+            this.moveLabel.Location = new System.Drawing.Point(416, 240);
             this.moveLabel.Name = "moveLabel";
             this.moveLabel.Size = new System.Drawing.Size(46, 15);
             this.moveLabel.TabIndex = 30;
@@ -737,7 +744,7 @@
             this.attackLabel.AutoSize = true;
             this.attackLabel.BackColor = System.Drawing.Color.Transparent;
             this.attackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.attackLabel.Location = new System.Drawing.Point(9, 193);
+            this.attackLabel.Location = new System.Drawing.Point(416, 240);
             this.attackLabel.Name = "attackLabel";
             this.attackLabel.Size = new System.Drawing.Size(57, 15);
             this.attackLabel.TabIndex = 31;
@@ -807,6 +814,57 @@
             this.numberOfArrows.Text = "0";
             this.numberOfArrows.Visible = false;
             // 
+            // quiver30
+            // 
+            this.quiver30.BackColor = System.Drawing.Color.Transparent;
+            this.quiver30.Image = ((System.Drawing.Image)(resources.GetObject("quiver30.Image")));
+            this.quiver30.Location = new System.Drawing.Point(48, 48);
+            this.quiver30.Name = "quiver30";
+            this.quiver30.Size = new System.Drawing.Size(30, 30);
+            this.quiver30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.quiver30.TabIndex = 37;
+            this.quiver30.TabStop = false;
+            this.quiver30.Visible = false;
+            // 
+            // equipQuiver
+            // 
+            this.equipQuiver.BackColor = System.Drawing.Color.Transparent;
+            this.equipQuiver.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.equipQuiver.Image = ((System.Drawing.Image)(resources.GetObject("equipQuiver.Image")));
+            this.equipQuiver.Location = new System.Drawing.Point(143, 314);
+            this.equipQuiver.Name = "equipQuiver";
+            this.equipQuiver.Size = new System.Drawing.Size(30, 30);
+            this.equipQuiver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipQuiver.TabIndex = 38;
+            this.equipQuiver.TabStop = false;
+            this.equipQuiver.Visible = false;
+            this.equipQuiver.Click += new System.EventHandler(this.equipQuiver_Click);
+            // 
+            // equipWeaponQuiver
+            // 
+            this.equipWeaponQuiver.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponQuiver.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.equipWeaponQuiver.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponQuiver.Image")));
+            this.equipWeaponQuiver.Location = new System.Drawing.Point(263, 293);
+            this.equipWeaponQuiver.Name = "equipWeaponQuiver";
+            this.equipWeaponQuiver.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponQuiver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipWeaponQuiver.TabIndex = 39;
+            this.equipWeaponQuiver.TabStop = false;
+            this.equipWeaponQuiver.Visible = false;
+            // 
+            // quiverButton
+            // 
+            this.quiverButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.quiverButton.Location = new System.Drawing.Point(315, 279);
+            this.quiverButton.Name = "quiverButton";
+            this.quiverButton.Size = new System.Drawing.Size(123, 63);
+            this.quiverButton.TabIndex = 40;
+            this.quiverButton.Text = "Use";
+            this.quiverButton.UseVisualStyleBackColor = true;
+            this.quiverButton.Visible = false;
+            this.quiverButton.Click += new System.EventHandler(this.quiverButton_Click);
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -814,6 +872,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.quiverButton);
+            this.Controls.Add(this.equipWeaponQuiver);
+            this.Controls.Add(this.equipQuiver);
             this.Controls.Add(this.numberOfArrows);
             this.Controls.Add(this.equipWeaponBattleAxe);
             this.Controls.Add(this.equipBattleAxe);
@@ -851,6 +912,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.wizard30);
             this.Controls.Add(this.battleAxe30);
+            this.Controls.Add(this.quiver30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -887,6 +949,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.battleAxe30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBattleAxe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBattleAxe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quiver30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipQuiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponQuiver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -951,6 +1016,10 @@
         private System.Windows.Forms.PictureBox equipBattleAxe;
         private System.Windows.Forms.PictureBox equipWeaponBattleAxe;
         private System.Windows.Forms.Label numberOfArrows;
+        private System.Windows.Forms.PictureBox quiver30;
+        private System.Windows.Forms.PictureBox equipQuiver;
+        private System.Windows.Forms.PictureBox equipWeaponQuiver;
+        private System.Windows.Forms.Button quiverButton;
     }
 }
 

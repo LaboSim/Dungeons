@@ -70,7 +70,6 @@ namespace Dungeons
                 {
                     NumberOfArrows--;
                     checkNumberOfArrows();
-                    Console.WriteLine(NumberOfArrows);
                 }                                
                 numberOfAttack++;
             }                
@@ -104,25 +103,25 @@ namespace Dungeons
             }
         }
 
-        public bool CheckPotionUsed()
+        public bool CheckUsedDisposable()
         {
-            IPotion potion;
-            bool potionUsed = true;
+            IDisposable disposable;
+            bool used = true;
 
             foreach(Weapon weapon in inventory)
             {
-                if (equippedWeapon.Name == weapon.Name && weapon is IPotion)
+                if (equippedWeapon.Name == weapon.Name && weapon is IDisposable)
                 {
-                    potion = weapon as IPotion;
-                    potionUsed = potion.Used;
-                    DeletePotion(weapon);
+                    disposable = weapon as IDisposable;
+                    used = disposable.Used;
+                    OneOffItem(weapon);
                     break;
                 }
             }
-            return potionUsed;
+            return used;
         }
 
-        private void DeletePotion(Weapon weapon)
+        private void OneOffItem(Weapon weapon)
         {
             equippedWeapon = null;
             inventory.Remove(weapon);
@@ -132,6 +131,11 @@ namespace Dungeons
         public void IncreaseHealth(int health, Random random)
         {
             HitPoints += random.Next(1, health);
+        }
+
+        public void IncreaseNumberOfArrows(int number, Random random)
+        {
+            NumberOfArrows += random.Next(1, number);
         }
     }
 }

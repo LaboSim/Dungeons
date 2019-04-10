@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class BluePotion : Weapon, IPotion
+    class BluePotion : Weapon, IDisposable
     {
         public BluePotion(Game game, Point location) : base(game, location)
         {

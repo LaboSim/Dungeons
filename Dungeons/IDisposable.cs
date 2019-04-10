@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dungeons
 {
-    interface IPotion
+    interface IDisposable
     {
         bool Used { get; }
     }

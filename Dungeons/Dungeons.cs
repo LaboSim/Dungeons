@@ -217,6 +217,11 @@ namespace Dungeons
                         weaponControl = battleAxe30;
                         break;
                     }
+                case "Quiver":
+                    {
+                        weaponControl = quiver30;
+                        break;
+                    }
             }
             weaponControl.Visible = true;
             return weaponControl;
@@ -263,6 +268,7 @@ namespace Dungeons
             bluePotion30.Visible = false;
             redPotion30.Visible = false;
             battleAxe30.Visible = false;
+            quiver30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -273,6 +279,7 @@ namespace Dungeons
             equipBluePotion.BorderStyle = BorderStyle.None;
             equipRedPotion.BorderStyle = BorderStyle.None;
             equipBattleAxe.BorderStyle = BorderStyle.None;
+            equipQuiver.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
@@ -283,6 +290,7 @@ namespace Dungeons
             equipWeaponBluePotion.Visible = false;
             equipWeaponRedPotion.Visible = false;
             equipWeaponBattleAxe.Visible = false;
+            equipWeaponQuiver.Visible = false;
         }
 
         private void choosenWeapon()
@@ -292,36 +300,49 @@ namespace Dungeons
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
                 drinkButton.Visible = false;
+                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
                 drinkButton.Visible = false;
+                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
                 drinkButton.Visible = false;
+                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Blue potion")
             {
                 equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBluePotion.Visible = true;
                 drinkButton.Visible = true;
+                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Red potion")
             {
                 equipRedPotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponRedPotion.Visible = true;
                 drinkButton.Visible = true;
+                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Battle axe")
             {
                 equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBattleAxe.Visible = true;
                 drinkButton.Visible = false;
+                quiverButton.Visible = false;
+            }
+            else if(game.choosenWeaponByPlayer() == "Quiver")
+            {
+                equipQuiver.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponQuiver.Visible = true;
+                drinkButton.Visible = false;
+                quiverButton.Visible = true;
             }
         }
 
@@ -347,6 +368,9 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Battle axe"))
                 equipBattleAxe.Visible = true;
+
+            if (game.CheckPlayerInventory("Quiver"))
+                equipQuiver.Visible = true;
         }
 
         private void CheckArrows()
@@ -437,7 +461,7 @@ namespace Dungeons
             string potion = game.choosenWeaponByPlayer();
 
             game.Attack(Direction.Up, random);
-            if (game.CheckPotionUsed())
+            if (game.CheckUsedDisposable())
             {
                 UpdateCharacters();
                 drinkButton.Visible = false;
@@ -522,6 +546,23 @@ namespace Dungeons
         {
             game.Equip("Battle axe");
             UpdateCharacters();
+        }
+
+        private void equipQuiver_Click(object sender, EventArgs e)
+        {
+            game.Equip("Quiver");
+            UpdateCharacters();
+        }
+
+        private void quiverButton_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Up, random);
+            if (game.CheckUsedDisposable())
+            {
+                UpdateCharacters();
+                quiverButton.Visible = false;
+                equipQuiver.Visible = false;
+            }
         }
     }
 }

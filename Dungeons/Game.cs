@@ -59,9 +59,9 @@ namespace Dungeons
             player.Equip(weaponName);
         }
 
-        public bool CheckPotionUsed()
+        public bool CheckUsedDisposable()
         {
-            return player.CheckPotionUsed();
+            return player.CheckUsedDisposable();
         }
 
         public string choosenWeaponByPlayer()
@@ -82,6 +82,11 @@ namespace Dungeons
         public void IncreasePlayerHealth(int health, Random random)
         {
             player.IncreaseHealth(health, random);
+        }
+
+        public void IncreasePlayerNumberOfArrows(int number, Random random)
+        {
+            player.IncreaseNumberOfArrows(number, random);
         }
 
         public void Attack(Direction direction, Random random)

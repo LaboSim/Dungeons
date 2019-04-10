@@ -7,20 +7,20 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class RedPotion : Weapon, IDisposable
+    class Quiver : Weapon, IDisposable
     {
-        public RedPotion(Game game, Point location) : base(game, location)
+        public Quiver(Game game, Point location) : base(game, location)
         {
             Used = false;
         }
 
         public bool Used { get; private set; }
 
-        public override string Name { get { return "Red potion"; } }
+        public override string Name { get { return "Quiver"; } }
 
         public override void Attack(Direction direction, Random random)
         {
-            game.IncreasePlayerHealth(10, random);
+            game.IncreasePlayerNumberOfArrows(6, random);
             Used = true;
         }
     }
