@@ -85,6 +85,7 @@
             this.battleAxe30 = new System.Windows.Forms.PictureBox();
             this.equipBattleAxe = new System.Windows.Forms.PictureBox();
             this.equipWeaponBattleAxe = new System.Windows.Forms.PictureBox();
+            this.numberOfArrows = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -694,7 +695,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.7";
+            this.tagLabel.Text = "v1.3.8";
             // 
             // label6
             // 
@@ -794,6 +795,18 @@
             this.equipWeaponBattleAxe.TabStop = false;
             this.equipWeaponBattleAxe.Visible = false;
             // 
+            // numberOfArrows
+            // 
+            this.numberOfArrows.AutoSize = true;
+            this.numberOfArrows.BackColor = System.Drawing.Color.Transparent;
+            this.numberOfArrows.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.numberOfArrows.Location = new System.Drawing.Point(123, 292);
+            this.numberOfArrows.Name = "numberOfArrows";
+            this.numberOfArrows.Size = new System.Drawing.Size(10, 12);
+            this.numberOfArrows.TabIndex = 36;
+            this.numberOfArrows.Text = "0";
+            this.numberOfArrows.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,6 +814,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.numberOfArrows);
             this.Controls.Add(this.equipWeaponBattleAxe);
             this.Controls.Add(this.equipBattleAxe);
             this.Controls.Add(this.attackLabel);
@@ -936,6 +950,7 @@
         private System.Windows.Forms.PictureBox battleAxe30;
         private System.Windows.Forms.PictureBox equipBattleAxe;
         private System.Windows.Forms.PictureBox equipWeaponBattleAxe;
+        private System.Windows.Forms.Label numberOfArrows;
     }
 }
 

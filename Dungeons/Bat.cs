@@ -9,7 +9,7 @@ namespace Dungeons
 {
     class Bat : Enemy
     {
-        public Bat(Game game, Point location) : base(game, location, 1)
+        public Bat(Game game, Point location) : base(game, location, 6)
         {
 
         }

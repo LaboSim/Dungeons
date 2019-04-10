@@ -17,6 +17,8 @@ namespace Dungeons
         private int numberOfAttack = 0;
         public int NumberOfAttack { get { return numberOfAttack; } }
 
+        public int NumberOfArrows { get; private set; }
+
         private Weapon equippedWeapon;
         private List<Weapon> inventory = new List<Weapon>();
         public List<string> Weapons
@@ -47,6 +49,9 @@ namespace Dungeons
             {
                 if (Nearby(game.WeaponInRoom.Location, distanceOfTheWeaponToThePlayer))
                 {
+                    if (game.WeaponInRoom.Name == "Bow")
+                        NumberOfArrows += 3;
+                        
                     game.WeaponInRoom.PickUpWeapon();
                     inventory.Add(game.WeaponInRoom);
                     if (inventory.Count == 1)
@@ -55,13 +60,26 @@ namespace Dungeons
             }
         }
 
+
         public void Attack(Direction direction, Random random)
         {
             if (equippedWeapon != null)
             {
                 equippedWeapon.Attack(direction, random);
+                if (equippedWeapon.Name == "Bow")
+                {
+                    NumberOfArrows--;
+                    checkNumberOfArrows();
+                    Console.WriteLine(NumberOfArrows);
+                }                                
                 numberOfAttack++;
             }                
+        }
+
+        private void checkNumberOfArrows()
+        {
+            if (NumberOfArrows == 0)
+                equippedWeapon = null;
         }
 
         public void Hit(int maxDamage, Random random)

@@ -74,6 +74,11 @@ namespace Dungeons
             return player.Weapons.Contains(weaponName);
         }
 
+        public int CheckNumberOfArrows()
+        {
+            return player.NumberOfArrows;
+        }
+
         public void IncreasePlayerHealth(int health, Random random)
         {
             player.IncreaseHealth(health, random);
@@ -96,17 +101,15 @@ namespace Dungeons
                 case 1:
                     {
                         Enemies = new List<Enemy>();                    
-                        Enemies.Add(new Bat(this, GetRandomLocation(random)));                        
+                        Enemies.Add(new Bat(this, GetRandomLocation(random)));
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
-                       // WeaponInRoom = new BattleAxe(this, GetRandomLocation(random));
                         break;
                     }
                 case 2:
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        //WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
-                        WeaponInRoom = new BattleAxe(this, GetRandomLocation(random));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:

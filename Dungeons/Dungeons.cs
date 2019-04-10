@@ -331,7 +331,10 @@ namespace Dungeons
                 equipSword.Visible = true;
 
             if (game.CheckPlayerInventory("Bow"))
+            {
                 equipBow.Visible = true;
+                CheckArrows();               
+            }
 
             if (game.CheckPlayerInventory("Mace"))
                 equipMace.Visible = true;
@@ -344,6 +347,23 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Battle axe"))
                 equipBattleAxe.Visible = true;
+        }
+
+        private void CheckArrows()
+        {
+            numberOfArrows.Visible = true;
+
+            if (game.CheckNumberOfArrows() == 0)
+            {
+                equipBow.Enabled = false;
+                numberOfArrows.Enabled = false;
+            }
+            else
+            {
+                equipBow.Enabled = true;
+                numberOfArrows.Enabled = true;
+            }
+            numberOfArrows.Text = game.CheckNumberOfArrows().ToString();
         }
 
         private void moveLeft_Click(object sender, EventArgs e)

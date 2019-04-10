@@ -18,7 +18,7 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            DamageEnemy(direction, 30, 1, random);
+            DamageEnemy(direction, 25, 1, random);
         }
     }
 }
