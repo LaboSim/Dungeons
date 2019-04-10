@@ -90,6 +90,9 @@
             this.equipQuiver = new System.Windows.Forms.PictureBox();
             this.equipWeaponQuiver = new System.Windows.Forms.PictureBox();
             this.quiverButton = new System.Windows.Forms.Button();
+            this.shield30 = new System.Windows.Forms.PictureBox();
+            this.equipShield = new System.Windows.Forms.PictureBox();
+            this.equipWeaponShield = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -120,6 +123,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.quiver30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipQuiver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponQuiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shield30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponShield)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -865,6 +871,43 @@
             this.quiverButton.Visible = false;
             this.quiverButton.Click += new System.EventHandler(this.quiverButton_Click);
             // 
+            // shield30
+            // 
+            this.shield30.BackColor = System.Drawing.Color.Transparent;
+            this.shield30.Image = ((System.Drawing.Image)(resources.GetObject("shield30.Image")));
+            this.shield30.Location = new System.Drawing.Point(84, 48);
+            this.shield30.Name = "shield30";
+            this.shield30.Size = new System.Drawing.Size(30, 30);
+            this.shield30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.shield30.TabIndex = 41;
+            this.shield30.TabStop = false;
+            this.shield30.Visible = false;
+            // 
+            // equipShield
+            // 
+            this.equipShield.BackColor = System.Drawing.Color.Transparent;
+            this.equipShield.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.equipShield.Image = ((System.Drawing.Image)(resources.GetObject("equipShield.Image")));
+            this.equipShield.Location = new System.Drawing.Point(179, 314);
+            this.equipShield.Name = "equipShield";
+            this.equipShield.Size = new System.Drawing.Size(30, 30);
+            this.equipShield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipShield.TabIndex = 42;
+            this.equipShield.TabStop = false;
+            this.equipShield.Visible = false;
+            // 
+            // equipWeaponShield
+            // 
+            this.equipWeaponShield.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponShield.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponShield.Image")));
+            this.equipWeaponShield.Location = new System.Drawing.Point(263, 293);
+            this.equipWeaponShield.Name = "equipWeaponShield";
+            this.equipWeaponShield.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponShield.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipWeaponShield.TabIndex = 43;
+            this.equipWeaponShield.TabStop = false;
+            this.equipWeaponShield.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -872,6 +915,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.equipWeaponShield);
+            this.Controls.Add(this.equipShield);
             this.Controls.Add(this.quiverButton);
             this.Controls.Add(this.equipWeaponQuiver);
             this.Controls.Add(this.equipQuiver);
@@ -913,6 +958,7 @@
             this.Controls.Add(this.wizard30);
             this.Controls.Add(this.battleAxe30);
             this.Controls.Add(this.quiver30);
+            this.Controls.Add(this.shield30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -952,6 +998,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.quiver30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipQuiver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponQuiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shield30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponShield)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1020,6 +1069,9 @@
         private System.Windows.Forms.PictureBox equipQuiver;
         private System.Windows.Forms.PictureBox equipWeaponQuiver;
         private System.Windows.Forms.Button quiverButton;
+        private System.Windows.Forms.PictureBox shield30;
+        private System.Windows.Forms.PictureBox equipShield;
+        private System.Windows.Forms.PictureBox equipWeaponShield;
     }
 }
 
