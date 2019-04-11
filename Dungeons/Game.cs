@@ -99,10 +99,12 @@ namespace Dungeons
                 shieldUsed = true;
             }
             else
-            {
-                player.ActivateShield(armour, true);
-            }
-                       
+                player.ActivateShield(armour, true);                      
+        }
+
+        public void DestroyShield()
+        {
+            shieldUsed = false;
         }
 
         public void Attack(Direction direction, Random random)
@@ -139,7 +141,8 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 20);
+                       // WeaponInRoom = new Bow(this, GetRandomLocation(random));
                         break;
                     }
                 case 4:

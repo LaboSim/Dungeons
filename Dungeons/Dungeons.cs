@@ -389,6 +389,8 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Shield"))
                 equipShield.Visible = true;
+            else
+                equipShield.Visible = false;
         }
 
         private void CheckArrows()

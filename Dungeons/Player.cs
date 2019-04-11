@@ -104,6 +104,7 @@ namespace Dungeons
                         bufforDamage *= -1;
                         HitPoints -= bufforDamage;
                         OneOffItem(equippedWeapon);
+                        game.DestroyShield();
                         Console.WriteLine("Bron usunieta");
                         Console.WriteLine("Lista broni po: " + Weapons.Count);
                     }
@@ -114,8 +115,6 @@ namespace Dungeons
                 Console.WriteLine("Tarcza nie została wybrana");
                 HitPoints -= receivedDamage;
             }
-
-            //HitPoints -= random.Next(1, maxDamage);
         }
 
         public void ActivateShield(int armour, bool shieldUsed)
