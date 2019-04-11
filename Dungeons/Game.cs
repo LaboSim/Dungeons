@@ -133,15 +133,14 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
-                       // WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 20);
+                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
                        // WeaponInRoom = new Bow(this, GetRandomLocation(random));
                         break;
                     }

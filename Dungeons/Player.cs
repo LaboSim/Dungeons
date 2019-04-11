@@ -35,7 +35,6 @@ namespace Dungeons
         }
 
         public int HitPoints { get; private set; }
-
         public int CheckArmour { get; private set; }
 
         public Player(Game game, Point location) : base(game, location)

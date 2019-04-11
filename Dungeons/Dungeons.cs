@@ -307,58 +307,59 @@ namespace Dungeons
             {
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
-                drinkButton.Visible = false;
-                quiverButton.Visible = false;
+                setTheVisibilityOfButtons();
             }
             else if(game.choosenWeaponByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
-                drinkButton.Visible = false;
-                quiverButton.Visible = false;
+                setTheVisibilityOfButtons();
             }
             else if(game.choosenWeaponByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
-                drinkButton.Visible = false;
-                quiverButton.Visible = false;
+                setTheVisibilityOfButtons();
             }
             else if(game.choosenWeaponByPlayer() == "Blue potion")
             {
                 equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBluePotion.Visible = true;
+                setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
-                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Red potion")
             {
                 equipRedPotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponRedPotion.Visible = true;
+                setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
-                quiverButton.Visible = false;
             }
             else if(game.choosenWeaponByPlayer() == "Battle axe")
             {
                 equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBattleAxe.Visible = true;
-                drinkButton.Visible = false;
-                quiverButton.Visible = false;
+                setTheVisibilityOfButtons();
             }
             else if(game.choosenWeaponByPlayer() == "Quiver")
             {
                 equipQuiver.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponQuiver.Visible = true;
-                drinkButton.Visible = false;
+                setTheVisibilityOfButtons();
                 quiverButton.Visible = true;
             }
             else if(game.choosenWeaponByPlayer() == "Shield")
             {
                 equipShield.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponShield.Visible = true;
-                drinkButton.Visible = false;
-                quiverButton.Visible = false;
+                setTheVisibilityOfButtons();
             }
+        }
+
+        private void setTheVisibilityOfButtons()
+        {
+            drinkButton.Visible = false;
+            quiverButton.Visible = false;
         }
 
         private void checkInventory()
