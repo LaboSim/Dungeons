@@ -53,6 +53,7 @@
     <Compile Include="Bat.cs" />
     <Compile Include="BattleAxe.cs" />
     <Compile Include="BluePotion.cs" />
+    <Compile Include="Bomb.cs" />
     <Compile Include="Bow.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="Dungeons.cs">

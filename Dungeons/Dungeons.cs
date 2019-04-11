@@ -227,6 +227,11 @@ namespace Dungeons
                         weaponControl = shield30;
                         break;
                     }
+                case "Bomb":
+                    {
+                        weaponControl = bomb30;
+                        break;
+                    }
             }
             weaponControl.Visible = true;
             return weaponControl;
@@ -275,6 +280,7 @@ namespace Dungeons
             battleAxe30.Visible = false;
             quiver30.Visible = false;
             shield30.Visible = false;
+            bomb30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -287,6 +293,7 @@ namespace Dungeons
             equipBattleAxe.BorderStyle = BorderStyle.None;
             equipQuiver.BorderStyle = BorderStyle.None;
             equipShield.BorderStyle = BorderStyle.None;
+            equipBomb.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
@@ -299,6 +306,7 @@ namespace Dungeons
             equipWeaponBattleAxe.Visible = false;
             equipWeaponQuiver.Visible = false;
             equipWeaponShield.Visible = false;
+            equipWeaponBomb.Visible = false;
         }
 
         private void choosenWeapon()
@@ -354,12 +362,20 @@ namespace Dungeons
                 equipWeaponShield.Visible = true;
                 setTheVisibilityOfButtons();
             }
+            else if(game.choosenWeaponByPlayer() == "Bomb")
+            {
+                equipBomb.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponShield.Visible = true;
+                setTheVisibilityOfButtons();
+                blowButton.Visible = true;
+            }
         }
 
         private void setTheVisibilityOfButtons()
         {
             drinkButton.Visible = false;
             quiverButton.Visible = false;
+            blowButton.Visible = false;
         }
 
         private void checkInventory()
@@ -387,6 +403,9 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Quiver"))
                 equipQuiver.Visible = true;
+
+            if (game.CheckPlayerInventory("Bomb"))
+                equipBomb.Visible = true;
 
             if (game.CheckPlayerInventory("Shield"))
             {
@@ -599,6 +618,23 @@ namespace Dungeons
             game.Equip("Shield");
             game.Attack(Direction.Up, random);
             UpdateCharacters();
+        }
+
+        private void equipBomb_Click(object sender, EventArgs e)
+        {
+            game.Equip("Bomb");
+            UpdateCharacters();
+        }
+
+        private void blowButton_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Up, random);
+            if (game.CheckUsedDisposable())
+            {
+                UpdateCharacters();
+                blowButton.Visible = false;
+                equipBomb.Visible = false;
+            }
         }
     }
 }

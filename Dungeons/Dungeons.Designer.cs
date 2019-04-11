@@ -94,6 +94,10 @@
             this.equipShield = new System.Windows.Forms.PictureBox();
             this.equipWeaponShield = new System.Windows.Forms.PictureBox();
             this.pointShield = new System.Windows.Forms.Label();
+            this.bomb30 = new System.Windows.Forms.PictureBox();
+            this.equipBomb = new System.Windows.Forms.PictureBox();
+            this.equipWeaponBomb = new System.Windows.Forms.PictureBox();
+            this.blowButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -127,6 +131,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.shield30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipShield)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponShield)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bomb30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -921,6 +928,55 @@
             this.pointShield.TabIndex = 44;
             this.pointShield.Visible = false;
             // 
+            // bomb30
+            // 
+            this.bomb30.BackColor = System.Drawing.Color.Transparent;
+            this.bomb30.Image = ((System.Drawing.Image)(resources.GetObject("bomb30.Image")));
+            this.bomb30.Location = new System.Drawing.Point(120, 48);
+            this.bomb30.Name = "bomb30";
+            this.bomb30.Size = new System.Drawing.Size(30, 30);
+            this.bomb30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bomb30.TabIndex = 45;
+            this.bomb30.TabStop = false;
+            this.bomb30.Visible = false;
+            // 
+            // equipBomb
+            // 
+            this.equipBomb.BackColor = System.Drawing.Color.Transparent;
+            this.equipBomb.Image = ((System.Drawing.Image)(resources.GetObject("equipBomb.Image")));
+            this.equipBomb.Location = new System.Drawing.Point(215, 314);
+            this.equipBomb.Name = "equipBomb";
+            this.equipBomb.Size = new System.Drawing.Size(30, 30);
+            this.equipBomb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipBomb.TabIndex = 46;
+            this.equipBomb.TabStop = false;
+            this.equipBomb.Visible = false;
+            this.equipBomb.Click += new System.EventHandler(this.equipBomb_Click);
+            // 
+            // equipWeaponBomb
+            // 
+            this.equipWeaponBomb.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponBomb.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBomb.Image")));
+            this.equipWeaponBomb.Location = new System.Drawing.Point(263, 293);
+            this.equipWeaponBomb.Name = "equipWeaponBomb";
+            this.equipWeaponBomb.Size = new System.Drawing.Size(50, 50);
+            this.equipWeaponBomb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.equipWeaponBomb.TabIndex = 47;
+            this.equipWeaponBomb.TabStop = false;
+            this.equipWeaponBomb.Visible = false;
+            // 
+            // blowButton
+            // 
+            this.blowButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.blowButton.Location = new System.Drawing.Point(315, 279);
+            this.blowButton.Name = "blowButton";
+            this.blowButton.Size = new System.Drawing.Size(123, 63);
+            this.blowButton.TabIndex = 48;
+            this.blowButton.Text = "BLOW!!!";
+            this.blowButton.UseVisualStyleBackColor = true;
+            this.blowButton.Visible = false;
+            this.blowButton.Click += new System.EventHandler(this.blowButton_Click);
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -928,6 +984,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.blowButton);
+            this.Controls.Add(this.equipWeaponBomb);
+            this.Controls.Add(this.equipBomb);
             this.Controls.Add(this.pointShield);
             this.Controls.Add(this.equipWeaponShield);
             this.Controls.Add(this.quiverButton);
@@ -973,6 +1032,7 @@
             this.Controls.Add(this.quiver30);
             this.Controls.Add(this.shield30);
             this.Controls.Add(this.equipShield);
+            this.Controls.Add(this.bomb30);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -1015,6 +1075,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.shield30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipShield)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponShield)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bomb30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1087,6 +1150,10 @@
         private System.Windows.Forms.PictureBox equipShield;
         private System.Windows.Forms.PictureBox equipWeaponShield;
         private System.Windows.Forms.Label pointShield;
+        private System.Windows.Forms.PictureBox bomb30;
+        private System.Windows.Forms.PictureBox equipBomb;
+        private System.Windows.Forms.PictureBox equipWeaponBomb;
+        private System.Windows.Forms.Button blowButton;
     }
 }
 
