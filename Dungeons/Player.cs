@@ -71,7 +71,8 @@ namespace Dungeons
                     NumberOfArrows--;
                     checkNumberOfArrows();
                 } 
-                if(equippedWeapon.Name != "Shield")
+                if(equippedWeapon.Name != "Shield" && equippedWeapon.Name != "Blue potion" && 
+                    equippedWeapon.Name != "Red potion" && equippedWeapon.Name != "Quiver")
                     numberOfAttack++;
             }                
         }
