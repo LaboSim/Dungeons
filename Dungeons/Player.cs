@@ -40,7 +40,7 @@ namespace Dungeons
 
         public Player(Game game, Point location) : base(game, location)
         {
-            HitPoints = 100;
+            HitPoints = 10;
         }
 
         public void Move(Direction direction)
@@ -85,35 +85,28 @@ namespace Dungeons
 
         public void Hit(int maxDamage, Random random)
         {
-            Console.WriteLine("Lista broni przed: " + Weapons.Count);
-            int bufforDamage;
+            int bufforDamage = 0;
             int receivedDamage = random.Next(1, maxDamage);
             if (equippedWeapon != null && equippedWeapon is Shield)
-            {
-                Console.WriteLine("Jestem w środku i tarcza ma " + CheckArmour);
-                if(CheckArmour >= 1)
-                {
-                    bufforDamage = CheckArmour - receivedDamage;
-                    if(bufforDamage > 0)
-                    {
-                        CheckArmour -= receivedDamage;
-                        Console.WriteLine("Po otrzymianiu obrażeń na tarcze " + CheckArmour);
-                    }
-                    else
-                    {
-                        bufforDamage *= -1;
-                        HitPoints -= bufforDamage;
-                        OneOffItem(equippedWeapon);
-                        game.DestroyShield();
-                        Console.WriteLine("Bron usunieta");
-                        Console.WriteLine("Lista broni po: " + Weapons.Count);
-                    }
-                }
-            }
+                damageToShield(receivedDamage, bufforDamage);                
             else
-            {
-                Console.WriteLine("Tarcza nie została wybrana");
                 HitPoints -= receivedDamage;
+        }
+
+        private void damageToShield(int receivedDamage, int bufforDamage)
+        {
+            if (CheckArmour >= 1)
+            {
+                bufforDamage = CheckArmour - receivedDamage;
+                if (bufforDamage > 0)
+                    CheckArmour -= receivedDamage;
+                else
+                {
+                    bufforDamage *= -1;
+                    HitPoints -= bufforDamage;
+                    OneOffItem(equippedWeapon);
+                    game.DestroyShield();
+                }
             }
         }
 
