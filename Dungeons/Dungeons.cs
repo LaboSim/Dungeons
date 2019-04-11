@@ -389,9 +389,18 @@ namespace Dungeons
                 equipQuiver.Visible = true;
 
             if (game.CheckPlayerInventory("Shield"))
+            {
                 equipShield.Visible = true;
+                pointShield.Visible = true;
+                pointShield.Text = game.PointOfShield().ToString();
+                Console.WriteLine(game.PointOfShield());
+            }
             else
+            {
                 equipShield.Visible = false;
+                pointShield.Visible = false;
+            }
+               
         }
 
         private void CheckArrows()

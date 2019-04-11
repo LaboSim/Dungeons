@@ -93,6 +93,7 @@
             this.shield30 = new System.Windows.Forms.PictureBox();
             this.equipShield = new System.Windows.Forms.PictureBox();
             this.equipWeaponShield = new System.Windows.Forms.PictureBox();
+            this.pointShield = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -708,7 +709,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.3.9";
+            this.tagLabel.Text = "v1.4.0";
             // 
             // label6
             // 
@@ -739,7 +740,7 @@
             this.moveLabel.AutoSize = true;
             this.moveLabel.BackColor = System.Drawing.Color.Transparent;
             this.moveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.moveLabel.Location = new System.Drawing.Point(416, 240);
+            this.moveLabel.Location = new System.Drawing.Point(388, 251);
             this.moveLabel.Name = "moveLabel";
             this.moveLabel.Size = new System.Drawing.Size(46, 15);
             this.moveLabel.TabIndex = 30;
@@ -750,7 +751,7 @@
             this.attackLabel.AutoSize = true;
             this.attackLabel.BackColor = System.Drawing.Color.Transparent;
             this.attackLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.attackLabel.Location = new System.Drawing.Point(416, 240);
+            this.attackLabel.Location = new System.Drawing.Point(388, 251);
             this.attackLabel.Name = "attackLabel";
             this.attackLabel.Size = new System.Drawing.Size(57, 15);
             this.attackLabel.TabIndex = 31;
@@ -909,6 +910,18 @@
             this.equipWeaponShield.TabStop = false;
             this.equipWeaponShield.Visible = false;
             // 
+            // pointShield
+            // 
+            this.pointShield.AutoSize = true;
+            this.pointShield.BackColor = System.Drawing.Color.Transparent;
+            this.pointShield.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.pointShield.Location = new System.Drawing.Point(200, 334);
+            this.pointShield.Name = "pointShield";
+            this.pointShield.Size = new System.Drawing.Size(9, 9);
+            this.pointShield.TabIndex = 44;
+            this.pointShield.Text = "5";
+            this.pointShield.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -916,8 +929,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.pointShield);
             this.Controls.Add(this.equipWeaponShield);
-            this.Controls.Add(this.equipShield);
             this.Controls.Add(this.quiverButton);
             this.Controls.Add(this.equipWeaponQuiver);
             this.Controls.Add(this.equipQuiver);
@@ -960,6 +973,7 @@
             this.Controls.Add(this.battleAxe30);
             this.Controls.Add(this.quiver30);
             this.Controls.Add(this.shield30);
+            this.Controls.Add(this.equipShield);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -1073,6 +1087,7 @@
         private System.Windows.Forms.PictureBox shield30;
         private System.Windows.Forms.PictureBox equipShield;
         private System.Windows.Forms.PictureBox equipWeaponShield;
+        private System.Windows.Forms.Label pointShield;
     }
 }
 
