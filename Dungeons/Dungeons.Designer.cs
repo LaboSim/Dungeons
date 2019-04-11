@@ -716,7 +716,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.4.1";
+            this.tagLabel.Text = "v1.4.2";
             // 
             // label6
             // 
@@ -908,6 +908,7 @@
             // equipWeaponShield
             // 
             this.equipWeaponShield.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponShield.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponShield.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponShield.Image")));
             this.equipWeaponShield.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponShield.Name = "equipWeaponShield";
@@ -957,6 +958,7 @@
             // equipWeaponBomb
             // 
             this.equipWeaponBomb.BackColor = System.Drawing.Color.Transparent;
+            this.equipWeaponBomb.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.equipWeaponBomb.Image = ((System.Drawing.Image)(resources.GetObject("equipWeaponBomb.Image")));
             this.equipWeaponBomb.Location = new System.Drawing.Point(263, 293);
             this.equipWeaponBomb.Name = "equipWeaponBomb";

@@ -239,7 +239,7 @@ namespace Dungeons
 
         private void countEnemies(int enemiesShown)
         {
-            if (game.Level == 9)
+            if (game.Level == 18)
                 FinishTheGame();
 
             else

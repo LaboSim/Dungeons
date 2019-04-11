@@ -20,52 +20,52 @@ namespace Dungeons
         {
             if (direction == Direction.Up)
             {
-                if (DamageEnemy(direction, 20, 6, random) == false)
+                if (DamageEnemy(direction, 10, 6, random) == false)
                 {
-                    if (DamageEnemy(Direction.Right, 20, 6, random) == false)
+                    if (DamageEnemy(Direction.Right, 10, 6, random) == false)
                     {
-                        if (DamageEnemy(Direction.Down, 20, 6, random) == false)
+                        if (DamageEnemy(Direction.Down, 10, 6, random) == false)
                         {
-                            DamageEnemy(Direction.Left, 20, 6, random);
+                            DamageEnemy(Direction.Left, 10, 6, random);
                         }
                     }
                 }
             }
             else if(direction == Direction.Right)
             {
-                if(DamageEnemy(direction, 20, 6, random) == false)
+                if(DamageEnemy(direction, 10, 6, random) == false)
                 {
-                    if(DamageEnemy(Direction.Down, 20, 6, random) == false)
+                    if(DamageEnemy(Direction.Down, 10, 6, random) == false)
                     {
-                        if(DamageEnemy(Direction.Left, 20, 6, random) == false)
+                        if(DamageEnemy(Direction.Left, 10, 6, random) == false)
                         {
-                            DamageEnemy(Direction.Up, 20, 6, random);
+                            DamageEnemy(Direction.Up, 10, 6, random);
                         }
                     }
                 }
             }
             else if(direction == Direction.Down)
             {
-                if(DamageEnemy(direction, 20, 6, random) == false)
+                if(DamageEnemy(direction, 10, 6, random) == false)
                 {
-                    if(DamageEnemy(Direction.Left, 20, 6, random) == false)
+                    if(DamageEnemy(Direction.Left, 10, 6, random) == false)
                     {
-                        if(DamageEnemy(Direction.Up, 20, 6, random) == false)
+                        if(DamageEnemy(Direction.Up, 10, 6, random) == false)
                         {
-                            DamageEnemy(Direction.Right, 20, 6, random);
+                            DamageEnemy(Direction.Right, 10, 6, random);
                         }
                     }
                 }
             }
             else
             {
-                if(DamageEnemy(Direction.Left, 20, 6, random) == false)
+                if(DamageEnemy(Direction.Left, 10, 6, random) == false)
                 {
-                    if(DamageEnemy(Direction.Up, 20, 6, random) == false)
+                    if(DamageEnemy(Direction.Up, 10, 6, random) == false)
                     {
-                        if(DamageEnemy(Direction.Right, 20, 6, random) == false)
+                        if(DamageEnemy(Direction.Right, 10, 6, random) == false)
                         {
-                            DamageEnemy(Direction.Down, 20, 6, random);
+                            DamageEnemy(Direction.Down, 10, 6, random);
                         }
                     }
                 }

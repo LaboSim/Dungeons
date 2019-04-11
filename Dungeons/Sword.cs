@@ -26,41 +26,41 @@ namespace Dungeons
         {
             if(direction == Direction.Up)
             {
-                if(DamageEnemy(direction, 10, 3, random) == false)
+                if(DamageEnemy(direction, 8, 3, random) == false)
                 {
-                    if(DamageEnemy(Direction.Right, 10, 3, random) == false)
+                    if(DamageEnemy(Direction.Right, 8, 3, random) == false)
                     {
-                        DamageEnemy(Direction.Left, 10, 3, random);
+                        DamageEnemy(Direction.Left, 8, 3, random);
                     }
                 }
             }
             else if(direction == Direction.Right)
             {
-                if(DamageEnemy(direction, 10, 3, random) == false)
+                if(DamageEnemy(direction, 8, 3, random) == false)
                 {
-                    if(DamageEnemy(Direction.Down, 10, 3, random) == false)
+                    if(DamageEnemy(Direction.Down, 8, 3, random) == false)
                     {
-                        DamageEnemy(Direction.Up, 10, 3, random);
+                        DamageEnemy(Direction.Up, 8, 3, random);
                     }
                 }
             }
             else if(direction == Direction.Down)
             {
-                if(DamageEnemy(direction, 10, 3, random) == false)
+                if(DamageEnemy(direction, 8, 3, random) == false)
                 {
-                    if(DamageEnemy(Direction.Left, 10, 3, random) == false)
+                    if(DamageEnemy(Direction.Left, 8, 3, random) == false)
                     {
-                        DamageEnemy(Direction.Right, 10, 3, random);
+                        DamageEnemy(Direction.Right, 8, 3, random);
                     }
                 }
             }
             else
             {
-                if(DamageEnemy(direction, 10, 3, random) == false)
+                if(DamageEnemy(direction, 8, 3, random) == false)
                 {
-                    if(DamageEnemy(Direction.Up, 10, 3, random) == false)
+                    if(DamageEnemy(Direction.Up, 8, 3, random) == false)
                     {
-                        DamageEnemy(Direction.Down, 10, 3, random);
+                        DamageEnemy(Direction.Down, 8, 3, random);
                     }
                 }
             }

@@ -20,10 +20,10 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            DamageEnemy(Direction.Down, 13, 5, random);
-            DamageEnemy(Direction.Left, 13, 5, random);
-            DamageEnemy(Direction.Right, 13, 5, random);
-            DamageEnemy(Direction.Up, 13, 5, random);
+            DamageEnemy(Direction.Down, 10, 5, random);
+            DamageEnemy(Direction.Left, 10, 5, random);
+            DamageEnemy(Direction.Right, 10, 5, random);
+            DamageEnemy(Direction.Up, 10, 5, random);
             Used = true;
         }
     }
