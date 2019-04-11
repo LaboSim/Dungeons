@@ -36,9 +36,11 @@ namespace Dungeons
 
         public int HitPoints { get; private set; }
 
+        public int CheckArmour { get; private set; }
+
         public Player(Game game, Point location) : base(game, location)
         {
-            HitPoints = 10;
+            HitPoints = 100;
         }
 
         public void Move(Direction direction)
@@ -60,7 +62,6 @@ namespace Dungeons
             }
         }
 
-
         public void Attack(Direction direction, Random random)
         {
             if (equippedWeapon != null)
@@ -70,8 +71,9 @@ namespace Dungeons
                 {
                     NumberOfArrows--;
                     checkNumberOfArrows();
-                }                                
-                numberOfAttack++;
+                } 
+                if(equippedWeapon.Name != "Shield")
+                    numberOfAttack++;
             }                
         }
 
@@ -83,7 +85,43 @@ namespace Dungeons
 
         public void Hit(int maxDamage, Random random)
         {
-            HitPoints -= random.Next(1, maxDamage);
+            Console.WriteLine("Lista broni przed: " + Weapons.Count);
+            int bufforDamage;
+            int receivedDamage = random.Next(1, maxDamage);
+            if (equippedWeapon != null && equippedWeapon is Shield)
+            {
+                Console.WriteLine("Jestem w środku i tarcza ma " + CheckArmour);
+                if(CheckArmour >= 1)
+                {
+                    bufforDamage = CheckArmour - receivedDamage;
+                    if(bufforDamage > 0)
+                    {
+                        CheckArmour -= receivedDamage;
+                        Console.WriteLine("Po otrzymianiu obrażeń na tarcze " + CheckArmour);
+                    }
+                    else
+                    {
+                        bufforDamage *= -1;
+                        HitPoints -= bufforDamage;
+                        OneOffItem(equippedWeapon);
+                        Console.WriteLine("Bron usunieta");
+                        Console.WriteLine("Lista broni po: " + Weapons.Count);
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Tarcza nie została wybrana");
+                HitPoints -= receivedDamage;
+            }
+
+            //HitPoints -= random.Next(1, maxDamage);
+        }
+
+        public void ActivateShield(int armour, bool shieldUsed)
+        {
+            if(shieldUsed == false)
+                CheckArmour = armour;
         }
 
         public string choosenWeapon()

@@ -895,6 +895,7 @@
             this.equipShield.TabIndex = 42;
             this.equipShield.TabStop = false;
             this.equipShield.Visible = false;
+            this.equipShield.Click += new System.EventHandler(this.equipShield_Click);
             // 
             // equipWeaponShield
             // 

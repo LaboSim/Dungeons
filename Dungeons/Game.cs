@@ -28,6 +28,8 @@ namespace Dungeons
         private Rectangle boundaries;
         public Rectangle Boundaries { get { return boundaries; } }
 
+        bool shieldUsed = false;
+
         public Game(Rectangle boundaries)
         {
             this.boundaries = boundaries;
@@ -89,6 +91,20 @@ namespace Dungeons
             player.IncreaseNumberOfArrows(number, random);
         }
 
+        public void ActivatePlayerShield(int armour)
+        {
+            if (shieldUsed == false)
+            {
+                player.ActivateShield(armour, false);
+                shieldUsed = true;
+            }
+            else
+            {
+                player.ActivateShield(armour, true);
+            }
+                       
+        }
+
         public void Attack(Direction direction, Random random)
         {
             player.Attack(direction, random);
@@ -107,6 +123,7 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();                    
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
+                       // WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
@@ -114,7 +131,8 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
+                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
+                       // WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }
                 case 3:

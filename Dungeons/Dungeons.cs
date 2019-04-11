@@ -222,6 +222,11 @@ namespace Dungeons
                         weaponControl = quiver30;
                         break;
                     }
+                case "Shield":
+                    {
+                        weaponControl = shield30;
+                        break;
+                    }
             }
             weaponControl.Visible = true;
             return weaponControl;
@@ -269,6 +274,7 @@ namespace Dungeons
             redPotion30.Visible = false;
             battleAxe30.Visible = false;
             quiver30.Visible = false;
+            shield30.Visible = false;
         }
 
         private void setNoneWeaponInInventory()
@@ -280,6 +286,7 @@ namespace Dungeons
             equipRedPotion.BorderStyle = BorderStyle.None;
             equipBattleAxe.BorderStyle = BorderStyle.None;
             equipQuiver.BorderStyle = BorderStyle.None;
+            equipShield.BorderStyle = BorderStyle.None;
         }
 
         private void setClearEquipWeapon()
@@ -291,6 +298,7 @@ namespace Dungeons
             equipWeaponRedPotion.Visible = false;
             equipWeaponBattleAxe.Visible = false;
             equipWeaponQuiver.Visible = false;
+            equipWeaponShield.Visible = false;
         }
 
         private void choosenWeapon()
@@ -344,6 +352,13 @@ namespace Dungeons
                 drinkButton.Visible = false;
                 quiverButton.Visible = true;
             }
+            else if(game.choosenWeaponByPlayer() == "Shield")
+            {
+                equipShield.BorderStyle = BorderStyle.FixedSingle;
+                equipWeaponShield.Visible = true;
+                drinkButton.Visible = false;
+                quiverButton.Visible = false;
+            }
         }
 
         private void checkInventory()
@@ -361,7 +376,7 @@ namespace Dungeons
                 equipMace.Visible = true;
 
             if (game.CheckPlayerInventory("Blue potion"))
-                    equipBluePotion.Visible = true;
+                equipBluePotion.Visible = true;
 
             if (game.CheckPlayerInventory("Red potion"))
                 equipRedPotion.Visible = true;
@@ -371,6 +386,9 @@ namespace Dungeons
 
             if (game.CheckPlayerInventory("Quiver"))
                 equipQuiver.Visible = true;
+
+            if (game.CheckPlayerInventory("Shield"))
+                equipShield.Visible = true;
         }
 
         private void CheckArrows()
@@ -563,6 +581,13 @@ namespace Dungeons
                 quiverButton.Visible = false;
                 equipQuiver.Visible = false;
             }
+        }
+
+        private void equipShield_Click(object sender, EventArgs e)
+        {
+            game.Equip("Shield");
+            game.Attack(Direction.Up, random);
+            UpdateCharacters();
         }
     }
 }
