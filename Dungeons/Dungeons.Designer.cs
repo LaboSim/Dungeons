@@ -917,9 +917,8 @@
             this.pointShield.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pointShield.Location = new System.Drawing.Point(200, 334);
             this.pointShield.Name = "pointShield";
-            this.pointShield.Size = new System.Drawing.Size(9, 9);
+            this.pointShield.Size = new System.Drawing.Size(0, 9);
             this.pointShield.TabIndex = 44;
-            this.pointShield.Text = "5";
             this.pointShield.Visible = false;
             // 
             // DungeonsForm

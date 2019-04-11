@@ -393,7 +393,6 @@ namespace Dungeons
                 equipShield.Visible = true;
                 pointShield.Visible = true;
                 pointShield.Text = game.PointOfShield().ToString();
-                Console.WriteLine(game.PointOfShield());
             }
             else
             {

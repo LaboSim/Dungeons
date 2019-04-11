@@ -52,6 +52,8 @@ namespace Dungeons
                 {
                     if (game.WeaponInRoom.Name == "Bow")
                         NumberOfArrows += 3;
+                    else if (game.WeaponInRoom.Name == "Shield")
+                        CheckArmour = 5;
                         
                     game.WeaponInRoom.PickUpWeapon();
                     inventory.Add(game.WeaponInRoom);
