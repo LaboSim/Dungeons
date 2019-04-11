@@ -716,7 +716,7 @@
             this.tagLabel.Name = "tagLabel";
             this.tagLabel.Size = new System.Drawing.Size(25, 9);
             this.tagLabel.TabIndex = 27;
-            this.tagLabel.Text = "v1.4.0";
+            this.tagLabel.Text = "v1.4.1";
             // 
             // label6
             // 
@@ -943,6 +943,7 @@
             // equipBomb
             // 
             this.equipBomb.BackColor = System.Drawing.Color.Transparent;
+            this.equipBomb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.equipBomb.Image = ((System.Drawing.Image)(resources.GetObject("equipBomb.Image")));
             this.equipBomb.Location = new System.Drawing.Point(215, 314);
             this.equipBomb.Name = "equipBomb";

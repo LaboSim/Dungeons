@@ -130,7 +130,6 @@ namespace Dungeons
                     {
                         Enemies = new List<Enemy>();                    
                         Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                       // 
                         WeaponInRoom = new Sword(this, GetRandomLocation(random));
                         break;
                     }
@@ -138,7 +137,8 @@ namespace Dungeons
                     {
                         Enemies.Clear();
                         Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                        WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
+                        WeaponInRoom = new Bomb(this, GetRandomLocation(random));
+                        //WeaponInRoom = new Shield(this, GetRandomLocation(random), 5);
                        // WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                         break;
                     }

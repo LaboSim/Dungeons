@@ -365,7 +365,7 @@ namespace Dungeons
             else if(game.choosenWeaponByPlayer() == "Bomb")
             {
                 equipBomb.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponShield.Visible = true;
+                equipWeaponBomb.Visible = true;
                 setTheVisibilityOfButtons();
                 blowButton.Visible = true;
             }
