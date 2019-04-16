@@ -5,6 +5,9 @@ namespace Dungeons
 {
     class Bow : Weapon
     {
+        private const int damage = 1;
+        private const int range = 18;
+
         public Bow(Game game, Point location) : base(game, location)
         {
 
@@ -14,7 +17,7 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            DamageEnemy(direction, 18, 1, random);
+            DamageEnemy(direction, range, damage, random);
         }
     }
 }

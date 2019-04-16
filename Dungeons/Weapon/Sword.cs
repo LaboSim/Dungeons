@@ -5,6 +5,9 @@ namespace Dungeons
 {
     class Sword : Weapon
     {
+        private const int damage = 3;
+        private const int range = 8;
+
         public Sword(Game game, Point location) : base(game, location)
         {
 
@@ -22,41 +25,41 @@ namespace Dungeons
         {
             if(direction == Direction.Up)
             {
-                if(DamageEnemy(direction, 8, 3, random) == false)
+                if(DamageEnemy(direction, range, damage, random) == false)
                 {
-                    if(DamageEnemy(Direction.Right, 8, 3, random) == false)
+                    if(DamageEnemy(Direction.Right, range, damage, random) == false)
                     {
-                        DamageEnemy(Direction.Left, 8, 3, random);
+                        DamageEnemy(Direction.Left, range, damage, random);
                     }
                 }
             }
             else if(direction == Direction.Right)
             {
-                if(DamageEnemy(direction, 8, 3, random) == false)
+                if(DamageEnemy(direction, range, damage, random) == false)
                 {
-                    if(DamageEnemy(Direction.Down, 8, 3, random) == false)
+                    if(DamageEnemy(Direction.Down, range, damage, random) == false)
                     {
-                        DamageEnemy(Direction.Up, 8, 3, random);
+                        DamageEnemy(Direction.Up, range, damage, random);
                     }
                 }
             }
             else if(direction == Direction.Down)
             {
-                if(DamageEnemy(direction, 8, 3, random) == false)
+                if(DamageEnemy(direction, range, damage, random) == false)
                 {
-                    if(DamageEnemy(Direction.Left, 8, 3, random) == false)
+                    if(DamageEnemy(Direction.Left, range, damage, random) == false)
                     {
-                        DamageEnemy(Direction.Right, 8, 3, random);
+                        DamageEnemy(Direction.Right, range, damage, random);
                     }
                 }
             }
             else
             {
-                if(DamageEnemy(direction, 8, 3, random) == false)
+                if(DamageEnemy(direction, range, damage, random) == false)
                 {
-                    if(DamageEnemy(Direction.Up, 8, 3, random) == false)
+                    if(DamageEnemy(Direction.Up, range, damage, random) == false)
                     {
-                        DamageEnemy(Direction.Down, 8, 3, random);
+                        DamageEnemy(Direction.Down, range, damage, random);
                     }
                 }
             }

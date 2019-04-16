@@ -5,6 +5,9 @@ namespace Dungeons
 {
     class BattleAxe : Weapon
     {
+        private const int damage = 8;
+        private const int range = 5;
+
         public BattleAxe(Game game, Point location) : base(game, location)
         {
 
@@ -14,7 +17,7 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            DamageEnemy(direction, 5, 8, random);
+            DamageEnemy(direction, range, damage, random);
         }
     }
 }
