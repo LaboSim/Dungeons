@@ -62,9 +62,9 @@ namespace Dungeons
             return player.CheckUsedDisposable();
         }
 
-        public string choosenWeaponByPlayer()
+        public string ChoosenWeaponByPlayer()
         {
-            return player.choosenWeapon();
+            return player.ChoosenWeapon();
         }
 
         public bool CheckPlayerInventory(string weaponName)

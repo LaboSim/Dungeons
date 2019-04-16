@@ -68,7 +68,7 @@ namespace Dungeons
                 if (equippedWeapon.Name == "Bow")
                 {
                     NumberOfArrows--;
-                    checkNumberOfArrows();
+                    CheckNumberOfArrows();
                 }
                 if (equippedWeapon != null)
                 {
@@ -79,7 +79,7 @@ namespace Dungeons
             }                
         }
 
-        private void checkNumberOfArrows()
+        private void CheckNumberOfArrows()
         {
             if (NumberOfArrows == 0)
                 equippedWeapon = null;
@@ -118,7 +118,7 @@ namespace Dungeons
                 CheckArmour = armour;
         }
 
-        public string choosenWeapon()
+        public string ChoosenWeapon()
         {
             if (equippedWeapon != null)
                 return equippedWeapon.Name;

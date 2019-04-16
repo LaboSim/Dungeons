@@ -5,7 +5,7 @@ namespace Dungeons
 {
     abstract class Enemy : Movement
     {
-        private const int NearPlayerDistance = 25;
+        private const int nearPlayerDistance = 25;
         public int HitPoints { get; private set; }
 
         public Enemy(Game game, Point location, int hitPoints) : base(game, location)
@@ -23,7 +23,7 @@ namespace Dungeons
 
         protected bool NearPlayer()
         {
-            return (Nearby(game.PlayerLocation, NearPlayerDistance));
+            return (Nearby(game.PlayerLocation, nearPlayerDistance));
         }
 
         protected Direction FindPlayerDirection(Point playerLocation)

@@ -311,58 +311,58 @@ namespace Dungeons
 
         private void choosenWeapon()
         {
-            if(game.choosenWeaponByPlayer() == "Sword")
+            if(game.ChoosenWeaponByPlayer() == "Sword")
             {
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.choosenWeaponByPlayer() == "Bow")
+            else if(game.ChoosenWeaponByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.choosenWeaponByPlayer() == "Mace")
+            else if(game.ChoosenWeaponByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.choosenWeaponByPlayer() == "Blue potion")
+            else if(game.ChoosenWeaponByPlayer() == "Blue potion")
             {
                 equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBluePotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
             }
-            else if(game.choosenWeaponByPlayer() == "Red potion")
+            else if(game.ChoosenWeaponByPlayer() == "Red potion")
             {
                 equipRedPotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponRedPotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
             }
-            else if(game.choosenWeaponByPlayer() == "Battle axe")
+            else if(game.ChoosenWeaponByPlayer() == "Battle axe")
             {
                 equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBattleAxe.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.choosenWeaponByPlayer() == "Quiver")
+            else if(game.ChoosenWeaponByPlayer() == "Quiver")
             {
                 equipQuiver.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponQuiver.Visible = true;
                 setTheVisibilityOfButtons();
                 quiverButton.Visible = true;
             }
-            else if(game.choosenWeaponByPlayer() == "Shield")
+            else if(game.ChoosenWeaponByPlayer() == "Shield")
             {
                 equipShield.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponShield.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.choosenWeaponByPlayer() == "Bomb")
+            else if(game.ChoosenWeaponByPlayer() == "Bomb")
             {
                 equipBomb.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBomb.Visible = true;
@@ -506,7 +506,7 @@ namespace Dungeons
 
         private void drinkButton_Click(object sender, EventArgs e)
         {
-            string potion = game.choosenWeaponByPlayer();
+            string potion = game.ChoosenWeaponByPlayer();
 
             game.Attack(Direction.Up, random);
             if (game.CheckUsedDisposable())

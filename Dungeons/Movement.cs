@@ -5,7 +5,7 @@ namespace Dungeons
 {
     abstract class Movement
     {
-        private const int MoveInterval = 10;
+        private const int moveInterval = 10;
         protected Point location;
         public Point Location { get { return location; } }
         protected Game game;
@@ -42,26 +42,26 @@ namespace Dungeons
             {
                 case Direction.Up:
                     {
-                        if (newlocation.Y - MoveInterval >= boundaries.Top)
-                            newlocation.Y -= MoveInterval;
+                        if (newlocation.Y - moveInterval >= boundaries.Top)
+                            newlocation.Y -= moveInterval;
                         break;
                     }
                 case Direction.Down:
                     {
-                        if (newlocation.Y + MoveInterval <= boundaries.Bottom)
-                            newlocation.Y += MoveInterval;
+                        if (newlocation.Y + moveInterval <= boundaries.Bottom)
+                            newlocation.Y += moveInterval;
                         break;
                     }
                 case Direction.Left:
                     {
-                        if (newlocation.X - MoveInterval >= boundaries.Left)
-                            newlocation.X -= MoveInterval;
+                        if (newlocation.X - moveInterval >= boundaries.Left)
+                            newlocation.X -= moveInterval;
                         break;
                     }
                 case Direction.Right:
                     {
-                        if (newlocation.X + MoveInterval <= boundaries.Right)
-                            newlocation.X += MoveInterval;
+                        if (newlocation.X + moveInterval <= boundaries.Right)
+                            newlocation.X += moveInterval;
                         break;
                     }
             }
@@ -76,26 +76,26 @@ namespace Dungeons
             {
                 case Direction.Up:
                     {
-                        if (newlocation.Y - MoveInterval >= boundaries.Top)
-                            newlocation.Y -= MoveInterval;
+                        if (newlocation.Y - moveInterval >= boundaries.Top)
+                            newlocation.Y -= moveInterval;
                         break;
                     }
                 case Direction.Down:
                     {
-                        if (newlocation.Y + MoveInterval <= boundaries.Bottom)
-                            newlocation.Y += MoveInterval;
+                        if (newlocation.Y + moveInterval <= boundaries.Bottom)
+                            newlocation.Y += moveInterval;
                         break;
                     }
                 case Direction.Left:
                     {
-                        if (newlocation.X - MoveInterval >= boundaries.Left)
-                            newlocation.X -= MoveInterval;
+                        if (newlocation.X - moveInterval >= boundaries.Left)
+                            newlocation.X -= moveInterval;
                         break;
                     }
                 case Direction.Right:
                     {
-                        if (newlocation.X + MoveInterval <= boundaries.Right)
-                            newlocation.X += MoveInterval;
+                        if (newlocation.X + moveInterval <= boundaries.Right)
+                            newlocation.X += moveInterval;
                         break;
                     }
             }
