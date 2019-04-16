@@ -32,7 +32,7 @@ If you want to attack you have to switch to the tab 'Attack' and then choose dir
 Additionaly the player should be at an appropriate distance from the enemy. Each of weapons has unique range of destruction.
 ##### Equipment
 Using of equipment is very easy. Just move the mouse and click on the selected item and you can use it already.
-### If you want to plat this game
+### If you want to play this game
 Download ZIP -> https://github.com/SimonWithYerba/Dungeons/archive/master.zip
 <br/>If you downloaded ZIP extract files and then: Dungeons-master/Dungeons/bin/Debug/Dungeons.exe
 ### Author
