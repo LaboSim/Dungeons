@@ -5,6 +5,8 @@ namespace Dungeons
 {
     class RedPotion : Weapon, IDisposable
     {
+        private const int additionalHealth = 10;
+
         public RedPotion(Game game, Point location) : base(game, location)
         {
             Used = false;
@@ -16,7 +18,7 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            game.IncreasePlayerHealth(10, random);
+            game.IncreasePlayerHealth(additionalHealth, random);
             Used = true;
         }
     }

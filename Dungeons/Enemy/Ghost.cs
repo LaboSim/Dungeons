@@ -5,6 +5,9 @@ namespace Dungeons
 {
     class Ghost : Enemy
     {
+        private const int minHealth = 1;
+        private const int maxDamage = 3;
+
         public Ghost(Game game, Point location) : base(game, location, 8)
         {
 
@@ -12,7 +15,7 @@ namespace Dungeons
 
         public override void Move(Random random)
         {
-            if(HitPoints >= 1)
+            if(HitPoints >= minHealth)
             {
                 if(random.Next(1,4) == 1)
                 {
@@ -20,7 +23,7 @@ namespace Dungeons
                 }
                 if (NearPlayer())
                 {
-                    game.HitPlayer(3, random);
+                    game.HitPlayer(maxDamage, random);
                 }
             }
         }

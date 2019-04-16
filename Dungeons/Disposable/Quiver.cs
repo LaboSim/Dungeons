@@ -5,6 +5,8 @@ namespace Dungeons
 {
     class Quiver : Weapon, IDisposable
     {
+        private const int addtionalArrows = 6;
+
         public Quiver(Game game, Point location) : base(game, location)
         {
             Used = false;
@@ -16,7 +18,7 @@ namespace Dungeons
 
         public override void Attack(Direction direction, Random random)
         {
-            game.IncreasePlayerNumberOfArrows(6, random);
+            game.IncreasePlayerNumberOfArrows(addtionalArrows, random);
             Used = true;
         }
     }

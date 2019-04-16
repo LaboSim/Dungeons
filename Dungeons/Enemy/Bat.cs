@@ -5,6 +5,9 @@ namespace Dungeons
 {
     class Bat : Enemy
     {
+        private const int minHealth = 1;
+        private const int maxDamage = 2;
+
         public Bat(Game game, Point location) : base(game, location, 6)
         {
 
@@ -12,7 +15,7 @@ namespace Dungeons
 
         public override void Move(Random random)
         {
-            if(HitPoints >= 1)
+            if(HitPoints >= minHealth)
             {
                 if(random.Next(1,3) == 1)
                 {
@@ -24,7 +27,7 @@ namespace Dungeons
                 }
                 if (NearPlayer())
                 {
-                    game.HitPlayer(2, random);
+                    game.HitPlayer(maxDamage, random);
                 }
             }
         }
