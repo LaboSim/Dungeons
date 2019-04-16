@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class Player : Mover
+    class Player : Movement
     {
         private const int distanceOfTheWeaponToThePlayer = 1;
 

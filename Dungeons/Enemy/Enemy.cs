@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class Enemy : Mover
+    abstract class Enemy : Movement
     {
         private const int NearPlayerDistance = 25;
         public int HitPoints { get; private set; }

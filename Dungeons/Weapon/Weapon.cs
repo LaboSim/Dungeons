@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class Weapon : Mover
+    abstract class Weapon : Movement
     {
         public bool PickedUp { get; private set; }
 
