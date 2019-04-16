@@ -73,12 +73,13 @@
             // 
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("MV Boli", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.Location = new System.Drawing.Point(106, 76);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(319, 42);
+            this.title.Size = new System.Drawing.Size(369, 49);
             this.title.TabIndex = 3;
             this.title.Text = "D U N G E O N S";
+            this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // instructionButton
             // 
