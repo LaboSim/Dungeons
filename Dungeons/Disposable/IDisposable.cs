@@ -1,5 +1,4 @@
-﻿
-namespace Dungeons
+﻿namespace Dungeons
 {
     interface IDisposable
     {
