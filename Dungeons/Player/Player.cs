@@ -8,8 +8,6 @@ namespace Dungeons
     {
         private const int distanceOfTheWeaponToThePlayer = 1;
 
-        public int NumberOfMoves { get; private set; }
-        public int NumberOfAttack { get; private set; }
         public int NumberOfArrows { get; private set; }
 
         private Weapon equippedWeapon;
