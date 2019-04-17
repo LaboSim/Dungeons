@@ -168,10 +168,12 @@ namespace Dungeons
         {
             player30.Location = game.PlayerLocation;
             playerHitPoints.Text = game.PlayerHitPoints.ToString();
-            overallNumberOfMoves.Text = "Overall number of moves: " + PlayerStatistics.ShowNumberOfMoves();
-            overallNumberOfAttacks.Text = "Overall number of attacks: " + PlayerStatistics.ShowNumberOfAttack();
+            overallNumberOfMoves.Text = "Overall number of moves: " + PlayerStatistics.MovePlayer;
+            overallNumberOfAttacks.Text = "Overall number of attacks: " + PlayerStatistics.AttackPlayer;
+            //overallNumberOfAttacksSuccessful.Text = "Overall number of attack successful: " +
+            //   game.Attackk.ToString();
             overallNumberOfAttacksSuccessful.Text = "Overall number of attack successful: " +
-                PlayerStatistics.ShowNumberOfSuccessfulAttack();
+                PlayerStatistics.SuccessfulAttackPlayer;
         }
 
         private void checkTheStatusOfWeaponOnTheBoard(Control weaponControl)

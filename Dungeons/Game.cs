@@ -11,8 +11,6 @@ namespace Dungeons
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
 
-        public int NumberOfAttackSuccessful { get; set; }
-
         private int level = 0;
         public int Level { get { return level; } }
 

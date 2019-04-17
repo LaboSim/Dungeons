@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Direction.cs" />
     <Compile Include="Disposable\BluePotion.cs" />
     <Compile Include="Disposable\IDisposable.cs" />
     <Compile Include="Disposable\Quiver.cs" />
@@ -67,9 +66,10 @@
     <Compile Include="Enemy\Ghoul.cs" />
     <Compile Include="Enemy\Wizard.cs" />
     <Compile Include="Game.cs" />
-    <Compile Include="Movement.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="PlayerStatistics.cs" />
+    <Compile Include="Movement\Direction.cs" />
+    <Compile Include="Movement\Movement.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\PlayerStatistics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\EndOfGame.cs">

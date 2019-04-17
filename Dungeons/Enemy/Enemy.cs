@@ -7,7 +7,7 @@ namespace Dungeons
     {
         private const int nearPlayerDistance = 25;
         public int HitPoints { get; private set; }
-        public int ReceivedDamageByEnemy { get; private set; }
+        public int ReceivedAttackByEnemy { get; private set; }
 
         public Enemy(Game game, Point location, int hitPoints) : base(game, location)
         {
@@ -19,14 +19,8 @@ namespace Dungeons
         public void Hit(int maxDamage, Random random)
         {
             HitPoints -= random.Next(1, maxDamage);
-            AddReceivedAttack();
-        }
-
-        private void AddReceivedAttack()
-        {
-            ReceivedDamageByEnemy++;
-            PlayerStatistics.StatisticsSuccessfulAttack(this, ReceivedDamageByEnemy);
-        }
+            PlayerStatistics.SuccessfulAttackPlayer++;
+        }           
 
         protected bool NearPlayer()
         {
