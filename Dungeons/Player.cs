@@ -8,11 +8,8 @@ namespace Dungeons
     {
         private const int distanceOfTheWeaponToThePlayer = 1;
 
-        private int numberOfMoves = 0;
-        public int NumberOfMoves { get { return numberOfMoves; } }
-
-        private int numberOfAttack = 0;
-        public int NumberOfAttack { get { return numberOfAttack; } }
+        public int NumberOfMoves { get; private set; }
+        public int NumberOfAttack { get; private set; }
 
         public int NumberOfArrows { get; private set; }
 
@@ -41,7 +38,7 @@ namespace Dungeons
 
         public void Move(Direction direction)
         {
-            numberOfMoves++;
+            AddOneMove();
             base.location = Move(direction, game.Boundaries);
             if (!game.WeaponInRoom.PickedUp)
             {
@@ -60,6 +57,12 @@ namespace Dungeons
             }
         }
 
+        private void AddOneMove()
+        {
+            NumberOfMoves++;
+            PlayerStatistics.StatisticsMove(this, NumberOfMoves);
+        }
+
         public void Attack(Direction direction, Random random)
         {
             if (equippedWeapon != null)
@@ -74,9 +77,15 @@ namespace Dungeons
                 {
                     if (equippedWeapon.Name != "Shield" && equippedWeapon.Name != "Blue potion" &&
                     equippedWeapon.Name != "Red potion" && equippedWeapon.Name != "Quiver")
-                        numberOfAttack++;
+                        AddOneAttack();
                 }
             }                
+        }
+
+        private void AddOneAttack()
+        {
+            NumberOfAttack++;
+            PlayerStatistics.StatisticsAttack(this, NumberOfAttack);
         }
 
         private void CheckNumberOfArrows()
