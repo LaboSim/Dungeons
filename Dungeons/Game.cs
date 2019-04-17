@@ -37,6 +37,7 @@ namespace Dungeons
             }
         }
 
+        // get random location inside the rectangle of the board that's why I added 10 - mathematical trick
         private Point GetRandomLocation(Random random)
         {
             return new Point(boundaries.Left + random.Next(boundaries.Right / 10 - boundaries.Left / 10) * 10,

@@ -21,11 +21,11 @@ namespace Dungeons
 
         public abstract void Attack(Direction direction, Random random);
 
-        protected bool DamageEnemy(Direction direction, int radius, int damage, Random random)
+        protected bool DamageEnemy(Direction direction, int range, int damage, Random random)
         {
             Point target = game.PlayerLocation;
 
-            for(int distance = 0; distance<radius; distance++)
+            for(int distance = 0; distance<range; distance++)
             {
                 foreach(Enemy enemy in game.Enemies)
                 {

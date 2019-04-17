@@ -27,6 +27,7 @@ namespace Dungeons
             return (Nearby(game.PlayerLocation, nearPlayerDistance));
         }
 
+        //10 to increase chance to find player location by enemy
         protected Direction FindPlayerDirection(Point playerLocation)
         {
             Direction directionToMove;
