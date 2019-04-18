@@ -7,6 +7,7 @@ namespace Dungeons
     class Game
     {
         private Player player;
+        private CreateLevels createLevels;
 
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
@@ -26,6 +27,7 @@ namespace Dungeons
         {
             this.boundaries = boundaries;
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
+            createLevels = new CreateLevels(this);
         }
 
         public void Move(Direction direction, Random random)
@@ -38,11 +40,11 @@ namespace Dungeons
         }
 
         // get random location inside the rectangle of the board that's why I added 10 - mathematical trick
-        private Point GetRandomLocation(Random random)
+       /* public Point GetRandomLocation(Random random)
         {
             return new Point(boundaries.Left + random.Next(boundaries.Right / 10 - boundaries.Left / 10) * 10,
                 boundaries.Top + random.Next(boundaries.Bottom / 10 - boundaries.Top / 10) * 10);
-        }
+        }*/
 
         public void HitPlayer(int maxDamage, Random random)
         {
@@ -114,6 +116,12 @@ namespace Dungeons
             }
         }
 
+        public void NewLevel(Random random)
+        {
+            level++;
+            createLevels.NewLevel(random, level);
+        }
+        /*
         public void NewLevel(Random random)
         {
             level++;
@@ -337,6 +345,6 @@ namespace Dungeons
                         break;
                     }
             }
-        }
+        }*/
     }
 }

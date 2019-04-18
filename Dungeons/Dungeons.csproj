@@ -65,7 +65,8 @@
     <Compile Include="Enemy\Ghost.cs" />
     <Compile Include="Enemy\Ghoul.cs" />
     <Compile Include="Enemy\Wizard.cs" />
-    <Compile Include="Game.cs" />
+    <Compile Include="Game\CreateLevels.cs" />
+    <Compile Include="Game\Game.cs" />
     <Compile Include="Movement\Direction.cs" />
     <Compile Include="Movement\Movement.cs" />
     <Compile Include="Player\Player.cs" />
