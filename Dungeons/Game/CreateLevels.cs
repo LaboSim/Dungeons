@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Dungeons
 {
@@ -11,11 +8,12 @@ namespace Dungeons
     {
         private Game game;
 
-        public CreateLevels(Game Game)
+        public CreateLevels(Game game)
         {
-            this.game = Game;
+            this.game = game;
         }
 
+        // get random location inside the rectangle of the board that's why I added 10 - mathematical trick
         private Point GetRandomLocation(Random random)
         {
             return new Point(game.Boundaries.Left + random.Next(game.Boundaries.Right / 10 - game.Boundaries.Left / 10) * 10,
@@ -24,32 +22,29 @@ namespace Dungeons
 
         public void NewLevel(Random random, int level)
         {
+            game.Enemies = new List<Enemy>();
             switch (level)
             {
                 case 1:
-                    {
-                        game.Enemies = new List<Enemy>();
+                    {                        
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new Sword(game, GetRandomLocation(random));
                         break;
                     }
                 case 2:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new BluePotion(game, GetRandomLocation(random));
                         break;
                     }
                 case 3:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new Bow(game, GetRandomLocation(random));
                         break;
                     }
                 case 4:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Bow"))
@@ -65,7 +60,6 @@ namespace Dungeons
                     }
                 case 5:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new RedPotion(game, GetRandomLocation(random));
@@ -73,7 +67,6 @@ namespace Dungeons
                     }
                 case 6:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new Mace(game, GetRandomLocation(random));
@@ -81,7 +74,6 @@ namespace Dungeons
                     }
                 case 7:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
@@ -98,7 +90,6 @@ namespace Dungeons
                     }
                 case 8:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Bow"))
                             game.WeaponInRoom = new Quiver(game, GetRandomLocation(random));
@@ -106,7 +97,6 @@ namespace Dungeons
                     }
                 case 9:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Bow"))
@@ -117,7 +107,6 @@ namespace Dungeons
                     }
                 case 10:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Red potion"))
@@ -128,7 +117,6 @@ namespace Dungeons
                     }
                 case 11:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Battle axe"))
@@ -139,7 +127,6 @@ namespace Dungeons
                     }
                 case 12:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
@@ -154,14 +141,12 @@ namespace Dungeons
                     }
                 case 13:
                     {
-                        game.Enemies = new List<Enemy>();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.WeaponInRoom = new Bomb(game, GetRandomLocation(random));
                         break;
                     }
                 case 14:
                     {
-                        game.Enemies = new List<Enemy>();
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Blue potion"))
@@ -177,7 +162,6 @@ namespace Dungeons
                     }
                 case 15:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
@@ -197,7 +181,6 @@ namespace Dungeons
                     }
                 case 16:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
@@ -219,7 +202,6 @@ namespace Dungeons
                     }
                 case 17:
                     {
-                        game.Enemies.Clear();
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
@@ -240,7 +222,6 @@ namespace Dungeons
                     }
                 case 18:
                     {
-                        game.Enemies.Clear();
                         break;
                     }
             }
