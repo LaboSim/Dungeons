@@ -3,31 +3,28 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class Movement
+    abstract class HandlingEnemyDamage : Item
     {
         private const int moveInterval = 10;
-        protected Point location;
-        public Point Location { get { return location; } }
-        protected Game game;
 
-        public Movement(Game game, Point location)
+        public HandlingEnemyDamage(Game game, Point location) : base(game, location)
         {
-            this.game = game;
-            this.location = location;
+
         }
 
-        public bool Nearby(Point locationToCheck, int distance)
+        protected bool Nearby(Point enemyLocation, Point targetLocation, int distance)
         {
-            if (Math.Abs(location.X - locationToCheck.X) < distance &&
-                (Math.Abs(location.Y - locationToCheck.Y) < distance))
+            if (Math.Abs(enemyLocation.X - targetLocation.X) < distance &&
+                (Math.Abs(enemyLocation.Y - targetLocation.Y) < distance))
                 return true;
             else
                 return false;
         }
 
-        public Point Move(Direction direction, Rectangle boundaries)
+        // this is a little abstract, we ,,change" location to deal damage
+        protected Point ChangeLocation(Direction direction, Point playerLocation, Rectangle boundaries)
         {
-            Point newlocation = location;
+            Point newlocation = playerLocation;
 
             switch (direction)
             {
@@ -57,6 +54,25 @@ namespace Dungeons
                     }
             }
             return newlocation;
+        }
+
+        protected bool DamageEnemy(Direction direction, int range, int damage, Random random)
+        {
+            Point target = game.PlayerLocation;
+
+            for (int distance = 0; distance < range; distance++)
+            {
+                foreach (Enemy enemy in game.Enemies)
+                {
+                    if (Nearby(enemy.Location, target, distance))
+                    {
+                        enemy.Hit(damage, random);
+                        return true;
+                    }
+                }
+                target = ChangeLocation(direction, target, game.Boundaries);
+            }
+            return false;
         }
     }
 }

@@ -50,10 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Disposable\BluePotion.cs" />
-    <Compile Include="Disposable\IDisposable.cs" />
-    <Compile Include="Disposable\Quiver.cs" />
-    <Compile Include="Disposable\RedPotion.cs" />
     <Compile Include="Dungeons.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +63,21 @@
     <Compile Include="Enemy\Wizard.cs" />
     <Compile Include="Game\CreateLevels.cs" />
     <Compile Include="Game\Game.cs" />
+    <Compile Include="Item\Armour\Armour.cs" />
+    <Compile Include="Item\Armour\Shield.cs" />
+    <Compile Include="Item\Disposable\BluePotion.cs" />
+    <Compile Include="Item\Disposable\Disposable.cs" />
+    <Compile Include="Item\Disposable\Quiver.cs" />
+    <Compile Include="Item\Disposable\RedPotion.cs" />
+    <Compile Include="Item\Item.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Explosive\Bomb.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Explosive\Explosive.cs" />
+    <Compile Include="Item\ItemsDealingDamage\HandlingEnemyDamage.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\BattleAxe.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\Bow.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\Mace.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\Sword.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\Weapon.cs" />
     <Compile Include="Movement\Direction.cs" />
     <Compile Include="Movement\Movement.cs" />
     <Compile Include="Player\Player.cs" />
@@ -91,13 +102,6 @@
     <Compile Include="View\PrepareToPlay.Designer.cs">
       <DependentUpon>PrepareToPlay.cs</DependentUpon>
     </Compile>
-    <Compile Include="Weapon\BattleAxe.cs" />
-    <Compile Include="Weapon\Bomb.cs" />
-    <Compile Include="Weapon\Bow.cs" />
-    <Compile Include="Weapon\Mace.cs" />
-    <Compile Include="Weapon\Shield.cs" />
-    <Compile Include="Weapon\Sword.cs" />
-    <Compile Include="Weapon\Weapon.cs" />
     <EmbeddedResource Include="Dungeons.resx">
       <DependentUpon>Dungeons.cs</DependentUpon>
     </EmbeddedResource>

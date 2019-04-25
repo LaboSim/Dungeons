@@ -3,23 +3,20 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class BluePotion : Weapon, IDisposable
+    class BluePotion : Disposable
     {
         private const int additionalHealth = 5;
 
         public BluePotion(Game game, Point location) : base(game, location)
         {
-            Used = false;
+
         }
-
-        public bool Used { get; private set; }
-
         public override string Name { get { return "Blue potion"; } }
 
-        public override void Attack(Direction direction, Random random)
+        public override void Use(Random random)
         {
             game.IncreasePlayerHealth(additionalHealth, random);
-            Used = true;
+            UseDisposable();
         }
     }
 }

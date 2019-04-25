@@ -16,16 +16,15 @@ namespace Dungeons
         public int Level { get { return level; } }
 
         public List<Enemy> Enemies;
-        public Weapon WeaponInRoom;
+        public Item ItemInRoom;
 
         private Rectangle boundaries;
         public Rectangle Boundaries { get { return boundaries; } }
 
-        bool shieldUsed = false;
-
         public Game(Rectangle boundaries)
         {
             this.boundaries = boundaries;
+            // 10 and 70 is ,,random" number to set the starting location of player
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
             createLevels = new CreateLevels(this);
         }
@@ -33,35 +32,49 @@ namespace Dungeons
         public void Move(Direction direction, Random random)
         {
             player.Move(direction);
-            foreach(Enemy enemy in Enemies)
+            EnemyMoves(random);           
+        }  
+        
+        private void EnemyMoves(Random random)
+        {
+            foreach (Enemy enemy in Enemies)
             {
                 enemy.Move(random);
             }
-        }      
+        }
 
         public void HitPlayer(int maxDamage, Random random)
         {
             player.Hit(maxDamage, random);
         }
 
-        public void Equip(string weaponName)
+        public void Equip(string itemName)
         {
-            player.Equip(weaponName);
+            player.Equip(itemName);
         }
 
-        public bool CheckUsedDisposable()
+        public bool UseDisposable(Random random)
         {
-            return player.CheckUsedDisposable();
+            bool used = player.UseDisposable(random);
+            EnemyMoves(random);
+            return used;
         }
 
-        public string ChoosenWeaponByPlayer()
+        public bool DetonateBomb(Random random)
         {
-            return player.ChoosenWeapon();
+            bool used = player.DetonateBomb(random);
+            EnemyMoves(random);
+            return used;
         }
 
-        public bool CheckPlayerInventory(string weaponName)
+        public string ChoosenItemByPlayer()
         {
-            return player.Weapons.Contains(weaponName);
+            return player.ChoosenItem();
+        }
+
+        public bool CheckPlayerInventory(string itemName)
+        {
+            return player.Items.Contains(itemName);
         }
 
         public int CheckNumberOfArrows()
@@ -79,34 +92,17 @@ namespace Dungeons
             player.IncreaseNumberOfArrows(number, random);
         }
 
-        public void ActivatePlayerShield(int armour)
+        public void DestroyArmour()
         {
-            if (shieldUsed == false)
-            {
-                player.ActivateShield(armour, false);
-                shieldUsed = true;
-            }
-            else
-                player.ActivateShield(armour, true);                      
-        }
-
-        public int PointOfShield()
-        {
-            return player.CheckArmour;
-        }
-
-        public void DestroyShield()
-        {
-            shieldUsed = false;
-        }
+            player.DestroyArmour();
+        }  
+        
+        public int PointsOfArmour { get; set; }
 
         public void Attack(Direction direction, Random random)
         {
             player.Attack(direction, random);
-            foreach(Enemy enemy in Enemies)
-            {
-                enemy.Move(random);
-            }
+            EnemyMoves(random);
         }
 
         public void NewLevel(Random random)

@@ -44,18 +44,18 @@ namespace Dungeons
             UpdatePlayer();
             enemiesShown = UpdateEnemies();
            
-            setTheVisibilityOfTheWeaponOnTheBoard();
+            setTheVisibilityOfTheItemOnTheBoard();
 
-            Control weaponControl = null;
-            chooseWeaponToDisplay(weaponControl);
+            Control itemControl = null;
+            chooseItemToDisplay(itemControl);
 
-            setClearEquipWeapon();
+            setClearEquipItem();
             checkInventory();
-            setNoneWeaponInInventory();
+            setNoneItemInInventory();
             
-            choosenWeapon();
+            choosenItem();
 
-            checkTheStatusOfWeaponOnTheBoard(chooseWeaponToDisplay(weaponControl));
+            checkTheStatusOfItemOnTheBoard(chooseItemToDisplay(itemControl));
 
             checkHitPoints(game.PlayerHitPoints);
             countEnemies(enemiesShown);               
@@ -174,67 +174,67 @@ namespace Dungeons
                 PlayerStatistics.SuccessfulAttackPlayer;
         }
 
-        private void checkTheStatusOfWeaponOnTheBoard(Control weaponControl)
+        private void checkTheStatusOfItemOnTheBoard(Control itemControl)
         {
-            weaponControl.Location = game.WeaponInRoom.Location;
-            if (game.WeaponInRoom.PickedUp)
-                weaponControl.Visible = false;
+            itemControl.Location = game.ItemInRoom.Location;
+            if (game.ItemInRoom.PickedUp)
+                itemControl.Visible = false;
             else
-                weaponControl.Visible = true;
+                itemControl.Visible = true;
         }
 
-        private Control chooseWeaponToDisplay(Control weaponControl)
+        private Control chooseItemToDisplay(Control itemControl)
         {
-            switch (game.WeaponInRoom.Name)
+            switch (game.ItemInRoom.Name)
             {
                 case "Sword":
                     {
-                        weaponControl = sword30;
+                        itemControl = sword30;
                         break;
                     }
                 case "Bow":
                     {
-                        weaponControl = bow30;
+                        itemControl = bow30;
                         break;
                     }
                 case "Mace":
                     {
-                        weaponControl = mace30;
+                        itemControl = mace30;
                         break;
                     }
                 case "Blue potion":
                     {
-                        weaponControl = bluePotion30;
+                        itemControl = bluePotion30;
                         break;
                     }
                 case "Red potion":
                     {
-                        weaponControl = redPotion30;
+                        itemControl = redPotion30;
                         break;
                     }
                 case "Battle axe":
                     {
-                        weaponControl = battleAxe30;
+                        itemControl = battleAxe30;
                         break;
                     }
                 case "Quiver":
                     {
-                        weaponControl = quiver30;
+                        itemControl = quiver30;
                         break;
                     }
                 case "Shield":
                     {
-                        weaponControl = shield30;
+                        itemControl = shield30;
                         break;
                     }
                 case "Bomb":
                     {
-                        weaponControl = bomb30;
+                        itemControl = bomb30;
                         break;
                     }
             }
-            weaponControl.Visible = true;
-            return weaponControl;
+            itemControl.Visible = true;
+            return itemControl;
         }
 
         private void countEnemies(int enemiesShown)
@@ -270,7 +270,7 @@ namespace Dungeons
             }
         }
 
-        private void setTheVisibilityOfTheWeaponOnTheBoard()
+        private void setTheVisibilityOfTheItemOnTheBoard()
         {
             sword30.Visible = false;
             bow30.Visible = false;
@@ -283,7 +283,7 @@ namespace Dungeons
             bomb30.Visible = false;
         }
 
-        private void setNoneWeaponInInventory()
+        private void setNoneItemInInventory()
         {
             equipSword.BorderStyle = BorderStyle.None;
             equipBow.BorderStyle = BorderStyle.None;
@@ -296,7 +296,7 @@ namespace Dungeons
             equipBomb.BorderStyle = BorderStyle.None;
         }
 
-        private void setClearEquipWeapon()
+        private void setClearEquipItem()
         {
             equipWeaponSword.Visible = false;
             equipWeaponBow.Visible = false;
@@ -309,60 +309,60 @@ namespace Dungeons
             equipWeaponBomb.Visible = false;
         }
 
-        private void choosenWeapon()
+        private void choosenItem()
         {
-            if(game.ChoosenWeaponByPlayer() == "Sword")
+            if(game.ChoosenItemByPlayer() == "Sword")
             {
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.ChoosenWeaponByPlayer() == "Bow")
+            else if(game.ChoosenItemByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.ChoosenWeaponByPlayer() == "Mace")
+            else if(game.ChoosenItemByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.ChoosenWeaponByPlayer() == "Blue potion")
+            else if(game.ChoosenItemByPlayer() == "Blue potion")
             {
                 equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBluePotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
             }
-            else if(game.ChoosenWeaponByPlayer() == "Red potion")
+            else if(game.ChoosenItemByPlayer() == "Red potion")
             {
                 equipRedPotion.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponRedPotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
             }
-            else if(game.ChoosenWeaponByPlayer() == "Battle axe")
+            else if(game.ChoosenItemByPlayer() == "Battle axe")
             {
                 equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBattleAxe.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.ChoosenWeaponByPlayer() == "Quiver")
+            else if(game.ChoosenItemByPlayer() == "Quiver")
             {
                 equipQuiver.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponQuiver.Visible = true;
                 setTheVisibilityOfButtons();
                 quiverButton.Visible = true;
             }
-            else if(game.ChoosenWeaponByPlayer() == "Shield")
+            else if(game.ChoosenItemByPlayer() == "Shield")
             {
                 equipShield.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponShield.Visible = true;
                 setTheVisibilityOfButtons();
             }
-            else if(game.ChoosenWeaponByPlayer() == "Bomb")
+            else if(game.ChoosenItemByPlayer() == "Bomb")
             {
                 equipBomb.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBomb.Visible = true;
@@ -411,7 +411,7 @@ namespace Dungeons
             {
                 equipShield.Visible = true;
                 pointShield.Visible = true;
-                pointShield.Text = game.PointOfShield().ToString();
+                pointShield.Text = game.PointsOfArmour.ToString();
             }
             else
             {
@@ -506,10 +506,9 @@ namespace Dungeons
 
         private void drinkButton_Click(object sender, EventArgs e)
         {
-            string potion = game.ChoosenWeaponByPlayer();
+            string potion = game.ChoosenItemByPlayer();
 
-            game.Attack(Direction.Up, random);
-            if (game.CheckUsedDisposable())
+            if (game.UseDisposable(random))
             {
                 UpdateCharacters();
                 drinkButton.Visible = false;
@@ -604,8 +603,7 @@ namespace Dungeons
 
         private void quiverButton_Click(object sender, EventArgs e)
         {
-            game.Attack(Direction.Up, random);
-            if (game.CheckUsedDisposable())
+            if (game.UseDisposable(random))
             {
                 UpdateCharacters();
                 quiverButton.Visible = false;
@@ -616,7 +614,6 @@ namespace Dungeons
         private void equipShield_Click(object sender, EventArgs e)
         {
             game.Equip("Shield");
-            game.Attack(Direction.Up, random);
             UpdateCharacters();
         }
 
@@ -628,8 +625,7 @@ namespace Dungeons
 
         private void blowButton_Click(object sender, EventArgs e)
         {
-            game.Attack(Direction.Up, random);
-            if (game.CheckUsedDisposable())
+            if (game.DetonateBomb(random))
             {
                 UpdateCharacters();
                 blowButton.Visible = false;

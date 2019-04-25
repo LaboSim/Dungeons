@@ -6,27 +6,26 @@ namespace Dungeons
 {
     class Player : Movement
     {
-        private const int distanceOfTheWeaponToThePlayer = 1;
+        private const int distanceOfTheItemToThePlayer = 1;
 
         public int NumberOfArrows { get; private set; }
 
-        private Weapon equippedWeapon;
-        private List<Weapon> inventory = new List<Weapon>();
-        public List<string> Weapons
+        private Item equippedItem;
+        private List<Item> inventory = new List<Item>();
+        public List<string> Items
         {
             get
             {
                 List<string> names = new List<string>();
-                foreach(Weapon weapon in inventory)
+                foreach(Item item in inventory)
                 {
-                    names.Add(weapon.Name);
+                    names.Add(item.Name);
                 }
                 return names;
             }
         }
 
         public int HitPoints { get; private set; }
-        public int CheckArmour { get; private set; }
 
         public Player(Game game, Point location) : base(game, location)
         {
@@ -37,121 +36,136 @@ namespace Dungeons
         {
             PlayerStatistics.MovePlayer++;
             base.location = Move(direction, game.Boundaries);
-            if (!game.WeaponInRoom.PickedUp)
+            if (!game.ItemInRoom.PickedUp)
             {
-                if (Nearby(game.WeaponInRoom.Location, distanceOfTheWeaponToThePlayer))
+                if (Nearby(game.ItemInRoom.Location, distanceOfTheItemToThePlayer))
                 {
-                    if (game.WeaponInRoom.Name == "Bow")
+                    if (game.ItemInRoom.Name == "Bow")
                         NumberOfArrows += 3;
-                    else if (game.WeaponInRoom.Name == "Shield")
-                        CheckArmour = 5;
                         
-                    game.WeaponInRoom.PickUpWeapon();
-                    inventory.Add(game.WeaponInRoom);
+                    game.ItemInRoom.PickUpItem();
+                    inventory.Add(game.ItemInRoom);
                     if (inventory.Count == 1)
-                        game.Equip(game.WeaponInRoom.Name);
+                        game.Equip(game.ItemInRoom.Name);
                 }
             }
         }
 
         public void Attack(Direction direction, Random random)
         {
-            if (equippedWeapon != null)
+            Weapon weapon;
+            weapon = equippedItem as Weapon;
+            if (equippedItem != null)
             {
-                equippedWeapon.Attack(direction, random);
-                if (equippedWeapon.Name == "Bow")
+                weapon.Attack(direction, random);
+                if (weapon.Name == "Bow")
                 {
                     NumberOfArrows--;
                     CheckNumberOfArrows();
                 }
-                if (equippedWeapon != null)
-                {
-                    if (equippedWeapon.Name != "Shield" && equippedWeapon.Name != "Blue potion" &&
-                    equippedWeapon.Name != "Red potion" && equippedWeapon.Name != "Quiver")
-                        PlayerStatistics.AttackPlayer++;
-                }
+                PlayerStatistics.AttackPlayer++;
             }                
         }
 
-        private void CheckNumberOfArrows()
+        public bool UseDisposable(Random random)
         {
-            if (NumberOfArrows == 0)
-                equippedWeapon = null;
-        }
+            Disposable disposable;
+            bool used = false;           
 
-        public void Hit(int maxDamage, Random random)
-        {
-            int bufforDamage = 0;
-            int receivedDamage = random.Next(1, maxDamage);
-            if (equippedWeapon != null && equippedWeapon is Shield)
-                damageToShield(receivedDamage, bufforDamage);                
-            else
-                HitPoints -= receivedDamage;
-        }
-
-        private void damageToShield(int receivedDamage, int bufforDamage)
-        {
-            if (CheckArmour >= 1)
+            if (equippedItem != null)
             {
-                bufforDamage = CheckArmour - receivedDamage;
-                if (bufforDamage > 0)
-                    CheckArmour -= receivedDamage;
-                else
+                disposable = equippedItem as Disposable;
+                foreach (Item item in inventory)
                 {
-                    bufforDamage *= -1;
-                    HitPoints -= bufforDamage;
-                    OneOffItem(equippedWeapon);
-                    game.DestroyShield();
-                }
+                    if (disposable.Name == item.Name)
+                    {
+                        disposable.Use(random);
+                        used = disposable.Used;
+                        OneOffItem(item);
+                        break;
+                    }                   
+                }                
             }
+            return used;
         }
 
-        public void ActivateShield(int armour, bool shieldUsed)
+        public bool DetonateBomb(Random random)
         {
-            if(shieldUsed == false)
-                CheckArmour = armour;
-        }
+            Explosive explosive;
+            bool used = false;
 
-        public string ChoosenWeapon()
-        {
-            if (equippedWeapon != null)
-                return equippedWeapon.Name;
-            else
-                return "";
-        }
-
-        public void Equip(string weaponName)
-        {
-            foreach(Weapon weapon in inventory)
+            if (equippedItem != null)
             {
-                if (weapon.Name == weaponName)
-                    equippedWeapon = weapon;
-            }
-        }
+                explosive = equippedItem as Explosive;
+                PlayerStatistics.AttackPlayer++;
 
-        public bool CheckUsedDisposable()
-        {
-            IDisposable disposable;
-            bool used = true;
-
-            foreach(Weapon weapon in inventory)
-            {
-                if (equippedWeapon.Name == weapon.Name && weapon is IDisposable)
+                foreach (Item item in inventory)
                 {
-                    disposable = weapon as IDisposable;
-                    used = disposable.Used;
-                    OneOffItem(weapon);
-                    break;
+                    if (explosive.Name == item.Name)
+                    {
+                        explosive.Detonate(random);
+                        used = explosive.Blow;
+                        OneOffItem(item);
+                        break;
+                    }
                 }
             }
             return used;
         }
 
-        private void OneOffItem(Weapon weapon)
+        private void CheckNumberOfArrows()
         {
-            equippedWeapon = null;
-            inventory.Remove(weapon);
-            Weapons.Remove(weapon.Name);           
+            if (NumberOfArrows == 0)
+                equippedItem = null;
+        }
+
+        public void Hit(int maxDamage, Random random)
+        {
+            int receivedDamage = random.Next(1, maxDamage);
+            if (equippedItem != null && equippedItem is Armour)
+            {
+                Armour armour = equippedItem as Armour;
+                int damage;
+                damage = armour.GetDamage(receivedDamage);
+                if (damage > 0)
+                    ;                   
+                else
+                    HitPoints -= damage;               
+            }                             
+            else
+                HitPoints -= receivedDamage;
+        }
+
+        public void DestroyArmour()
+        {
+            OneOffItem(equippedItem);
+        }
+
+        public string ChoosenItem()
+        {
+            if (equippedItem != null)
+                return equippedItem.Name;
+            else
+                return "";
+        }
+
+        public void Equip(string itemName)
+        {
+            foreach(Item item in inventory)
+            {
+                if (item.Name == itemName)
+                {
+                    equippedItem = item;
+                    break;
+                }                   
+            }
+        }
+
+        private void OneOffItem(Item item)
+        {
+            equippedItem = null;
+            inventory.Remove(item);
+            Items.Remove(item.Name);           
         }
 
         public void IncreaseHealth(int health, Random random)
