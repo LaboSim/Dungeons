@@ -8,8 +8,6 @@ namespace Dungeons
     {
         private const int distanceOfTheItemToThePlayer = 1;
 
-        public int NumberOfArrows { get; private set; }
-
         private Item equippedItem;
         private List<Item> inventory = new List<Item>();
         public List<string> Items
@@ -39,10 +37,7 @@ namespace Dungeons
             if (!game.ItemInRoom.PickedUp)
             {
                 if (Nearby(game.ItemInRoom.Location, distanceOfTheItemToThePlayer))
-                {
-                    if (game.ItemInRoom.Name == "Bow")
-                        NumberOfArrows += 3;
-                        
+                {                        
                     game.ItemInRoom.PickUpItem();
                     inventory.Add(game.ItemInRoom);
                     if (inventory.Count == 1)
@@ -58,11 +53,6 @@ namespace Dungeons
             if (equippedItem != null)
             {
                 weapon.Attack(direction, random);
-                if (weapon.Name == "Bow")
-                {
-                    NumberOfArrows--;
-                    CheckNumberOfArrows();
-                }
                 PlayerStatistics.AttackPlayer++;
             }                
         }
@@ -83,7 +73,7 @@ namespace Dungeons
                         used = disposable.Used;
                         OneOffItem(item);
                         break;
-                    }                   
+                    }                    
                 }                
             }
             return used;
@@ -113,10 +103,9 @@ namespace Dungeons
             return used;
         }
 
-        private void CheckNumberOfArrows()
+        public void DeactivateItem()
         {
-            if (NumberOfArrows == 0)
-                equippedItem = null;
+            equippedItem = null;
         }
 
         public void Hit(int maxDamage, Random random)
@@ -128,7 +117,7 @@ namespace Dungeons
                 int damage;
                 damage = armour.GetDamage(receivedDamage);
                 if (damage > 0)
-                    ;                   
+                    return;                   
                 else
                     HitPoints -= damage;               
             }                             
@@ -173,9 +162,18 @@ namespace Dungeons
             HitPoints += random.Next(1, health);
         }
 
-        public void IncreaseNumberOfArrows(int number, Random random)
+        public void AddArrows(int arrows, Random random)
         {
-            NumberOfArrows += random.Next(1, number);
+            foreach(Item item in inventory)
+            {
+                IHandlingArch arch;
+                if (item is Bow)
+                {
+                    arch = item as IHandlingArch;
+                    arch.AddArrows(arrows, random);
+                    break; 
+                }
+            }
         }
     }
 }

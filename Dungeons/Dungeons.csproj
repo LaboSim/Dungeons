@@ -75,6 +75,7 @@
     <Compile Include="Item\ItemsDealingDamage\HandlingEnemyDamage.cs" />
     <Compile Include="Item\ItemsDealingDamage\Weapon\BattleAxe.cs" />
     <Compile Include="Item\ItemsDealingDamage\Weapon\Bow.cs" />
+    <Compile Include="Item\ItemsDealingDamage\Weapon\IHandlingArch.cs" />
     <Compile Include="Item\ItemsDealingDamage\Weapon\Mace.cs" />
     <Compile Include="Item\ItemsDealingDamage\Weapon\Sword.cs" />
     <Compile Include="Item\ItemsDealingDamage\Weapon\Weapon.cs" />

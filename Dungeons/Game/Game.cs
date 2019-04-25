@@ -77,9 +77,11 @@ namespace Dungeons
             return player.Items.Contains(itemName);
         }
 
-        public int CheckNumberOfArrows()
+        public int NumberOfArrows { get; set; }
+
+        public void DeactivateArch()
         {
-            return player.NumberOfArrows;
+            player.DeactivateItem();
         }
 
         public void IncreasePlayerHealth(int health, Random random)
@@ -87,9 +89,9 @@ namespace Dungeons
             player.IncreaseHealth(health, random);
         }
 
-        public void IncreasePlayerNumberOfArrows(int number, Random random)
+        public void AddArrows(int arrows, Random random)
         {
-            player.IncreaseNumberOfArrows(number, random);
+            player.AddArrows(arrows, random);
         }
 
         public void DestroyArmour()

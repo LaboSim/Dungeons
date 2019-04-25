@@ -34,8 +34,7 @@ namespace Dungeons
                 case 2:
                     {
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
-                        game.ItemInRoom = new Shield(game, GetRandomLocation(random));
-                        //game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                        game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
                         break;
                     }
                 case 3:
@@ -51,7 +50,7 @@ namespace Dungeons
                         if (game.CheckPlayerInventory("Bow"))
                         {
                             if (game.CheckPlayerInventory("Blue potion"))
-                                ;
+                                return;
                             else
                                 game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
                         }
@@ -81,7 +80,7 @@ namespace Dungeons
                         if (game.CheckPlayerInventory("Mace"))
                         {
                             if (game.CheckPlayerInventory("Red potion"))
-                                ;
+                                return;
                             else
                                 game.ItemInRoom = new RedPotion(game, GetRandomLocation(random));
                         }
@@ -121,7 +120,7 @@ namespace Dungeons
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Battle axe"))
-                            ;
+                            return;
                         else
                             game.ItemInRoom = new BattleAxe(game, GetRandomLocation(random));
                         break;
@@ -134,7 +133,7 @@ namespace Dungeons
                         if (game.CheckPlayerInventory("Bow"))
                         {
                             if (game.CheckPlayerInventory("Quiver"))
-                                ;
+                                return;
                             else
                                 game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
                         }
@@ -153,7 +152,7 @@ namespace Dungeons
                         if (game.CheckPlayerInventory("Blue potion"))
                         {
                             if (game.CheckPlayerInventory("Shield"))
-                                ;
+                                return;
                             else
                                 game.ItemInRoom = new Shield(game, GetRandomLocation(random));
                         }
@@ -171,7 +170,7 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Bow"))
                             {
                                 if (game.CheckPlayerInventory("Quiver"))
-                                    ;
+                                    return;
                                 else
                                     game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
                             }
@@ -190,7 +189,7 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Red potion"))
                             {
                                 if (game.CheckPlayerInventory("Blue potion"))
-                                    ;
+                                    return;
                                 else
                                     game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
                             }
@@ -212,7 +211,7 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Bow"))
                             {
                                 if (game.CheckPlayerInventory("Quiver"))
-                                    ;
+                                    return;
                                 else
                                     game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
                             }
