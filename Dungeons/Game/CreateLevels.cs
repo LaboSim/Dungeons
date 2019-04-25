@@ -34,7 +34,8 @@ namespace Dungeons
                 case 2:
                     {
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
-                        game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                        game.ItemInRoom = new Shield(game, GetRandomLocation(random));
+                        //game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
                         break;
                     }
                 case 3:

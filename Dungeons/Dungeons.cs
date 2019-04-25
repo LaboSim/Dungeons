@@ -316,18 +316,21 @@ namespace Dungeons
                 equipSword.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponSword.Visible = true;
                 setTheVisibilityOfButtons();
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Bow")
             {
                 equipBow.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBow.Visible = true;
                 setTheVisibilityOfButtons();
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Mace")
             {
                 equipMace.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponMace.Visible = true;
                 setTheVisibilityOfButtons();
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Blue potion")
             {
@@ -335,6 +338,7 @@ namespace Dungeons
                 equipWeaponBluePotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Red potion")
             {
@@ -342,12 +346,14 @@ namespace Dungeons
                 equipWeaponRedPotion.Visible = true;
                 setTheVisibilityOfButtons();
                 drinkButton.Visible = true;
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Battle axe")
             {
                 equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponBattleAxe.Visible = true;
                 setTheVisibilityOfButtons();
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Quiver")
             {
@@ -355,12 +361,14 @@ namespace Dungeons
                 equipWeaponQuiver.Visible = true;
                 setTheVisibilityOfButtons();
                 quiverButton.Visible = true;
+                TabAttackManager(true);
             }
             else if(game.ChoosenItemByPlayer() == "Shield")
             {
                 equipShield.BorderStyle = BorderStyle.FixedSingle;
                 equipWeaponShield.Visible = true;
                 setTheVisibilityOfButtons();
+                TabAttackManager(false);
             }
             else if(game.ChoosenItemByPlayer() == "Bomb")
             {
@@ -368,6 +376,7 @@ namespace Dungeons
                 equipWeaponBomb.Visible = true;
                 setTheVisibilityOfButtons();
                 blowButton.Visible = true;
+                TabAttackManager(true);
             }
         }
 
@@ -419,6 +428,11 @@ namespace Dungeons
                 pointShield.Visible = false;
             }
                
+        }
+
+        private void TabAttackManager(bool value)
+        {
+            ((Control)this.tabPage2).Enabled = value;
         }
 
         private void CheckArrows()
