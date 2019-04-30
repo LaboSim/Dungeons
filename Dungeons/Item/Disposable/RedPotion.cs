@@ -7,7 +7,7 @@ namespace Dungeons
     {
         private const int additionalHealth = 10;
 
-        public RedPotion(Game game, Point location) : base(game, location)
+        public RedPotion(Game game, Point location, Player player) : base(game, location, player)
         {
 
         }
@@ -15,7 +15,7 @@ namespace Dungeons
 
         public override void Use(Random random)
         {
-            game.IncreasePlayerHealth(additionalHealth, random);
+            player.IncreaseHealth(additionalHealth, random);            
             Use();
         }
     }

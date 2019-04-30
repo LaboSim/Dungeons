@@ -6,11 +6,18 @@ namespace Dungeons
 {
     class Game
     {
+        /// <summary>
+        /// Magages the gameplay
+        /// </summary>
+        #region Fields and Properties
         private Player player;
         private Levels createLevels;
 
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
+
+        public int NumberOfArrows { get; set; }
+        public int PointsOfArmour { get; set; }
 
         private int level = 0;
         public int Level { get { return level; } }
@@ -20,37 +27,27 @@ namespace Dungeons
 
         private Rectangle boundaries;
         public Rectangle Boundaries { get { return boundaries; } }
+        #endregion
 
         public Game(Rectangle boundaries)
         {
             this.boundaries = boundaries;
             // 10 and 70 is ,,random" number to set the starting location of player
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
-            createLevels = new Levels(this);
+            createLevels = new Levels(this, player);
         }
 
+        #region Actions of gameplay
         public void Move(Direction direction, Random random)
         {
             player.Move(direction);
             EnemyMoves(random);           
-        }  
-        
-        private void EnemyMoves(Random random)
-        {
-            foreach (Enemy enemy in Enemies)
-            {
-                enemy.Move(random);
-            }
         }
 
-        public void HitPlayer(int maxDamage, Random random)
+        public void Attack(Direction direction, Random random)
         {
-            player.Hit(maxDamage, random);
-        }
-
-        public void Equip(string itemName)
-        {
-            player.Equip(itemName);
+            player.Attack(direction, random);
+            EnemyMoves(random);
         }
 
         public bool UseDisposable(Random random)
@@ -66,6 +63,26 @@ namespace Dungeons
             EnemyMoves(random);
             return used;
         }
+        #endregion
+
+        public void HitPlayer(int maxDamage, Random random)
+        {
+            player.Hit(maxDamage, random);
+        }      
+
+        private void EnemyMoves(Random random)
+        {
+            foreach (Enemy enemy in Enemies)
+            {
+                enemy.Move(random);
+            }
+        }
+
+        #region Equipment activities
+        public void Equip(string itemName)
+        {
+            player.Equip(itemName);
+        }
 
         public string ChoosenItemByPlayer()
         {
@@ -76,36 +93,7 @@ namespace Dungeons
         {
             return player.Items.Contains(itemName);
         }
-
-        public int NumberOfArrows { get; set; }
-
-        public void DeactivateArch()
-        {
-            player.DeactivateItem();
-        }
-
-        public void IncreasePlayerHealth(int health, Random random)
-        {
-            player.IncreaseHealth(health, random);
-        }
-
-        public void AddArrows(int arrows, Random random)
-        {
-            player.AddArrows(arrows, random);
-        }
-
-        public void DestroyArmour()
-        {
-            player.DestroyArmour();
-        }  
-        
-        public int PointsOfArmour { get; set; }
-
-        public void Attack(Direction direction, Random random)
-        {
-            player.Attack(direction, random);
-            EnemyMoves(random);
-        }
+        #endregion
 
         public void NewLevel(Random random)
         {

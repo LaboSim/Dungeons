@@ -6,7 +6,7 @@ namespace Dungeons
     {
         private const int pointOfDurability = 5;
 
-        public Shield(Game game, Point location) : base(game, location, pointOfDurability)
+        public Shield(Game game, Point location, Player player) : base(game, location, player, pointOfDurability)
         {
             game.PointsOfArmour = PointsOfDurability;
         }
@@ -24,7 +24,7 @@ namespace Dungeons
             else
             {
                 int damage = (-1) * PointsOfDurability;
-                game.DestroyArmour();
+                player.DestroyArmour();
                 return damage;
             }
         }

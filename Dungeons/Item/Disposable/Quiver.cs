@@ -7,7 +7,7 @@ namespace Dungeons
     {
         private const int maxAddtionalArrows = 6;
 
-        public Quiver(Game game, Point location) : base(game, location)
+        public Quiver(Game game, Point location, Player player) : base(game, location, player)
         {
             
         }
@@ -16,7 +16,7 @@ namespace Dungeons
 
         public override void Use(Random random)
         {
-            game.AddArrows(maxAddtionalArrows, random);
+            player.AddArrows(maxAddtionalArrows, random);
             Use();
         }
     }

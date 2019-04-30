@@ -5,16 +5,21 @@ namespace Dungeons
 {
     class Bow : Weapon, IRangedWeapon
     {
+        #region Fields and Properties
+        private Player player;
+
         private const int damage = 1;
         private const int range = 18;
         private const int startingNumberOfArrows = 3;
 
         public int NumberOfArrows { get; private set; }
+        #endregion
 
-        public Bow(Game game, Point location) : base(game, location)
+        public Bow(Game game, Point location, Player player) : base(game, location)
         {
             NumberOfArrows = startingNumberOfArrows;
             game.NumberOfArrows = NumberOfArrows;
+            this.player = player;
         }
 
         public override string Name { get { return "Bow"; } }
@@ -25,7 +30,7 @@ namespace Dungeons
             game.NumberOfArrows = NumberOfArrows;           
             DamageEnemy(direction, range, damage, random);
             if (NumberOfArrows <= 0)
-                game.DeactivateArch();
+                player.DeactivateItem();
         }
 
         public void AddArrows(int number, Random random)

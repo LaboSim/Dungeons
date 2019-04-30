@@ -6,11 +6,16 @@ namespace Dungeons
 {
     class Levels
     {
+        /// <summary>
+        /// Class to create new levels
+        /// </summary>
         private Game game;
+        private Player player;
 
-        public Levels(Game game)
+        public Levels(Game game, Player player)
         {
             this.game = game;
+            this.player = player;
         }
 
         // get random location inside the rectangle of the board that's why I added 10 - mathematical trick
@@ -34,13 +39,13 @@ namespace Dungeons
                 case 2:
                     {
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
-                        game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                        game.ItemInRoom = new BluePotion(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 3:
                     {
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
-                        game.ItemInRoom = new Bow(game, GetRandomLocation(random));
+                        game.ItemInRoom = new Bow(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 4:
@@ -52,17 +57,18 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Blue potion"))
                                 return;
                             else
-                                game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                                //game.ItemInRoom = new Quiver(game, GetRandomLocation(random), player);
+                                game.ItemInRoom = new BluePotion(game, GetRandomLocation(random), player);
                         }
                         else
-                            game.ItemInRoom = new Bow(game, GetRandomLocation(random));
+                            game.ItemInRoom = new Bow(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 5:
                     {
                         game.Enemies.Add(new Bat(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
-                        game.ItemInRoom = new RedPotion(game, GetRandomLocation(random));
+                        game.ItemInRoom = new RedPotion(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 6:
@@ -82,7 +88,7 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Red potion"))
                                 return;
                             else
-                                game.ItemInRoom = new RedPotion(game, GetRandomLocation(random));
+                                game.ItemInRoom = new RedPotion(game, GetRandomLocation(random), player);
                         }
                         else
                             game.ItemInRoom = new Mace(game, GetRandomLocation(random));
@@ -92,7 +98,7 @@ namespace Dungeons
                     {
                         game.Enemies.Add(new Wizard(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Bow"))
-                            game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
+                            game.ItemInRoom = new Quiver(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 9:
@@ -100,9 +106,9 @@ namespace Dungeons
                         game.Enemies.Add(new Ghost(game, GetRandomLocation(random)));
                         game.Enemies.Add(new Ghoul(game, GetRandomLocation(random)));
                         if (game.CheckPlayerInventory("Bow"))
-                            game.ItemInRoom = new Shield(game, GetRandomLocation(random));
+                            game.ItemInRoom = new Shield(game, GetRandomLocation(random), player);
                         else
-                            game.ItemInRoom = new Bow(game, GetRandomLocation(random));
+                            game.ItemInRoom = new Bow(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 10:
@@ -112,7 +118,7 @@ namespace Dungeons
                         if (game.CheckPlayerInventory("Red potion"))
                             game.ItemInRoom = new BattleAxe(game, GetRandomLocation(random));
                         else
-                            game.ItemInRoom = new RedPotion(game, GetRandomLocation(random));
+                            game.ItemInRoom = new RedPotion(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 11:
@@ -135,7 +141,7 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Quiver"))
                                 return;
                             else
-                                game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
+                                game.ItemInRoom = new Quiver(game, GetRandomLocation(random),player);
                         }
                         break;
                     }
@@ -154,10 +160,10 @@ namespace Dungeons
                             if (game.CheckPlayerInventory("Shield"))
                                 return;
                             else
-                                game.ItemInRoom = new Shield(game, GetRandomLocation(random));
+                                game.ItemInRoom = new Shield(game, GetRandomLocation(random), player);
                         }
                         else
-                            game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                            game.ItemInRoom = new BluePotion(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 15:
@@ -172,7 +178,7 @@ namespace Dungeons
                                 if (game.CheckPlayerInventory("Quiver"))
                                     return;
                                 else
-                                    game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
+                                    game.ItemInRoom = new Quiver(game, GetRandomLocation(random), player);
                             }
                         }
                         else
@@ -191,10 +197,10 @@ namespace Dungeons
                                 if (game.CheckPlayerInventory("Blue potion"))
                                     return;
                                 else
-                                    game.ItemInRoom = new BluePotion(game, GetRandomLocation(random));
+                                    game.ItemInRoom = new BluePotion(game, GetRandomLocation(random), player);
                             }
                             else
-                                game.ItemInRoom = new RedPotion(game, GetRandomLocation(random));
+                                game.ItemInRoom = new RedPotion(game, GetRandomLocation(random), player);
                         }
                         else
                             game.ItemInRoom = new Bomb(game, GetRandomLocation(random));
@@ -213,11 +219,11 @@ namespace Dungeons
                                 if (game.CheckPlayerInventory("Quiver"))
                                     return;
                                 else
-                                    game.ItemInRoom = new Quiver(game, GetRandomLocation(random));
+                                    game.ItemInRoom = new Quiver(game, GetRandomLocation(random), player);
                             }
                         }
                         else
-                            game.ItemInRoom = new Shield(game, GetRandomLocation(random));
+                            game.ItemInRoom = new Shield(game, GetRandomLocation(random), player);
                         break;
                     }
                 case 18:

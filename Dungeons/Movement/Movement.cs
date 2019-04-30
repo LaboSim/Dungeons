@@ -5,10 +5,12 @@ namespace Dungeons
 {
     abstract class Movement
     {
+        #region Fields and Properties
         private const int moveInterval = 10;
         protected Point location;
-        public Point Location { get { return location; } }
         protected Game game;
+        public Point Location { get { return location; } }
+        #endregion
 
         public Movement(Game game, Point location)
         {

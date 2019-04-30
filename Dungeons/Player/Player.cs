@@ -6,9 +6,17 @@ namespace Dungeons
 {
     class Player : Movement
     {
+        /// <summary>
+        /// Class to handle with movement, attack, equipment of player
+        /// </summary>
+        #region Fields and Properties
         private const int distanceOfTheItemToThePlayer = 1;
 
         private Item equippedItem;
+
+        public int HitPoints { get; private set; }
+        #endregion
+
         private List<Item> inventory = new List<Item>();
         public List<string> Items
         {
@@ -21,15 +29,14 @@ namespace Dungeons
                 }
                 return names;
             }
-        }
-
-        public int HitPoints { get; private set; }
+        }       
 
         public Player(Game game, Point location) : base(game, location)
         {
             HitPoints = 10;
         }
 
+        #region Player's activities
         public void Move(Direction direction)
         {
             PlayerStatistics.MovePlayer++;
@@ -56,11 +63,45 @@ namespace Dungeons
                 PlayerStatistics.AttackPlayer++;
             }                
         }
+        #endregion
 
+        #region Equipment activities
+        public void DeactivateItem()
+        {
+            equippedItem = null;
+        }
+
+        public void DestroyArmour()
+        {
+            OneOffItem(equippedItem);
+        }
+
+        public string ChoosenItem()
+        {
+            if (equippedItem != null)
+                return equippedItem.Name;
+            else
+                return "";
+        }
+
+        public void Equip(string itemName)
+        {
+            foreach (Item item in inventory)
+            {
+                if (item.Name == itemName)
+                {
+                    equippedItem = item;
+                    break;
+                }
+            }
+        }
+        #endregion
+
+        #region Disposable activities
         public bool UseDisposable(Random random)
         {
             Disposable disposable;
-            bool used = false;           
+            bool used = false;
 
             if (equippedItem != null)
             {
@@ -73,8 +114,8 @@ namespace Dungeons
                         used = disposable.Used;
                         OneOffItem(item);
                         break;
-                    }                    
-                }                
+                    }
+                }
             }
             return used;
         }
@@ -103,11 +144,29 @@ namespace Dungeons
             return used;
         }
 
-        public void DeactivateItem()
+        private void OneOffItem(Item item)
         {
             equippedItem = null;
+            inventory.Remove(item);
+            Items.Remove(item.Name);
         }
 
+        public void AddArrows(int arrows, Random random)
+        {
+            foreach (Item item in inventory)
+            {
+                IRangedWeapon arch;
+                if (item is IRangedWeapon)
+                {
+                    arch = item as IRangedWeapon;
+                    arch.AddArrows(arrows, random);
+                    break;
+                }
+            }
+        }
+        #endregion
+
+        #region Activities regarding to hit points of player
         public void Hit(int maxDamage, Random random)
         {
             int receivedDamage = random.Next(1, maxDamage);
@@ -117,63 +176,18 @@ namespace Dungeons
                 int damage;
                 damage = armour.GetDamage(receivedDamage);
                 if (damage > 0)
-                    return;                   
+                    return;
                 else
-                    HitPoints -= damage;               
-            }                             
+                    HitPoints -= damage;
+            }
             else
                 HitPoints -= receivedDamage;
-        }
-
-        public void DestroyArmour()
-        {
-            OneOffItem(equippedItem);
-        }
-
-        public string ChoosenItem()
-        {
-            if (equippedItem != null)
-                return equippedItem.Name;
-            else
-                return "";
-        }
-
-        public void Equip(string itemName)
-        {
-            foreach(Item item in inventory)
-            {
-                if (item.Name == itemName)
-                {
-                    equippedItem = item;
-                    break;
-                }                   
-            }
-        }
-
-        private void OneOffItem(Item item)
-        {
-            equippedItem = null;
-            inventory.Remove(item);
-            Items.Remove(item.Name);           
         }
 
         public void IncreaseHealth(int health, Random random)
         {
             HitPoints += random.Next(1, health);
         }
-
-        public void AddArrows(int arrows, Random random)
-        {
-            foreach(Item item in inventory)
-            {
-                IRangedWeapon arch;
-                if (item is IRangedWeapon)
-                {
-                    arch = item as IRangedWeapon;
-                    arch.AddArrows(arrows, random);
-                    break; 
-                }
-            }
-        }
+        #endregion        
     }
 }

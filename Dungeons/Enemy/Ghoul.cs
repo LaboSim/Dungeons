@@ -5,9 +5,11 @@ namespace Dungeons
 {
     class Ghoul : Enemy
     {
+        #region Constant fields
         private const int minHealth = 1;
         private const int maxDamage = 4;
         private const int startingHitPoints = 10;
+        #endregion
 
         public Ghoul(Game game, Point location) : base(game, location, startingHitPoints)
         {

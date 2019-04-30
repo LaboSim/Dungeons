@@ -5,9 +5,11 @@ namespace Dungeons
 {
     class Wizard : Enemy
     {
+        #region Constant fields
         private const int minHealth = 1;
         private const int maxDamage = 5;
         private const int startingHitPoints = 20;
+        #endregion
 
         public Wizard(Game game, Point location) : base(game, location, startingHitPoints)
         {

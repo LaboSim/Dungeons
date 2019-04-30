@@ -5,9 +5,11 @@ namespace Dungeons
 {
     abstract class Enemy : Movement
     {
+        #region Fields
         private const int nearPlayerDistance = 25;
         public int HitPoints { get; private set; }
         public int ReceivedAttackByEnemy { get; private set; }
+        #endregion
 
         public Enemy(Game game, Point location, int hitPoints) : base(game, location)
         {

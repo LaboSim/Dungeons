@@ -5,10 +5,12 @@ namespace Dungeons
 {
     abstract class Disposable : Item
     {
+        protected Player player;
         public bool Used { get; private set; }
 
-        public Disposable(Game game, Point location) : base(game, location)
+        public Disposable(Game game, Point location, Player player) : base(game, location)
         {
+            this.player = player;
             Used = false;
         }
 
