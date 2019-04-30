@@ -6,7 +6,7 @@ namespace Dungeons
 {
     public partial class Menu : Form
     {
-        PrepareToPlay prepareToPlay = new PrepareToPlay();
+        ScreenBeforeTheGame screenBeforeTheGame = new ScreenBeforeTheGame();
         byte runApp = 0;
 
         public Menu()
@@ -60,9 +60,9 @@ namespace Dungeons
         {
             if (runApp == 0)
             {
-                prepareToPlay.Show();
+                screenBeforeTheGame.Show();
                 Thread.Sleep(1200);
-                prepareToPlay.Close();
+                screenBeforeTheGame.Close();
                 runApp++;
                 Continue();
             }

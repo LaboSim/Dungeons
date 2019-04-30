@@ -2,7 +2,7 @@
 
 namespace Dungeons
 {
-    interface IHandlingArch
+    interface IRangedWeapon
     {
         int NumberOfArrows { get; }
         void AddArrows(int number, Random random);

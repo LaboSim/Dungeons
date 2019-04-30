@@ -99,3 +99,16 @@ D:\Programowanie\Dun\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResourc
 D:\Programowanie\Dun\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
 D:\Programowanie\Dun\Dungeons\Dungeons\obj\Debug\Dungeons.exe
 D:\Programowanie\Dun\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\bin\Debug\Dungeons.exe.config
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\bin\Debug\Dungeons.exe
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\bin\Debug\Dungeons.pdb
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.csprojAssemblyReference.cache
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.DungeonsForm.resources
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.Properties.Resources.resources
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.EndOfGameForm.resources
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.Menu.resources
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResource.cache
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompileInputs.cache
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.exe
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
+D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.ScreenBeforeTheGame.resources

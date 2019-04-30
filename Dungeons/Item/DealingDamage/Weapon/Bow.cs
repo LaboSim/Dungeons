@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class Bow : Weapon, IHandlingArch
+    class Bow : Weapon, IRangedWeapon
     {
         private const int damage = 1;
         private const int range = 18;

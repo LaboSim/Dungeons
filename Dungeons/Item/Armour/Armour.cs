@@ -4,11 +4,11 @@ namespace Dungeons
 {
     abstract class Armour : Item
     {
-        public int PointsOfArmour { get; set; }
+        public int PointsOfDurability { get; set; }
 
         public Armour(Game game, Point location, int pointsOfArmour) : base(game, location)
         {
-            this.PointsOfArmour = pointsOfArmour;          
+            this.PointsOfDurability = pointsOfArmour;          
         }
 
         public abstract int GetDamage(int receivedDamage);

@@ -12,7 +12,7 @@ namespace Dungeons
             Used = false;
         }
 
-        public void UseDisposable()
+        public void Use()
         {
             Used = true;
         }

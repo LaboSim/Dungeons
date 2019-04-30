@@ -16,7 +16,7 @@ namespace Dungeons
         public override void Use(Random random)
         {
             game.IncreasePlayerHealth(additionalHealth, random);
-            UseDisposable();
+            Use();
         }
     }
 }

@@ -3,11 +3,11 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class HandlingEnemyDamage : Item
+    abstract class DamageForEnemy : Item
     {
         private const int moveInterval = 10;
 
-        public HandlingEnemyDamage(Game game, Point location) : base(game, location)
+        public DamageForEnemy(Game game, Point location) : base(game, location)
         {
 
         }
@@ -20,9 +20,8 @@ namespace Dungeons
             else
                 return false;
         }
-
-        // this is a little abstract, we ,,change" location to deal damage
-        protected Point ChangeLocation(Direction direction, Point playerLocation, Rectangle boundaries)
+        
+        protected Point ChangeLocationToDealDamage(Direction direction, Point playerLocation, Rectangle boundaries)
         {
             Point newlocation = playerLocation;
 
@@ -70,7 +69,7 @@ namespace Dungeons
                         return true;
                     }
                 }
-                target = ChangeLocation(direction, target, game.Boundaries);
+                target = ChangeLocationToDealDamage(direction, target, game.Boundaries);
             }
             return false;
         }

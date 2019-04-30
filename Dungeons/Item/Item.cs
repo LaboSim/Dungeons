@@ -16,7 +16,7 @@ namespace Dungeons
             PickedUp = false;
         }
 
-        public void PickUpItem()
+        public void PickUp()
         {
             PickedUp = true;
         }

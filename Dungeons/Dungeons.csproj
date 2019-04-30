@@ -61,7 +61,7 @@
     <Compile Include="Enemy\Ghost.cs" />
     <Compile Include="Enemy\Ghoul.cs" />
     <Compile Include="Enemy\Wizard.cs" />
-    <Compile Include="Game\CreateLevels.cs" />
+    <Compile Include="Game\Levels.cs" />
     <Compile Include="Game\Game.cs" />
     <Compile Include="Item\Armour\Armour.cs" />
     <Compile Include="Item\Armour\Shield.cs" />
@@ -70,15 +70,15 @@
     <Compile Include="Item\Disposable\Quiver.cs" />
     <Compile Include="Item\Disposable\RedPotion.cs" />
     <Compile Include="Item\Item.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Explosive\Bomb.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Explosive\Explosive.cs" />
-    <Compile Include="Item\ItemsDealingDamage\HandlingEnemyDamage.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\BattleAxe.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\Bow.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\IHandlingArch.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\Mace.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\Sword.cs" />
-    <Compile Include="Item\ItemsDealingDamage\Weapon\Weapon.cs" />
+    <Compile Include="Item\DealingDamage\Explosive\Bomb.cs" />
+    <Compile Include="Item\DealingDamage\Explosive\Explosive.cs" />
+    <Compile Include="Item\DealingDamage\DamageForEnemy.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\BattleAxe.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\Bow.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\IRangedWeapon.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\Mace.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\Sword.cs" />
+    <Compile Include="Item\DealingDamage\Weapon\Weapon.cs" />
     <Compile Include="Movement\Direction.cs" />
     <Compile Include="Movement\Movement.cs" />
     <Compile Include="Player\Player.cs" />
@@ -97,11 +97,11 @@
     <Compile Include="View\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\PrepareToPlay.cs">
+    <Compile Include="View\ScreenBeforeTheGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\PrepareToPlay.Designer.cs">
-      <DependentUpon>PrepareToPlay.cs</DependentUpon>
+    <Compile Include="View\ScreenBeforeTheGame.Designer.cs">
+      <DependentUpon>ScreenBeforeTheGame.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dungeons.resx">
       <DependentUpon>Dungeons.cs</DependentUpon>
@@ -122,8 +122,8 @@
     <EmbeddedResource Include="View\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\PrepareToPlay.resx">
-      <DependentUpon>PrepareToPlay.cs</DependentUpon>
+    <EmbeddedResource Include="View\ScreenBeforeTheGame.resx">
+      <DependentUpon>ScreenBeforeTheGame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

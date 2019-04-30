@@ -1,6 +1,6 @@
 ﻿namespace Dungeons
 {
-    partial class PrepareToPlay
+    partial class ScreenBeforeTheGame
     {
         /// <summary>
         /// Required designer variable.

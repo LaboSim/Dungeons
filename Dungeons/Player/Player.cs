@@ -38,7 +38,7 @@ namespace Dungeons
             {
                 if (Nearby(game.ItemInRoom.Location, distanceOfTheItemToThePlayer))
                 {                        
-                    game.ItemInRoom.PickUpItem();
+                    game.ItemInRoom.PickUp();
                     inventory.Add(game.ItemInRoom);
                     if (inventory.Count == 1)
                         game.Equip(game.ItemInRoom.Name);
@@ -166,10 +166,10 @@ namespace Dungeons
         {
             foreach(Item item in inventory)
             {
-                IHandlingArch arch;
-                if (item is Bow)
+                IRangedWeapon arch;
+                if (item is IRangedWeapon)
                 {
-                    arch = item as IHandlingArch;
+                    arch = item as IRangedWeapon;
                     arch.AddArrows(arrows, random);
                     break; 
                 }

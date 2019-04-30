@@ -2,9 +2,9 @@
 
 namespace Dungeons
 {
-    public partial class PrepareToPlay : Form
+    public partial class ScreenBeforeTheGame : Form
     {
-        public PrepareToPlay()
+        public ScreenBeforeTheGame()
         {
             InitializeComponent();
             CenterToScreen();

@@ -7,9 +7,9 @@ namespace Dungeons
     {
         private const int minHealth = 1;
         private const int maxDamage = 5;
-        private const int hitPointsOfLifeAtTheBeginning = 20;
+        private const int startingHitPoints = 20;
 
-        public Wizard(Game game, Point location) : base(game, location, hitPointsOfLifeAtTheBeginning)
+        public Wizard(Game game, Point location) : base(game, location, startingHitPoints)
         {
                 
         }

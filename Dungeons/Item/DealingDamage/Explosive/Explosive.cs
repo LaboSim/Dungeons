@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class Explosive : HandlingEnemyDamage
+    abstract class Explosive : DamageForEnemy
     {
         public bool Blow { get; private set; }
 

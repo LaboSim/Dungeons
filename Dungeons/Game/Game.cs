@@ -7,7 +7,7 @@ namespace Dungeons
     class Game
     {
         private Player player;
-        private CreateLevels createLevels;
+        private Levels createLevels;
 
         public Point PlayerLocation { get { return player.Location; } }
         public int PlayerHitPoints { get { return player.HitPoints; } }
@@ -26,7 +26,7 @@ namespace Dungeons
             this.boundaries = boundaries;
             // 10 and 70 is ,,random" number to set the starting location of player
             player = new Player(this, new Point(boundaries.Left + 10, boundaries.Top + 70));
-            createLevels = new CreateLevels(this);
+            createLevels = new Levels(this);
         }
 
         public void Move(Direction direction, Random random)

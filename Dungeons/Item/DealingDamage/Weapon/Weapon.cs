@@ -3,7 +3,7 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    abstract class Weapon : HandlingEnemyDamage
+    abstract class Weapon : DamageForEnemy
     {       
         public Weapon(Game game, Point location) : base(game, location)
         {

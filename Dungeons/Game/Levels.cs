@@ -4,11 +4,11 @@ using System.Drawing;
 
 namespace Dungeons
 {
-    class CreateLevels
+    class Levels
     {
         private Game game;
 
-        public CreateLevels(Game game)
+        public Levels(Game game)
         {
             this.game = game;
         }

@@ -17,7 +17,7 @@ namespace Dungeons
         public override void Use(Random random)
         {
             game.AddArrows(maxAddtionalArrows, random);
-            UseDisposable();
+            Use();
         }
     }
 }
