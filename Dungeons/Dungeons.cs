@@ -345,67 +345,64 @@ namespace Dungeons
         {
             if (game.ChoosenItemByPlayer() == "Sword")
             {
-                equipSword.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponSword.Visible = true;
+                SetTheControlsOfWeapon(equipSword, equipWeaponSword);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Bow")
             {
-                equipBow.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponBow.Visible = true;
+                SetTheControlsOfWeapon(equipBow, equipWeaponBow);                
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Mace")
             {
-                equipMace.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponMace.Visible = true;
+                SetTheControlsOfWeapon(equipMace, equipWeaponMace);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Blue potion")
             {
-                equipBluePotion.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponBluePotion.Visible = true;
+                SetTheControlsOfWeapon(equipBluePotion, equipWeaponBluePotion);
                 SetTheVisibilityOfButtons();
                 drinkButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Red potion")
             {
-                equipRedPotion.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponRedPotion.Visible = true;
+                SetTheControlsOfWeapon(equipRedPotion, equipWeaponRedPotion);
                 SetTheVisibilityOfButtons();
                 drinkButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Battle axe")
             {
-                equipBattleAxe.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponBattleAxe.Visible = true;
+                SetTheControlsOfWeapon(equipBattleAxe, equipWeaponBattleAxe);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Quiver")
             {
-                equipQuiver.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponQuiver.Visible = true;
+                SetTheControlsOfWeapon(equipQuiver, equipWeaponQuiver);
                 SetTheVisibilityOfButtons();
                 quiverButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Shield")
             {
-                equipShield.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponShield.Visible = true;
+                SetTheControlsOfWeapon(equipShield, equipWeaponShield);
                 SetTheVisibilityOfButtons();
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Bomb")
             {
-                equipBomb.BorderStyle = BorderStyle.FixedSingle;
-                equipWeaponBomb.Visible = true;
+                SetTheControlsOfWeapon(equipBomb, equipWeaponBomb);
                 SetTheVisibilityOfButtons();
                 blowButton.Visible = true;
                 TabAttackManager(false);
             }
+        }
+
+        private void SetTheControlsOfWeapon(PictureBox equipPictureBox, PictureBox equipWeaponPictureBox)
+        {
+            equipPictureBox.BorderStyle = BorderStyle.FixedSingle;
+            equipWeaponPictureBox.Visible = true;            
         }
         #endregion
 

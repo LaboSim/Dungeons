@@ -98,6 +98,7 @@
             this.equipBomb = new System.Windows.Forms.PictureBox();
             this.equipWeaponBomb = new System.Windows.Forms.PictureBox();
             this.blowButton = new System.Windows.Forms.Button();
+            this.playerSword30 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -134,6 +135,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bomb30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSword30)).BeginInit();
             this.SuspendLayout();
             // 
             // player30
@@ -980,6 +982,18 @@
             this.blowButton.Visible = false;
             this.blowButton.Click += new System.EventHandler(this.blowButton_Click);
             // 
+            // playerSword30
+            // 
+            this.playerSword30.BackColor = System.Drawing.Color.Transparent;
+            this.playerSword30.Image = global::Dungeons.Properties.Resources.playerSword30;
+            this.playerSword30.Location = new System.Drawing.Point(156, 48);
+            this.playerSword30.Name = "playerSword30";
+            this.playerSword30.Size = new System.Drawing.Size(30, 30);
+            this.playerSword30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerSword30.TabIndex = 49;
+            this.playerSword30.TabStop = false;
+            this.playerSword30.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -987,6 +1001,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.playerSword30);
             this.Controls.Add(this.blowButton);
             this.Controls.Add(this.equipWeaponBomb);
             this.Controls.Add(this.equipBomb);
@@ -1081,6 +1096,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bomb30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerSword30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1157,6 +1173,7 @@
         private System.Windows.Forms.PictureBox equipBomb;
         private System.Windows.Forms.PictureBox equipWeaponBomb;
         private System.Windows.Forms.Button blowButton;
+        private System.Windows.Forms.PictureBox playerSword30;
     }
 }
 

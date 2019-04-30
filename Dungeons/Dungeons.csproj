@@ -85,6 +85,11 @@
     <Compile Include="Player\PlayerStatistics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\EndOfGame.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,14 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="View\EndOfGame.resx">
       <DependentUpon>EndOfGame.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,13 +139,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\splash2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\splash1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\london-dungeon.jpg" />
+    <Content Include="Resources\PlayerWithDifferentWeapon\playerSword30.png" />
+    <Content Include="Resources\Screens\london-dungeon.jpg" />
+    <Content Include="Resources\Screens\splash1.jpg" />
+    <Content Include="Resources\Screens\splash2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
