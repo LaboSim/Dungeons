@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DungeonsForm));
-            this.player30 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,7 +98,14 @@
             this.equipWeaponBomb = new System.Windows.Forms.PictureBox();
             this.blowButton = new System.Windows.Forms.Button();
             this.playerSword30 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.player30)).BeginInit();
+            this.playerEmpty30 = new System.Windows.Forms.PictureBox();
+            this.playerBow30 = new System.Windows.Forms.PictureBox();
+            this.playerBluePotion30 = new System.Windows.Forms.PictureBox();
+            this.playerRedPotion30 = new System.Windows.Forms.PictureBox();
+            this.playerBattleAxe30 = new System.Windows.Forms.PictureBox();
+            this.playerQuiver30 = new System.Windows.Forms.PictureBox();
+            this.playerShield30 = new System.Windows.Forms.PictureBox();
+            this.playerBomb30 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -136,20 +142,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSword30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerEmpty30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBow30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBluePotion30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerRedPotion30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleAxe30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerQuiver30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerShield30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBomb30)).BeginInit();
             this.SuspendLayout();
-            // 
-            // player30
-            // 
-            this.player30.BackColor = System.Drawing.Color.Transparent;
-            this.player30.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.player30.Image = ((System.Drawing.Image)(resources.GetObject("player30.Image")));
-            this.player30.Location = new System.Drawing.Point(12, 12);
-            this.player30.Name = "player30";
-            this.player30.Size = new System.Drawing.Size(30, 30);
-            this.player30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.player30.TabIndex = 0;
-            this.player30.TabStop = false;
-            this.player30.Visible = false;
             // 
             // tableLayoutPanel1
             // 
@@ -935,7 +936,7 @@
             // 
             this.bomb30.BackColor = System.Drawing.Color.Transparent;
             this.bomb30.Image = ((System.Drawing.Image)(resources.GetObject("bomb30.Image")));
-            this.bomb30.Location = new System.Drawing.Point(120, 48);
+            this.bomb30.Location = new System.Drawing.Point(12, 12);
             this.bomb30.Name = "bomb30";
             this.bomb30.Size = new System.Drawing.Size(30, 30);
             this.bomb30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -994,6 +995,102 @@
             this.playerSword30.TabStop = false;
             this.playerSword30.Visible = false;
             // 
+            // playerEmpty30
+            // 
+            this.playerEmpty30.BackColor = System.Drawing.Color.Transparent;
+            this.playerEmpty30.Image = global::Dungeons.Properties.Resources.playerEmpty30;
+            this.playerEmpty30.Location = new System.Drawing.Point(192, 48);
+            this.playerEmpty30.Name = "playerEmpty30";
+            this.playerEmpty30.Size = new System.Drawing.Size(30, 30);
+            this.playerEmpty30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerEmpty30.TabIndex = 50;
+            this.playerEmpty30.TabStop = false;
+            this.playerEmpty30.Visible = false;
+            // 
+            // playerBow30
+            // 
+            this.playerBow30.BackColor = System.Drawing.Color.Transparent;
+            this.playerBow30.Image = global::Dungeons.Properties.Resources.playerBow30;
+            this.playerBow30.Location = new System.Drawing.Point(228, 48);
+            this.playerBow30.Name = "playerBow30";
+            this.playerBow30.Size = new System.Drawing.Size(30, 30);
+            this.playerBow30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerBow30.TabIndex = 51;
+            this.playerBow30.TabStop = false;
+            this.playerBow30.Visible = false;
+            // 
+            // playerBluePotion30
+            // 
+            this.playerBluePotion30.BackColor = System.Drawing.Color.Transparent;
+            this.playerBluePotion30.Image = global::Dungeons.Properties.Resources.playerBluePotion30;
+            this.playerBluePotion30.Location = new System.Drawing.Point(264, 48);
+            this.playerBluePotion30.Name = "playerBluePotion30";
+            this.playerBluePotion30.Size = new System.Drawing.Size(30, 30);
+            this.playerBluePotion30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerBluePotion30.TabIndex = 52;
+            this.playerBluePotion30.TabStop = false;
+            this.playerBluePotion30.Visible = false;
+            // 
+            // playerRedPotion30
+            // 
+            this.playerRedPotion30.BackColor = System.Drawing.Color.Transparent;
+            this.playerRedPotion30.Image = global::Dungeons.Properties.Resources.playerRedPotion30;
+            this.playerRedPotion30.Location = new System.Drawing.Point(300, 48);
+            this.playerRedPotion30.Name = "playerRedPotion30";
+            this.playerRedPotion30.Size = new System.Drawing.Size(30, 30);
+            this.playerRedPotion30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerRedPotion30.TabIndex = 53;
+            this.playerRedPotion30.TabStop = false;
+            this.playerRedPotion30.Visible = false;
+            // 
+            // playerBattleAxe30
+            // 
+            this.playerBattleAxe30.BackColor = System.Drawing.Color.Transparent;
+            this.playerBattleAxe30.Image = global::Dungeons.Properties.Resources.playerBattleAxe30;
+            this.playerBattleAxe30.Location = new System.Drawing.Point(120, 48);
+            this.playerBattleAxe30.Name = "playerBattleAxe30";
+            this.playerBattleAxe30.Size = new System.Drawing.Size(30, 30);
+            this.playerBattleAxe30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerBattleAxe30.TabIndex = 54;
+            this.playerBattleAxe30.TabStop = false;
+            this.playerBattleAxe30.Visible = false;
+            // 
+            // playerQuiver30
+            // 
+            this.playerQuiver30.BackColor = System.Drawing.Color.Transparent;
+            this.playerQuiver30.Image = global::Dungeons.Properties.Resources.playerQuiver30;
+            this.playerQuiver30.Location = new System.Drawing.Point(336, 48);
+            this.playerQuiver30.Name = "playerQuiver30";
+            this.playerQuiver30.Size = new System.Drawing.Size(30, 30);
+            this.playerQuiver30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerQuiver30.TabIndex = 55;
+            this.playerQuiver30.TabStop = false;
+            this.playerQuiver30.Visible = false;
+            // 
+            // playerShield30
+            // 
+            this.playerShield30.BackColor = System.Drawing.Color.Transparent;
+            this.playerShield30.Image = global::Dungeons.Properties.Resources.playerShield30;
+            this.playerShield30.Location = new System.Drawing.Point(372, 48);
+            this.playerShield30.Name = "playerShield30";
+            this.playerShield30.Size = new System.Drawing.Size(30, 30);
+            this.playerShield30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerShield30.TabIndex = 56;
+            this.playerShield30.TabStop = false;
+            this.playerShield30.Visible = false;
+            // 
+            // playerBomb30
+            // 
+            this.playerBomb30.BackColor = System.Drawing.Color.Transparent;
+            this.playerBomb30.Image = global::Dungeons.Properties.Resources.playerBomb30;
+            this.playerBomb30.Location = new System.Drawing.Point(408, 48);
+            this.playerBomb30.Name = "playerBomb30";
+            this.playerBomb30.Size = new System.Drawing.Size(30, 30);
+            this.playerBomb30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerBomb30.TabIndex = 57;
+            this.playerBomb30.TabStop = false;
+            this.playerBomb30.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1001,7 +1098,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.playerBomb30);
+            this.Controls.Add(this.playerShield30);
+            this.Controls.Add(this.playerQuiver30);
+            this.Controls.Add(this.playerBattleAxe30);
+            this.Controls.Add(this.playerRedPotion30);
+            this.Controls.Add(this.playerBluePotion30);
+            this.Controls.Add(this.playerBow30);
             this.Controls.Add(this.playerSword30);
+            this.Controls.Add(this.playerEmpty30);
             this.Controls.Add(this.blowButton);
             this.Controls.Add(this.equipWeaponBomb);
             this.Controls.Add(this.equipBomb);
@@ -1028,7 +1133,6 @@
             this.Controls.Add(this.ghoul30);
             this.Controls.Add(this.equipWeaponBluePotion);
             this.Controls.Add(this.equipBluePotion);
-            this.Controls.Add(this.player30);
             this.Controls.Add(this.equipWeaponMace);
             this.Controls.Add(this.equipMace);
             this.Controls.Add(this.equipWeaponBow);
@@ -1060,7 +1164,6 @@
             this.Text = "Dungeons";
             this.Load += new System.EventHandler(this.Dungeons_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Dungeons_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.player30)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1097,14 +1200,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.equipBomb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipWeaponBomb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerSword30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerEmpty30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBow30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBluePotion30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerRedPotion30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBattleAxe30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerQuiver30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerShield30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerBomb30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox player30;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -1174,6 +1283,14 @@
         private System.Windows.Forms.PictureBox equipWeaponBomb;
         private System.Windows.Forms.Button blowButton;
         private System.Windows.Forms.PictureBox playerSword30;
+        private System.Windows.Forms.PictureBox playerEmpty30;
+        private System.Windows.Forms.PictureBox playerBow30;
+        private System.Windows.Forms.PictureBox playerBluePotion30;
+        private System.Windows.Forms.PictureBox playerRedPotion30;
+        private System.Windows.Forms.PictureBox playerBattleAxe30;
+        private System.Windows.Forms.PictureBox playerQuiver30;
+        private System.Windows.Forms.PictureBox playerShield30;
+        private System.Windows.Forms.PictureBox playerBomb30;
     }
 }
 

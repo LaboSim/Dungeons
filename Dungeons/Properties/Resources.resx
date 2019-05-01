@@ -118,16 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="splash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screens\splash1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playerBattleAxe30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerBattleAxe30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="london-dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screens\london-dungeon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="playerShield30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerShield30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="splash2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Screens\splash2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="splash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screens\splash1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerRedPotion30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerRedPotion30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerEmpty30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerEmpty30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="london-dungeon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screens\london-dungeon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerBluePotion30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerBluePotion30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="playerSword30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerWithDifferentWeapon\playerSword30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerQuiver30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerQuiver30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerBow30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerBow30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="playerBomb30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerWithDifferentWeapon\playerBomb30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

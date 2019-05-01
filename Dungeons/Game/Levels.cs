@@ -56,8 +56,7 @@ namespace Dungeons
                         {
                             if (game.CheckPlayerInventory("Blue potion"))
                                 return;
-                            else
-                                //game.ItemInRoom = new Quiver(game, GetRandomLocation(random), player);
+                            else                                
                                 game.ItemInRoom = new BluePotion(game, GetRandomLocation(random), player);
                         }
                         else

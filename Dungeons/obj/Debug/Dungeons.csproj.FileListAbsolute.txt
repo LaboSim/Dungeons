@@ -53,7 +53,6 @@ D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\bin\Debug\Dungeons.ex
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\bin\Debug\Dungeons.exe
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\bin\Debug\Dungeons.pdb
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.csprojAssemblyReference.cache
-D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.Dungeons.resources
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.Menu.resources
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.Properties.Resources.resources
 D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.GenerateResource.cache
@@ -112,3 +111,6 @@ D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.csproj.CoreCompil
 D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.exe
 D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.pdb
 D:\Programowanie\Dugeons_\Dungeons\Dungeons\obj\Debug\Dungeons.ScreenBeforeTheGame.resources
+D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.DungeonsForm.resources
+D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.EndOfGameForm.resources
+D:\Szymon\Programowanie\C#\Dungeons_edit\Dungeons\Dungeons\obj\Debug\Dungeons.ScreenBeforeTheGame.resources

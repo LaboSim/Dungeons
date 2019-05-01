@@ -139,6 +139,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\PlayerWithDifferentWeapon\playerEmpty30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerBow30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerBluePotion30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerRedPotion30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerBattleAxe30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerQuiver30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerShield30.png" />
+    <None Include="Resources\PlayerWithDifferentWeapon\playerBomb30.png" />
     <Content Include="Resources\PlayerWithDifferentWeapon\playerSword30.png" />
     <Content Include="Resources\Screens\london-dungeon.jpg" />
     <Content Include="Resources\Screens\splash1.jpg" />

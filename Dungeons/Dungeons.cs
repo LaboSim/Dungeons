@@ -12,6 +12,7 @@ namespace Dungeons
         Menu menu = new Menu();
         EndOfGameForm endOfGame = new EndOfGameForm();
         bool checkVisibilityStats = true;
+        Control player = null;
         #endregion
 
         public DungeonsForm()
@@ -19,7 +20,8 @@ namespace Dungeons
             InitializeComponent();
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint |
                 ControlStyles.OptimizedDoubleBuffer, true);
-            player30.Visible = true;
+            player = playerEmpty30;
+            player.Visible = true;
             CenterToScreen();
             this.Show();
             menu.ShowDialog();
@@ -168,7 +170,7 @@ namespace Dungeons
 
         private void UpdatePlayer()
         {
-            player30.Location = game.PlayerLocation;
+            player.Location = game.PlayerLocation;
             playerHitPoints.Text = game.PlayerHitPoints.ToString();
             overallNumberOfMoves.Text = "Overall number of moves: " + PlayerStatistics.MovePlayer;
             overallNumberOfAttacks.Text = "Overall number of attacks: " + PlayerStatistics.AttackPlayer;
@@ -305,6 +307,7 @@ namespace Dungeons
             }
             else
             {
+                PictureForDisposableItem();
                 equipShield.Visible = false;
                 pointShield.Visible = false;
             }
@@ -345,64 +348,97 @@ namespace Dungeons
         {
             if (game.ChoosenItemByPlayer() == "Sword")
             {
-                SetTheControlsOfWeapon(equipSword, equipWeaponSword);
+                SetTheControlsOfWeapon(equipSword, equipWeaponSword, playerSword30);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Bow")
             {
-                SetTheControlsOfWeapon(equipBow, equipWeaponBow);                
+                SetTheControlsOfWeapon(equipBow, equipWeaponBow, playerBow30);                
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Mace")
             {
-                SetTheControlsOfWeapon(equipMace, equipWeaponMace);
+                SetTheControlsOfWeapon(equipMace, equipWeaponMace, playerSword30);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Blue potion")
             {
-                SetTheControlsOfWeapon(equipBluePotion, equipWeaponBluePotion);
+                SetTheControlsOfWeapon(equipBluePotion, equipWeaponBluePotion, playerBluePotion30);
                 SetTheVisibilityOfButtons();
                 drinkButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Red potion")
             {
-                SetTheControlsOfWeapon(equipRedPotion, equipWeaponRedPotion);
+                SetTheControlsOfWeapon(equipRedPotion, equipWeaponRedPotion, playerRedPotion30);
                 SetTheVisibilityOfButtons();
                 drinkButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Battle axe")
             {
-                SetTheControlsOfWeapon(equipBattleAxe, equipWeaponBattleAxe);
+                SetTheControlsOfWeapon(equipBattleAxe, equipWeaponBattleAxe, playerBattleAxe30);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Quiver")
             {
-                SetTheControlsOfWeapon(equipQuiver, equipWeaponQuiver);
+                SetTheControlsOfWeapon(equipQuiver, equipWeaponQuiver, playerQuiver30);
                 SetTheVisibilityOfButtons();
                 quiverButton.Visible = true;
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Shield")
             {
-                SetTheControlsOfWeapon(equipShield, equipWeaponShield);
+                SetTheControlsOfWeapon(equipShield, equipWeaponShield, playerShield30);
                 SetTheVisibilityOfButtons();
                 TabAttackManager(false);
             }
             else if (game.ChoosenItemByPlayer() == "Bomb")
             {
-                SetTheControlsOfWeapon(equipBomb, equipWeaponBomb);
+                SetTheControlsOfWeapon(equipBomb, equipWeaponBomb, playerBomb30);
                 SetTheVisibilityOfButtons();
                 blowButton.Visible = true;
                 TabAttackManager(false);
             }
         }
 
-        private void SetTheControlsOfWeapon(PictureBox equipPictureBox, PictureBox equipWeaponPictureBox)
+        private void SetTheControlsOfWeapon(PictureBox equipPictureBox, PictureBox equipWeaponPictureBox,
+            PictureBox playerPictureBox)
         {
             equipPictureBox.BorderStyle = BorderStyle.FixedSingle;
-            equipWeaponPictureBox.Visible = true;            
+            equipWeaponPictureBox.Visible = true;
+            SetTheControlOfPlayer(playerPictureBox);
+        }
+
+        private void SetTheControlOfPlayer(PictureBox playerPictureBox)
+        {
+            playerPictureBox.Location = game.PlayerLocation;
+            player = null;
+            player = playerPictureBox;
+            InvisibleOtherPictureOfPlayer();
+            playerPictureBox.Visible = true;
+        }
+
+        private void InvisibleOtherPictureOfPlayer()
+        {
+            playerEmpty30.Visible = false;
+            playerSword30.Visible = false;
+            playerBow30.Visible = false;
+            playerBluePotion30.Visible = false;
+            playerRedPotion30.Visible = false;
+            playerBattleAxe30.Visible = false;
+            playerQuiver30.Visible = false;
+            playerShield30.Visible = false;
+            playerBomb30.Visible = false;
+        }
+
+        private void PictureForDisposableItem()
+        {
+            InvisibleOtherPictureOfPlayer();
+            playerEmpty30.Location = game.PlayerLocation;
+            player = null;
+            player = playerEmpty30;
+            player.Visible = true;
         }
         #endregion
 
@@ -598,6 +634,7 @@ namespace Dungeons
                 drinkButton.Visible = false;
                 SetVisibilityEquipPotion(potion);
             }
+            PictureForDisposableItem();           
         }
 
         private void SetVisibilityEquipPotion(string potion)
@@ -616,6 +653,7 @@ namespace Dungeons
                 quiverButton.Visible = false;
                 equipQuiver.Visible = false;
             }
+            PictureForDisposableItem();
         }
                 
         private void blowButton_Click(object sender, EventArgs e)
@@ -626,6 +664,7 @@ namespace Dungeons
                 blowButton.Visible = false;
                 equipBomb.Visible = false;
             }
+            PictureForDisposableItem();
         }
         #endregion
 
