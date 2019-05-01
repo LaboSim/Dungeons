@@ -123,6 +123,16 @@ namespace Dungeons.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap playerMace30 {
+            get {
+                object obj = ResourceManager.GetObject("playerMace30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap playerQuiver30 {
             get {
                 object obj = ResourceManager.GetObject("playerQuiver30", resourceCulture);

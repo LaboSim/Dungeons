@@ -106,6 +106,7 @@
             this.playerQuiver30 = new System.Windows.Forms.PictureBox();
             this.playerShield30 = new System.Windows.Forms.PictureBox();
             this.playerBomb30 = new System.Windows.Forms.PictureBox();
+            this.playerMace30 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -150,6 +151,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.playerQuiver30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerShield30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBomb30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerMace30)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -1091,6 +1093,18 @@
             this.playerBomb30.TabStop = false;
             this.playerBomb30.Visible = false;
             // 
+            // playerMace30
+            // 
+            this.playerMace30.BackColor = System.Drawing.Color.Transparent;
+            this.playerMace30.Image = global::Dungeons.Properties.Resources.playerMace30;
+            this.playerMace30.Location = new System.Drawing.Point(444, 48);
+            this.playerMace30.Name = "playerMace30";
+            this.playerMace30.Size = new System.Drawing.Size(30, 30);
+            this.playerMace30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.playerMace30.TabIndex = 58;
+            this.playerMace30.TabStop = false;
+            this.playerMace30.Visible = false;
+            // 
             // DungeonsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1098,6 +1112,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.playerMace30);
             this.Controls.Add(this.playerBomb30);
             this.Controls.Add(this.playerShield30);
             this.Controls.Add(this.playerQuiver30);
@@ -1208,6 +1223,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.playerQuiver30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerShield30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBomb30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.playerMace30)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1291,6 +1307,7 @@
         private System.Windows.Forms.PictureBox playerQuiver30;
         private System.Windows.Forms.PictureBox playerShield30;
         private System.Windows.Forms.PictureBox playerBomb30;
+        private System.Windows.Forms.PictureBox playerMace30;
     }
 }
 

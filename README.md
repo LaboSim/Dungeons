@@ -1,5 +1,5 @@
 # D U N G E O N S
-###### version 1.4.2
+###### version 1.4.4
 ## INTRODUCTION
 **D U N G E O N S** is a simple adventure game, where the player has just one task - kill all enemies! 
 But it isn't an easy task, although it looks like that.
@@ -35,5 +35,3 @@ Using of equipment is very easy. Just move the mouse and click on the selected i
 ### If you want to play this game
 Download ZIP -> https://github.com/SimonWithYerba/Dungeons/archive/master.zip
 <br/>If you downloaded ZIP extract files and then: Dungeons-master/Dungeons/bin/Debug/Dungeons.exe
-### Author
-**Szymon Cierzniak**

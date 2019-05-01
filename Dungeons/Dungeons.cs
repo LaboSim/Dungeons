@@ -358,7 +358,7 @@ namespace Dungeons
             }
             else if (game.ChoosenItemByPlayer() == "Mace")
             {
-                SetTheControlsOfWeapon(equipMace, equipWeaponMace, playerSword30);
+                SetTheControlsOfWeapon(equipMace, equipWeaponMace, playerMace30);
                 SetTheVisibilityOfButtons();
             }
             else if (game.ChoosenItemByPlayer() == "Blue potion")
